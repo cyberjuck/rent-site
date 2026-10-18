@@ -5,6 +5,7 @@
   Bold in body text: <b>...</b>. New paragraph: <p>...</p>.
 */
 const EN = {
+  nav_rent: "RENT",
   nav_about: "what is rent",
   nav_team: "team",
   nav_expect: "what to expect",

@@ -64,6 +64,7 @@ section, [id] { scroll-margin-top: var(--header-h); }
 .langs button { opacity: .45; text-transform: uppercase; letter-spacing: -0.04em; }
 .langs button.is-active, .langs button:hover { opacity: 1; }
 .burger { display: none; }
+.logo { display: none; }
 
 /* ===== Mobile menu ===== */
 .menu {
@@ -220,9 +221,12 @@ html[lang="ru"] .strip [data-i18n="strip_from"] { --k: 1; }
   .t { font-size: min(calc(var(--m) * var(--k, 1) * 100vw / 390), calc(var(--m) * var(--k, 1) * 1.6px)); }
   br.d { display: none; }
 
-  .header { padding: 0 16px; justify-content: flex-end; }
+  .header { padding: 0 16px; justify-content: space-between; }
   .header__nav, .header__right { display: none; }
   .burger { display: block; height: 28px; }
+  .logo { display: block; font-size: 30px; line-height: .91; letter-spacing: -0.04em; }
+  .lhm141 { line-height: 1.41; }
+  .lhm131 { line-height: 1.31; }
 
   .cta-bar--fixed { display: flex; position: fixed; inset: auto 0 0 0; z-index: 40; }
   body.menu-open .cta-bar--fixed { display: none; }
