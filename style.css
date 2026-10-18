@@ -73,7 +73,8 @@ section, [id] { scroll-margin-top: var(--header-h); }
   font-family: "Anton", sans-serif; text-transform: uppercase; letter-spacing: -0.04em;
 }
 .menu.is-open { display: flex; }
-.menu__top { height: 60px; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; font-size: 22px; line-height: .91; }
+.menu__top { height: 60px; padding: 0 16px; display: flex; align-items: center; justify-content: flex-end; }
+.menu__langs { padding: 0 16px 24px; gap: 24px; font-size: 48px; line-height: .91; }
 .menu__nav { flex: 1; display: flex; flex-direction: column; gap: 20px; padding: 40px 16px; font-size: 48px; line-height: .91; }
 
 /* ===== Ticket bars ===== */
