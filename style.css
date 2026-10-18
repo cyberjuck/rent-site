@@ -173,6 +173,25 @@ html[lang="ru"] .a[data-i18n] { --k: 1.111; }
 html[lang="ru"] .header__nav, html[lang="ru"] .header__buy { font-size: 1.111em; }
 html[lang="ru"] .menu__nav { font-size: 53px; }
 
+/* ===== Russian: Roboto Flex (settings from Figma) ===== */
+:root {
+  --rf-axes: "wght" 700, "wdth" 45, "slnt" 0, "GRAD" 0, "XOPQ" 96, "XTRA" 468,
+             "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 760;
+}
+html[lang="ru"] .strip .t,
+html[lang="ru"] .cta-bar {
+  font-family: "Roboto Flex", "Anton", sans-serif;
+  font-weight: 700;
+  font-variation-settings: var(--rf-axes);
+  font-optical-sizing: auto;
+  letter-spacing: -0.03em;
+  -webkit-text-stroke: 0;
+}
+/* big pink strips: КУПИТЬ БИЛЕТ 92, ОТ/ДИН 32, 2000 34 */
+html[lang="ru"] .strip [data-i18n="strip_buy"] { --k: calc(92 / 90); }
+html[lang="ru"] .strip [data-i18n="strip_from"] { --k: 1; }
+.strip .num { font-size: calc(34em / 32); }
+
 /* ===== Tablet: tighten paddings ===== */
 @media (max-width: 1200px) {
   .header { padding: 0 40px; font-size: 24px; }
