@@ -39,6 +39,11 @@ const EN = {
 
   tickets_h: "buy a ticket",
 
+  // pink ticket bars
+  strip_buy: "buy a ticket",
+  strip_from: "FROM 2,000 RSD",
+  cta_buy: "BUY A TICKET",
+
   foot_xtix: "Tickets sold via xtix:",
   foot_terms: "Terms of service",
   foot_refund: "Refund policy",
@@ -90,6 +95,10 @@ const SR = {
     "<p>Bićeš mnogo bliže sceni nego inače, dovoljno blizu da vidiš baš sve. A glumci se neće praviti da ne postojiš. Želimo da budeš deo predstave i daćemo sve od sebe da se osećaš kao da si i sam ušao u ovu priču.</p>",
 
   tickets_h: "KUPI ULAZNICU",
+
+  strip_buy: "KUPI ULAZNICU",
+  strip_from: "OD 2.000 RSD",
+  cta_buy: "KUPI ULAZNICU",
 };
 
 const I18N = { en: EN, ru: RU, sr: SR };
