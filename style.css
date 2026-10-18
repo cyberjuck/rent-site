@@ -138,9 +138,10 @@ section, [id] { scroll-margin-top: var(--header-h); }
 .insta {
   display: flex; flex-direction: column; gap: 24px;
   background: var(--black); color: var(--orange); text-align: center;
-  padding: 70px 100px; transition: color .15s;
+  padding: 70px 100px;
 }
-.insta:hover { color: var(--pink); }
+.insta__link { align-self: center; transition: color .15s; }
+.insta__link:hover { color: #D84F2B; }
 
 /* ===== Footer ===== */
 .footer {

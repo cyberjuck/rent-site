@@ -44,8 +44,52 @@ const EN = {
   foot_refund: "Refund policy",
 };
 
-const I18N = {
-  en: EN,
-  ru: { ...EN }, // TODO: русский перевод
-  sr: { ...EN }, // TODO: српски превод
+const RU = {
+  ...EN, // TODO: остальные русские тексты
+  nav_about: "ЧТО ТАКОЕ RENT",
+  nav_team: "КОМАНДА",
+  nav_expect: "ФОРМАТ",
 };
+
+const SR = {
+  ...EN,
+  nav_about: "ŠTA JE RENT",
+  nav_team: "EKIPA",
+  nav_expect: "ŠTA DA OČEKUJETE",
+  nav_buy: "KUPI ULAZNICU",
+
+  about_h: "ŠTA JE RENT",
+  about_p:
+    "<p>RENT je <b>rok mjuzikl</b> Džonatana Larsona koji prati <b>godinu dana iz života grupe mladih umetnika u Njujorku početkom devedesetih godina prošlog veka.</b> Oni nemaju novca za kiriju, zaljubljuju se, gube jedni druge i pokušavaju da žive usred epidemije side.</p>" +
+    "<p>Larson je ovaj mjuzikl napisao inspirisan sopstvenim prijateljima i krajem u kom je živeo. Preminuo je iznenada u 35. godini, noć uoči premijere, i nikada nije video šta je usledilo: RENT je stigao na <b>Brodvej</b>, osvojio <b>Pulicerovu nagradu</b> i <b>četiri Toni nagrade</b> (uključujući onu za najbolji mjuzikl), izvodio se dvanaest godina i postao jedan od najupečatljivijih mjuzikala svih vremena.</p>" +
+    "<p>Ljudi se razboljevaju, zaljubljuju, odljubljuju i ponašaju se kao potpuni kreteni – i sve to često u istoj pesmi. A nekako ipak na kraju navijaš za njih.</p>" +
+    "<p>Larson je uzeo Pučinijevu operu La Bohème i preselio je u Njujork devedesetih. <b>Trideset godina kasnije, mi njegov Njujork dovodimo u Beograd. I ova priča je ovde i danas podjednako aktuelna.</b></p>",
+
+  our_h: "NAŠ RENT",
+  our_p:
+    "<p>Ljudi koji su gledali RENT kada je prvi put izveden u Njujorku 1996. godine opisali su taj osećaj kao da su njihovi prijatelji izašli na scenu i počeli da pevaju o životu koji svi zajedno žive. Tokom godina, predstava je izbrušena do savršenstva klasične brodvejske produkcije.</p>" +
+    "<p><b>Mi hoćemo da vratimo taj prvobitni osećaj.</b> Okupili smo ljude koji u ovoj priči prepoznaju sopstvene živote i pustili ih da na sceni budu ono što jesu. Zato svake večeri ostavljaju srce na sceni, a predstava postaje iskrena na način koji ne može da se uvežba. I baš tako nam se sviđa.</p>" +
+    "<p>Ulaznica košta 2.000 dinara (oko 20 američkih dolara), isto koliko su 1996. godine koštale čuvene ulaznice za prvi red na Brodveju.</p>",
+
+  every_h: "SVE JE RENT",
+  every_p:
+    "<p>Ni najsitnija slova u ugovorima ne pominju da iznajmljujemo mnogo više od stana u kom živimo. Zapravo, sve je pod kirijom. Stan, grad, ljudi koje jednog običnog utorka uveče zoveš porodicom. Uzimamo od života onoliko koliko nam srce, zdravlje i računi u banci dozvoljavaju. Držimo se toga dok nam ne istekne rok trajanja – ili viza.</p>" +
+    "<p>Za likove iz RENT-a kriza je bila epidemija side. Danas, svako od nas nosi neku svoju krizu. Nekima je došla zajedno s ratom i spakovanim koferom. Drugima se polako uvukla u život kroz spoznaju da mesto koje zovu domom više ne osećaju kao svoje.</p>" +
+    "<p>Često nam se čini da ne možemo ništa da promenimo. Da verujemo ljudima na vlasti koji nas godinama ne slušaju? Da radimo do iznemoglosti samo da bismo imali krov nad glavom, i to na planeti koja gori?</p>" +
+    "<p><b>RENT je priča o tome kako živeti usred svega toga – i ne stišavati glas.</b></p>" +
+    "<p>A tu smo i da priznamo nešto: ljubav još postoji. Prijateljstvo još postoji. I seks još postoji (bezbedan, molimo!). Nijedan rat, nijedna granica i nijedna udarna vest to ne mogu da nam oduzmu. I besni smo što je iko uopšte pokušao.</p>",
+
+  team_h: "EKIPA",
+  team_p:
+    "<p>Mi smo ekipa umetnika iz Srbije, Rusije i SAD-a koji su odlučili da postave brodvejski mjuzikl sa malim budžetom, u ono malo slobodnog vremena koje nam ostaje posle posla.</p>" +
+    "<p>Radimo to zato što iskreno volimo ovu predstavu. I zato što verujemo da je Beogradu baš sada ova priča potrebnija nego ikad.</p>",
+
+  expect_h: "ŠTA DA OČEKUJETE",
+  expect_p:
+    "<p>Prvi čin se gleda stojeći, što znači da slobodno možeš da plešeš i da se krećeš, baš kao na svirci. Za drugi čin imaćeš svoje mesto za sedenje, kao u običnom pozorištu. Bar je otvoren pre predstave i tokom pauze između činova.</p>" +
+    "<p>Bićeš mnogo bliže sceni nego inače, dovoljno blizu da vidiš baš sve. A glumci se neće praviti da ne postojiš. Želimo da budeš deo predstave i daćemo sve od sebe da se osećaš kao da si i sam ušao u ovu priču.</p>",
+
+  tickets_h: "KUPI ULAZNICU",
+};
+
+const I18N = { en: EN, ru: RU, sr: SR };
