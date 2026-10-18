@@ -53,7 +53,7 @@ const RU = {
   ...EN, // TODO: остальные русские тексты
   nav_about: "ЧТО ТАКОЕ RENT",
   nav_team: "КОМАНДА",
-  nav_expect: "ФОРМАТ",
+  nav_expect: "ЧТО ОЖИДАТЬ",
 
   strip_buy: "КУПИТЬ БИЛЕТ",
   strip_from: 'ОТ <span class="num">2000</span> ДИН',
