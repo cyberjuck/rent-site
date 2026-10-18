@@ -6,7 +6,11 @@ function setLang(lang) {
   const dict = I18N[lang];
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const v = dict[el.dataset.i18n];
-    if (v !== undefined) el.innerHTML = v;
+    if (v === undefined) return;
+    // menu items: letter Ж is set slightly larger
+    el.innerHTML = el.closest(".header__nav, .menu__nav") || el.classList.contains("header__buy")
+      ? v.replace(/Ж/g, '<span class="zh">Ж</span>')
+      : v;
   });
   document.documentElement.lang = lang;
   document.querySelectorAll(".langs button").forEach((b) =>

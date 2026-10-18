@@ -157,37 +157,52 @@ section, [id] { scroll-margin-top: var(--header-h); }
 .footer .u { text-decoration: underline; }
 .footer__year { width: 260px; text-align: right; }
 
-/* ===== Russian: Bebas Neue Bold (Anton has no Cyrillic) =====
-   size 100 instead of 90 (x1.111) + 1.5px outer black stroke */
+/* ===== Russian: Roboto Flex (Anton has no Cyrillic), axes from Figma ===== */
+:root {
+  /* pink ticket buttons */
+  --rf-btn: "wght" 700, "wdth" 45, "slnt" 0, "GRAD" 0, "XOPQ" 96, "XTRA" 468,
+            "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 760;
+  /* menu */
+  --rf-menu: "wght" 700, "wdth" 25, "slnt" 0, "GRAD" 0, "XOPQ" 96, "XTRA" 428,
+             "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 760;
+  /* headings */
+  --rf-head: "wght" 700, "wdth" 37, "slnt" 0, "GRAD" 0, "XOPQ" 96, "XTRA" 468,
+             "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 726;
+}
 html[lang="ru"] .a[data-i18n],
 html[lang="ru"] .header__nav a,
 html[lang="ru"] .header__buy,
-html[lang="ru"] .menu__nav a {
-  font-family: "Bebas Neue RU", "Anton", sans-serif;
-  font-weight: 700;
-  letter-spacing: 0;
-  -webkit-text-stroke: 3px #000;
-  paint-order: stroke fill;
-}
-html[lang="ru"] .a[data-i18n] { --k: 1.111; }
-html[lang="ru"] .header__nav, html[lang="ru"] .header__buy { font-size: 1.111em; }
-html[lang="ru"] .menu__nav { font-size: 53px; }
-
-/* ===== Russian: Roboto Flex (settings from Figma) ===== */
-:root {
-  --rf-axes: "wght" 700, "wdth" 45, "slnt" 0, "GRAD" 0, "XOPQ" 96, "XTRA" 468,
-             "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 760;
-}
-html[lang="ru"] .strip .t,
+html[lang="ru"] .menu__nav a,
 html[lang="ru"] .cta-bar {
   font-family: "Roboto Flex", "Anton", sans-serif;
   font-weight: 700;
-  font-variation-settings: var(--rf-axes);
   font-optical-sizing: auto;
-  letter-spacing: -0.03em;
-  -webkit-text-stroke: 0;
 }
-/* big pink strips: КУПИТЬ БИЛЕТ 92, ОТ/ДИН 32, 2000 34 */
+
+/* headings: 100 instead of 90, -3% */
+html[lang="ru"] .a[data-i18n] {
+  --k: calc(100 / 90);
+  font-variation-settings: var(--rf-head);
+  letter-spacing: -0.03em;
+}
+
+/* menu: 33 instead of 30, -4%, letter Ж 35 */
+html[lang="ru"] .header__nav a,
+html[lang="ru"] .header__buy,
+html[lang="ru"] .menu__nav a {
+  font-variation-settings: var(--rf-menu);
+  letter-spacing: -0.04em;
+}
+html[lang="ru"] .header__nav, html[lang="ru"] .header__buy { font-size: calc(33em / 30); }
+html[lang="ru"] .menu__nav { font-size: calc(48px * 33 / 30); }
+.zh { font-size: calc(35em / 33); }
+
+/* pink ticket buttons: КУПИТЬ БИЛЕТ 92, ОТ/ДИН 32, 2000 34, -3% */
+html[lang="ru"] .strip .t,
+html[lang="ru"] .cta-bar {
+  font-variation-settings: var(--rf-btn);
+  letter-spacing: -0.03em;
+}
 html[lang="ru"] .strip [data-i18n="strip_buy"] { --k: calc(92 / 90); }
 html[lang="ru"] .strip [data-i18n="strip_from"] { --k: 1; }
 .strip .num { font-size: calc(34em / 32); }
