@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RENT — Belgrade, December 2026</title>
+<meta name="description" content="RENT, the rock musical by Jonathan Larson. Drugstore, Belgrade — 13.12, 23.12 & 24.12, 20:00. Tickets from 2,000 RSD.">
+<meta property="og:title" content="RENT — Belgrade, December 2026">
+<meta property="og:description" content="13.12 / 23.12 / 24.12 at Drugstore, Belgrade. Tickets from 2,000 RSD.">
+<link rel="stylesheet" href="fonts.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== HEADER (fixed) ===== -->
+<header class="header">
+  <nav class="header__nav">
+    <a href="#about" data-i18n="nav_about">what is rent</a>
+    <a href="#team" data-i18n="nav_team">team</a>
+    <a href="#expect" data-i18n="nav_expect">what to expect</a>
+  </nav>
+  <div class="header__right">
+    <a href="#tickets" class="header__buy ticket-link" data-i18n="nav_buy">buy a ticket</a>
+    <div class="langs">
+      <button data-lang="ru">RU</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="sr">SR</button>
+    </div>
+  </div>
+  <button class="burger" aria-label="Menu" aria-expanded="false">
+    <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="2" y="6" width="24" height="3" fill="#fff"/><rect x="2" y="12.5" width="24" height="3" fill="#fff"/><rect x="2" y="19" width="24" height="3" fill="#fff"/></svg>
+  </button>
+</header>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="menu" aria-hidden="true">
+  <div class="menu__top">
+    <div class="langs">
+      <button data-lang="ru">RU</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="sr">SR</button>
+    </div>
+    <button class="menu__close" aria-label="Close">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M5 5L23 23M23 5L5 23" stroke="#fff" stroke-width="3"/></svg>
+    </button>
+  </div>
+  <nav class="menu__nav">
+    <a href="#about" data-i18n="nav_about">what is rent</a>
+    <a href="#team" data-i18n="nav_team">team</a>
+    <a href="#expect" data-i18n="nav_expect">what to expect</a>
+  </nav>
+  <a href="#tickets" class="cta-bar">BUY A TICKET</a>
+</div>
+
+<main>
+
+<!-- ===== HERO (black, EN only) ===== -->
+<section class="hero">
+  <p class="t rs" style="--d:120;--m:48">COME&nbsp; SEE</p>
+  <div class="stack">
+    <p class="t a lh88" style="--d:310;--m:140">“RENT”</p>
+    <p class="t a" style="--d:190;--m:96">THIS DECEMBER</p>
+  </div>
+  <p class="t a lh98" style="--d:90;--m:50">13.12 / 23.12 / 24.12<br>20:00</p>
+</section>
+
+<!-- ===== PINK STRIP (EN only, desktop) ===== -->
+<a href="#tickets" class="strip">
+  <span class="t a up" style="--d:90">buy a ticket</span>
+  <span class="t a up ls2" style="--d:32">FROM 2,000 RSD</span>
+</a>
+
+<!-- ===== ABOUT ===== -->
+<section class="row" id="about">
+  <div class="row__text">
+    <h2 class="t a lh98" style="--d:90;--m:50" data-i18n="about_h">WHAT IS “RENT”</h2>
+    <div class="body" data-i18n="about_p"></div>
+  </div>
+  <div class="row__img"><img src="images/what-is-rent.jpg" alt=""></div>
+</section>
+
+<section class="row row--rev">
+  <div class="row__text">
+    <h2 class="t a lh98" style="--d:90;--m:50" data-i18n="our_h">OUR “RENT”</h2>
+    <div class="body" data-i18n="our_p"></div>
+  </div>
+  <div class="row__img"><img src="images/our-rent.jpg" alt=""></div>
+</section>
+
+<section class="row">
+  <div class="row__text">
+    <h2 class="t a lh98" style="--d:90;--m:50" data-i18n="every_h">EVERYTHING IS RENT</h2>
+    <div class="body" data-i18n="every_p"></div>
+  </div>
+  <div class="row__img"><img src="images/everything-is-rent.jpg" alt=""></div>
+</section>
+
+<a href="#tickets" class="strip">
+  <span class="t a up" style="--d:90">buy a ticket</span>
+  <span class="t a up ls2" style="--d:32">FROM 2,000 RSD</span>
+</a>
+
+<section class="row row--rev" id="team">
+  <div class="row__text">
+    <h2 class="t a lh98" style="--d:90;--m:50" data-i18n="team_h">TEAM</h2>
+    <div class="body" data-i18n="team_p"></div>
+  </div>
+  <div class="row__img"><img src="images/team.jpg" alt=""></div>
+</section>
+
+<section class="row" id="expect">
+  <div class="row__text">
+    <h2 class="t a lh98" style="--d:90;--m:50" data-i18n="expect_h">WHAT TO EXPECT</h2>
+    <div class="body" data-i18n="expect_p"></div>
+  </div>
+  <div class="row__img"><img src="images/what-to-expect.jpg" alt=""></div>
+</section>
+
+<!-- ===== MANIFESTO (black, EN only) ===== -->
+<section class="manifesto">
+  <div class="stack">
+    <p class="t a up lh98" style="--d:90;--m:50">if you feel like</p>
+    <p class="t a up" style="--d:310;--m:90">a prisoner</p>
+    <p class="t a up lh98" style="--d:90;--m:50">to your job.<br>if you want to</p>
+  </div>
+  <p class="t rs up" style="--d:120;--m:70">create more,</p>
+  <div class="stack">
+    <p class="t a up lh98" style="--d:90;--m:50">but don't have the finances to.<br>if you don't know<br>where you’ll live<br>in a couple of years. if you’re afraid to plan your</p>
+    <p class="t a up" style="--d:310;--m:146">future</p>
+    <p class="t a up lh98" style="--d:90;--m:50">‘cause there are</p>
+  </div>
+  <p class="t rs up" style="--d:120;--m:43">no guarantees</p>
+  <div class="stack">
+    <p class="t a up lh98" style="--d:90;--m:50">IF YOU STOPPED CALLING<br class="d"> YOUR RELATIVES AND CHOSE<br class="d"> A FAMILY OF FRIENDS INSTEAD</p>
+    <p class="t a up" style="--d:310;--m:146">COME</p>
+    <p class="t a up lh92" style="--d:190;--m:50">JOIN US FOR this LITTLE</p>
+  </div>
+  <p class="t rs up" style="--d:120;--m:70">RAVE CLUB</p>
+  <p class="t a up lh98" style="--d:90;--m:66">BROADWAY MUSICAL RIDE</p>
+</section>
+
+<!-- ===== DRUGSTORE (pink, EN only) ===== -->
+<section class="drugstore">
+  <p class="t a up" style="--d:310;--m:90">DRUGSTORE</p>
+  <p class="t rs up" style="--d:120;--m:43">BELGRADE</p>
+  <div>
+    <p class="t a up" style="--d:310;--m:146">13.12</p>
+    <p class="t a up lh98" style="--d:90;--m:66">and</p>
+    <p class="t a up lh98" style="--d:190;--m:66">23.12 &amp; 24.12</p>
+  </div>
+</section>
+
+<!-- ===== TICKETS (xtix widget) ===== -->
+<section class="tickets" id="tickets">
+  <h2 class="t a up lh98" style="--d:90;--m:50" data-i18n="tickets_h">buy a ticket</h2>
+  <div class="tickets__widget">
+    <span data-xtix-event-inline="6ad01178f9f14e077beea772" data-xtix-lang="en" data-xtix-meta="true" data-xtix-token="eyJhbGciOiJIUzI1NiIsImlzcyI6Imh1Yi54dGl4LmFpIiwidHlwIjoiSldUIn0.eyJwIjoiNmFjZjcxYjg5ZDViMWM1OWQ1ZWVhNWQzIn0.JNisV-zeA_7YVUEcq9Hm50vH30cGpkWNOwJNLRsiPiE"></span>
+  </div>
+</section>
+
+<!-- ===== INSTAGRAM (black, EN only) ===== -->
+<a class="insta" href="https://www.instagram.com/rentshowbelgrade/" target="_blank" rel="noopener">
+  <span class="t rs up" style="--d:120;--m:43">&amp; see more</span>
+  <span class="stack">
+    <span class="t a up" style="--d:190;--m:50">in our</span>
+    <span class="t a up lh88" style="--d:310;--m:90">instagram</span>
+  </span>
+</a>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer__cols">
+    <p>Udruzenje Kuraz<br>Beograd, Knez Miletina, 43<br>PIB 115641955<br>Maticni broj 28414927</p>
+    <p><a href="mailto:hello@kuraz-theatre.company">hello@kuraz-theatre.company</a><br><a href="tel:+381621673184">+381621673184</a></p>
+    <p><span data-i18n="foot_xtix">Tickets sold via xtix:</span><br><a class="u" href="https://xtix.ai/documents/terms-of-service" target="_blank" rel="noopener" data-i18n="foot_terms">Terms of service</a><br><a class="u" href="https://xtix.ai/documents/organizer-refund-policy" target="_blank" rel="noopener" data-i18n="foot_refund">Refund policy</a></p>
+  </div>
+  <p class="footer__year">2026</p>
+</footer>
+
+<!-- ===== MOBILE STICKY CTA ===== -->
+<a href="#tickets" class="cta-bar cta-bar--fixed">BUY A TICKET</a>
+
+<script src="i18n.js"></script>
+<script src="main.js"></script>
+<script src="https://hub.xtix.ai/static/scripts/widget/xtixwidget.js"></script>
+</body>
+</html>

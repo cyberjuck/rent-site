@@ -1,0 +1,211 @@
+/* ===== Colors ===== */
+:root {
+  --black: #000;
+  --white: #fff;
+  --pink: #FC347A;        /* ticket strips, manifesto text */
+  --pink-hover: #EA3675;  /* hover on all ticket buttons */
+  --violet: #E950D7;      /* hero text, Drugstore background */
+  --orange: #F8643C;      /* Instagram block */
+  --header-h: 75px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--white);
+  color: var(--black);
+  font-family: "Inter", system-ui, sans-serif;
+  font-variation-settings: "opsz" 32; /* Inter Display look */
+  padding-top: var(--header-h);
+}
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+img { display: block; max-width: 100%; }
+section, [id] { scroll-margin-top: var(--header-h); }
+
+/* ===== Type ===== */
+/* --d = size on 1440 desktop, --m = size on 390 mobile (px, unitless) */
+.t {
+  display: block;
+  font-size: min(calc(var(--d) * var(--k, 1) * 1px), calc(var(--d) * var(--k, 1) * 100vw / 1440));
+  letter-spacing: -0.04em;
+  line-height: 0.91;
+}
+.a  { font-family: "Anton", sans-serif; font-weight: 400; }
+.rs { font-family: "Rock Salt", cursive; font-weight: 400; }
+.up { text-transform: uppercase; }
+.lh98 { line-height: 0.98; }
+.lh92 { line-height: 0.92; }
+.lh88 { line-height: 0.88; }
+.ls2 { letter-spacing: -0.02em; }
+
+.body { font-size: 20px; line-height: 1.3; max-width: 700px; }
+.body p + p { margin-top: 12px; }
+.body b { font-weight: 700; }
+
+.stack { display: flex; flex-direction: column; gap: 4px; }
+
+/* ===== Header ===== */
+.header {
+  position: fixed; inset: 0 0 auto 0; z-index: 50;
+  height: var(--header-h);
+  background: var(--black); color: var(--white);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 100px;
+  font-family: "Anton", sans-serif; font-size: 30px;
+  line-height: 0.91; letter-spacing: -0.04em; text-transform: uppercase;
+}
+.header__nav { display: flex; gap: 32px; }
+.header__right { display: flex; align-items: center; gap: 48px; }
+.header__buy { text-decoration: underline; text-underline-offset: 3px; transition: color .15s; }
+.header__buy:hover { color: var(--pink-hover); }
+.header__nav a:hover { opacity: .7; }
+.langs { display: flex; gap: 10px; }
+.langs button { opacity: .45; text-transform: uppercase; letter-spacing: -0.04em; }
+.langs button.is-active, .langs button:hover { opacity: 1; }
+.burger { display: none; }
+
+/* ===== Mobile menu ===== */
+.menu {
+  position: fixed; inset: 0; z-index: 60;
+  background: var(--black); color: var(--white);
+  display: none; flex-direction: column;
+  font-family: "Anton", sans-serif; text-transform: uppercase; letter-spacing: -0.04em;
+}
+.menu.is-open { display: flex; }
+.menu__top { height: 60px; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; font-size: 22px; line-height: .91; }
+.menu__nav { flex: 1; display: flex; flex-direction: column; gap: 20px; padding: 40px 16px; font-size: 48px; line-height: .91; }
+
+/* ===== Ticket bars ===== */
+.cta-bar {
+  display: flex; align-items: center; justify-content: center;
+  height: 64px; background: var(--pink); color: var(--black);
+  font-family: "Anton", sans-serif; font-size: 30px; letter-spacing: -0.04em;
+  transition: background .15s;
+}
+.cta-bar:hover { background: var(--pink-hover); }
+.cta-bar--fixed { display: none; }
+
+/* ===== Hero ===== */
+.hero {
+  background: var(--black); color: var(--violet); text-align: center;
+  padding: 50px 100px; display: flex; flex-direction: column; gap: 24px;
+}
+
+/* ===== Pink strip ===== */
+.strip {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  background: var(--pink); color: var(--black); text-align: center;
+  padding: 40px 100px; transition: background .15s;
+}
+.strip:hover { background: var(--pink-hover); }
+
+/* ===== Text + photo rows ===== */
+.row {
+  display: grid; grid-template-columns: 848fr 592fr;
+  min-height: min(588px, calc(588 * 100vw / 1440));
+}
+.row--rev { grid-template-columns: 592fr 848fr; }
+.row--rev .row__img { order: -1; }
+.row__text {
+  display: flex; flex-direction: column; justify-content: center; gap: 32px;
+  padding: 60px 48px 60px clamp(24px, 6.94vw, 100px);
+}
+.row--rev .row__text { padding: 70px clamp(24px, 6.94vw, 100px) 70px 48px; }
+.row__img { background: #1a1a1a; overflow: hidden; }
+.row__img img { width: 100%; height: 100%; object-fit: cover; }
+
+/* ===== Manifesto ===== */
+.manifesto {
+  background: var(--black); color: var(--pink); text-align: center;
+  padding: 70px 100px; display: flex; flex-direction: column; gap: 36px;
+}
+
+/* ===== Drugstore ===== */
+.drugstore {
+  background: var(--violet); color: var(--black); text-align: center;
+  padding: 70px 100px; display: flex; flex-direction: column; gap: 28px;
+}
+
+/* ===== Tickets ===== */
+.tickets {
+  background: var(--white); text-align: center;
+  padding: 70px 100px; display: flex; flex-direction: column; align-items: center; gap: 24px;
+}
+.tickets__widget { width: 100%; max-width: 736px; min-height: 200px; text-align: left; }
+
+/* ===== Instagram ===== */
+.insta {
+  display: flex; flex-direction: column; gap: 24px;
+  background: var(--black); color: var(--orange); text-align: center;
+  padding: 70px 100px; transition: color .15s;
+}
+.insta:hover { color: var(--pink); }
+
+/* ===== Footer ===== */
+.footer {
+  background: var(--black); color: var(--white);
+  display: flex; justify-content: space-between; gap: 24px;
+  padding: 70px 60px;
+  font-size: 14px; line-height: 1.3;
+}
+.footer__cols { display: flex; gap: 24px; }
+.footer__cols p { width: 260px; }
+.footer a:hover { color: var(--pink); }
+.footer .u { text-decoration: underline; }
+.footer__year { width: 260px; text-align: right; }
+
+/* ===== Russian: Bebas Neue Bold (Anton has no Cyrillic) =====
+   size 100 instead of 90 (x1.111) + 1.5px outer black stroke */
+html[lang="ru"] .a[data-i18n],
+html[lang="ru"] .header__nav a,
+html[lang="ru"] .header__buy,
+html[lang="ru"] .menu__nav a {
+  font-family: "Bebas Neue RU", "Anton", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0;
+  -webkit-text-stroke: 3px #000;
+  paint-order: stroke fill;
+}
+html[lang="ru"] .a[data-i18n] { --k: 1.111; }
+html[lang="ru"] .header__nav, html[lang="ru"] .header__buy { font-size: 1.111em; }
+html[lang="ru"] .menu__nav { font-size: 53px; }
+
+/* ===== Tablet: tighten paddings ===== */
+@media (max-width: 1200px) {
+  .header { padding: 0 40px; font-size: 24px; }
+  .hero, .strip, .manifesto, .drugstore, .tickets, .insta { padding-left: 40px; padding-right: 40px; }
+  .body { font-size: 18px; }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 899px) {
+  :root { --header-h: 60px; }
+  .t { font-size: min(calc(var(--m) * var(--k, 1) * 100vw / 390), calc(var(--m) * var(--k, 1) * 1.6px)); }
+  br.d { display: none; }
+
+  .header { padding: 0 16px; justify-content: flex-end; }
+  .header__nav, .header__right { display: none; }
+  .burger { display: block; height: 28px; }
+
+  .cta-bar--fixed { display: flex; position: fixed; inset: auto 0 0 0; z-index: 40; }
+  body.menu-open .cta-bar--fixed { display: none; }
+  body.menu-open { overflow: hidden; }
+
+  .hero { padding: 40px 16px; gap: 12px; }
+  .strip { display: none; }
+
+  .row, .row--rev { grid-template-columns: 1fr; min-height: 0; }
+  .row__img { order: -1; height: calc(360 * 100vw / 390); max-height: 560px; }
+  .row__text, .row--rev .row__text { padding: 32px 16px 40px; gap: 16px; }
+  .body { font-size: 16px; }
+
+  .manifesto { padding: 40px 16px; gap: 12px; }
+  .drugstore { padding: 40px 16px; gap: 12px; }
+  .tickets { padding: 40px 16px; gap: 12px; }
+  .insta { padding: 40px 16px; gap: 12px; }
+
+  .footer { flex-direction: column; padding: 40px 16px 104px; }
+  .footer__cols { flex-direction: column; gap: 16px; }
+  .footer__cols p, .footer__year { width: auto; text-align: left; }
+}
