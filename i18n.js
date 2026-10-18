@@ -54,6 +54,14 @@ const RU = {
   nav_about: "ЧТО ТАКОЕ RENT",
   nav_team: "КОМАНДА",
   nav_expect: "ЧТО ОЖИДАТЬ",
+  nav_buy: "купить билет",
+
+  about_h: "ЧТО ТАКОЕ «RENT»",
+  our_h: "НАШ «RENT»",
+  every_h: "АРЕНДУЕШЬ ВСЕ",
+  team_h: "КОМАНДА",
+  expect_h: "ЧТО ОЖИДАТЬ",
+  tickets_h: "КУПИТЬ БИЛЕТ",
 
   strip_buy: "КУПИТЬ БИЛЕТ",
   strip_from: 'ОТ <span class="num">2000</span> ДИН',
