@@ -1,8 +1,14 @@
 // ===== Language switch =====
 const LANGS = ["en", "sr", "ru"];
+// Temporarily hidden languages (translations are kept). To bring Russian back: []
+const HIDDEN_LANGS = ["ru"];
+
+document.querySelectorAll(".langs button").forEach((b) => {
+  if (HIDDEN_LANGS.includes(b.dataset.lang)) b.hidden = true;
+});
 
 function setLang(lang) {
-  if (!LANGS.includes(lang)) lang = "en";
+  if (!LANGS.includes(lang) || HIDDEN_LANGS.includes(lang)) lang = "en";
   const dict = I18N[lang];
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const v = dict[el.dataset.i18n];
