@@ -1,5 +1,5 @@
 // ===== Language switch =====
-const LANGS = ["en", "ru", "sr"];
+const LANGS = ["en", "sr", "ru"];
 
 function setLang(lang) {
   if (!LANGS.includes(lang)) lang = "en";
