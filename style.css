@@ -12,7 +12,8 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; background: var(--black); } /* color seen when page bounces on scroll */
 body {
-  background: var(--white);
+  /* top strip under the fixed header is black, so no white gap shows when the page bounces */
+  background: linear-gradient(to bottom, var(--black) var(--header-h), var(--white) var(--header-h));
   color: var(--black);
   font-family: "Inter", system-ui, sans-serif;
   font-variation-settings: "opsz" 32; /* Inter Display look */
