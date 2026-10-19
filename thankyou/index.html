@@ -16,7 +16,7 @@
     background: var(--violet); color: var(--black); text-align: center;
     padding: 50px 100px; display: flex; flex-direction: column; gap: 24px;
   }
-  html { background: linear-gradient(to bottom, var(--violet) 50%, var(--black) 50%); } /* pink when bouncing at top, black at bottom */
+  html { background: var(--violet); } /* solid: Safari ignores gradients for the bounce area */
   body.ty { background: var(--violet); }
   .ty-header { background: var(--violet); color: var(--black); justify-content: center; }
   .ty-back {
