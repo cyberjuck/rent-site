@@ -46,7 +46,7 @@ const EN = {
   strip_from: "FROM 2,000 RSD",
   cta_buy: "BUY A TICKET",
 
-  foot_xtix: "Tickets sold via xtix:",
+  foot_xtix: "Tickets sold via xtix",
   foot_terms: "Terms of service",
   foot_refund: "Refund policy",
 };
@@ -64,7 +64,7 @@ const RU = {
   team_h: "КОМАНДА",
   expect_h: "ЧТО ОЖИДАТЬ",
   tickets_h: "КУПИТЬ БИЛЕТ",
-  foot_xtix: "Билеты продаются через xtix:",
+  foot_xtix: "Билеты продаются через xtix",
 
   strip_buy: "КУПИТЬ БИЛЕТ",
   strip_from: 'ОТ <span class="num">2000</span> ДИН',
@@ -110,7 +110,7 @@ const SR = {
     "<p>Bićeš mnogo bliže sceni nego inače, dovoljno blizu da vidiš baš sve. A glumci se neće praviti da ne postojiš. Želimo da budeš deo predstave i daćemo sve od sebe da se osećaš kao da si i sam ušao u ovu priču.</p>",
 
   tickets_h: "KUPI ULAZNICU",
-  foot_xtix: "Ulaznice se prodaju preko xtix-a:",
+  foot_xtix: "Ulaznice se prodaju preko xtix-a",
 
   strip_buy: "KUPI ULAZNICU",
   strip_from: "OD 2.000 RSD",
