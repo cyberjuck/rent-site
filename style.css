@@ -287,18 +287,28 @@ html[lang="ru"] .strip [data-i18n="strip_from"] { --k: 1; }
 .manifesto { --c: var(--pink); }
 .drugstore, .ty-hero { --c: var(--black); }
 .insta { --c: var(--orange); }
+/* fx.js splits every big line into visual lines (.ln) and words (.w).
+   Hovering a word (the letters themselves) turns its whole visual line into an outline. */
 @media (hover: hover) {
-  .hero .t, .manifesto .t, .drugstore .t, .insta .t, .ty-hero .t {
+  .fx .ln {
     color: transparent;
-    -webkit-text-stroke: 2px var(--c);
-    background: linear-gradient(var(--c), var(--c)) left center / 100% 100% no-repeat;
+    -webkit-text-stroke: 2px transparent; /* stroke only while hovered, so letters keep their exact weight */
+    background-image: linear-gradient(var(--c), var(--c));
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    background-size: 100% 100%;
     -webkit-background-clip: text; background-clip: text;
-    transition: background-size .45s cubic-bezier(.55, 0, .9, .45); /* ease-in */
+    /* extra room so swashy Rock Salt glyphs get fully filled; layout unchanged */
+    padding: .4em .25em; margin: 0 -.25em;
+    -webkit-box-decoration-break: clone; box-decoration-break: clone;
+    transition: background-size .16s cubic-bezier(.2, .8, .2, 1), -webkit-text-stroke-color 0s .16s;
   }
-  .hero .t:hover, .manifesto .t:hover, .drugstore .t:hover, .insta .t:hover, .ty-hero .t:hover {
+  .fx .ln.on {
+    -webkit-text-stroke-color: var(--c);
     background-size: 0% 100%;
+    transition: background-size .2s cubic-bezier(.75, 0, .25, 1), -webkit-text-stroke-color 0s;
   }
-  .insta__link:hover { color: transparent; }
+  .insta__link:hover { --c: #D84F2B; }
 }
 
 /* =====================================================================
@@ -306,7 +316,7 @@ html[lang="ru"] .strip [data-i18n="strip_from"] { --k: 1; }
    desktop — from their side, mobile — from below
    ===================================================================== */
 .anim .row__img img {
-  transition: clip-path 1.1s cubic-bezier(.7, 0, .2, 1), transform 1.4s cubic-bezier(.2, .7, .2, 1);
+  transition: clip-path .65s cubic-bezier(.65, 0, .2, 1), transform .85s cubic-bezier(.2, .7, .2, 1);
   transform: scale(1.15);
 }
 .anim .row .row__img img { clip-path: inset(0 0 0 100%); }      /* photo on the right: opens from right */

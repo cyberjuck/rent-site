@@ -54,13 +54,3 @@ document.querySelectorAll(".row__img img").forEach((img) => {
   img.addEventListener("error", hide);
 });
 
-// ===== Photos: reveal on scroll =====
-if ("IntersectionObserver" in window) {
-  document.documentElement.classList.add("anim");
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
-      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
-    });
-  }, { threshold: 0.25 });
-  document.querySelectorAll(".row__img").forEach((el) => io.observe(el));
-}
