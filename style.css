@@ -116,7 +116,7 @@ section, [id] { scroll-margin-top: var(--header-h); }
   padding: 60px 48px 60px clamp(24px, 6.94vw, 100px);
 }
 .row--rev .row__text { padding: 70px clamp(24px, 6.94vw, 100px) 70px 48px; }
-.row__img { background: #1a1a1a; overflow: hidden; }
+.row__img { overflow: hidden; }
 .row__img img { width: 100%; height: 100%; object-fit: cover; }
 
 /* ===== Manifesto ===== */
@@ -254,4 +254,68 @@ html[lang="ru"] .strip [data-i18n="strip_from"] { --k: 1; }
   .footer__row { display: flex; flex-direction: column; gap: 16px; padding: 0; }
   .footer__row + .footer__row { margin-top: 16px; }
   .footer__year { text-align: left; }
+}
+
+/* =====================================================================
+   PAPER TEXTURE on big-word blocks (as in Figma: PAPER3 layers)
+   ::before = under the text, ::after = over the text
+   ===================================================================== */
+.hero, .manifesto, .drugstore, .insta, .ty-hero {
+  position: relative; isolation: isolate; overflow: hidden;
+}
+.hero > *, .manifesto > *, .drugstore > *, .insta > *, .ty-hero > * { position: relative; z-index: 1; }
+.hero::before, .hero::after,
+.manifesto::before, .manifesto::after,
+.drugstore::before, .drugstore::after,
+.insta::before, .insta::after,
+.ty-hero::before, .ty-hero::after {
+  content: ""; position: absolute; inset: -8%;
+  background: url(images/paper.jpg) center / cover no-repeat;
+  pointer-events: none;
+}
+/* black blocks: paper 10% under the text + color dodge 100% over it */
+.hero::before, .manifesto::before, .insta::before { z-index: 0; opacity: .1; }
+.hero::after, .manifesto::after, .insta::after { z-index: 2; mix-blend-mode: color-dodge; }
+/* pink blocks: color dodge 40% + linear dodge 30%, both over the text */
+.drugstore::before, .ty-hero::before { z-index: 2; mix-blend-mode: color-dodge; opacity: .4; }
+.drugstore::after, .ty-hero::after { z-index: 2; mix-blend-mode: plus-lighter; opacity: .3; }
+
+/* =====================================================================
+   BIG WORDS: on hover each line turns into an outline (fill wipes away)
+   ===================================================================== */
+.hero { --c: var(--violet); }
+.manifesto { --c: var(--pink); }
+.drugstore, .ty-hero { --c: var(--black); }
+.insta { --c: var(--orange); }
+@media (hover: hover) {
+  .hero .t, .manifesto .t, .drugstore .t, .insta .t, .ty-hero .t {
+    color: transparent;
+    -webkit-text-stroke: 2px var(--c);
+    background: linear-gradient(var(--c), var(--c)) left center / 100% 100% no-repeat;
+    -webkit-background-clip: text; background-clip: text;
+    transition: background-size .45s cubic-bezier(.55, 0, .9, .45); /* ease-in */
+  }
+  .hero .t:hover, .manifesto .t:hover, .drugstore .t:hover, .insta .t:hover, .ty-hero .t:hover {
+    background-size: 0% 100%;
+  }
+  .insta__link:hover { color: transparent; }
+}
+
+/* =====================================================================
+   PHOTOS: slide in when scrolled into view
+   desktop — from their side, mobile — from below
+   ===================================================================== */
+.anim .row__img img {
+  transition: clip-path 1.1s cubic-bezier(.7, 0, .2, 1), transform 1.4s cubic-bezier(.2, .7, .2, 1);
+  transform: scale(1.15);
+}
+.anim .row .row__img img { clip-path: inset(0 0 0 100%); }      /* photo on the right: opens from right */
+.anim .row--rev .row__img img { clip-path: inset(0 100% 0 0); } /* photo on the left: opens from left */
+.anim .row__img.in img { clip-path: inset(0 0 0 0); transform: scale(1); }
+@media (max-width: 899px) {
+  .anim .row .row__img img, .anim .row--rev .row__img img { clip-path: inset(100% 0 0 0); transform: translateY(40px) scale(1.1); }
+  .anim .row .row__img.in img, .anim .row--rev .row__img.in img { clip-path: inset(0 0 0 0); transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .anim .row__img img { clip-path: none !important; transform: none !important; transition: none; }
 }
