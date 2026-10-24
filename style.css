@@ -287,28 +287,26 @@ html[lang="ru"] .strip [data-i18n="strip_from"] { --k: 1; }
 .manifesto { --c: var(--pink); }
 .drugstore, .ty-hero { --c: var(--black); }
 .insta { --c: var(--orange); }
-/* fx.js splits every big line into visual lines (.ln) and words (.w).
-   Hovering a word (the letters themselves) turns its whole visual line into an outline. */
-@media (hover: hover) {
-  .fx .ln {
-    color: transparent;
-    -webkit-text-stroke: 2px transparent; /* stroke only while hovered, so letters keep their exact weight */
-    background-image: linear-gradient(var(--c), var(--c));
-    background-repeat: no-repeat;
-    background-position: 100% 50%;
-    background-size: 100% 100%;
-    -webkit-background-clip: text; background-clip: text;
-    /* extra room so swashy Rock Salt glyphs get fully filled; layout unchanged */
-    padding: .4em .25em; margin: 0 -.25em;
-    -webkit-box-decoration-break: clone; box-decoration-break: clone;
-    transition: background-size .16s cubic-bezier(.2, .8, .2, 1), -webkit-text-stroke-color 0s .16s;
+/* fx.js: per visual line — .ln-o (text, gets a 1.5px inside outline) + .ln-f (fill on top, wipes away) */
+@media (hover: hover) and (pointer: fine) {
+  .fx .ln { position: relative; }
+  .fx .ln.ring .ln-o { filter: url(#ring); }
+  .fx .ln-f {
+    position: absolute; left: 0; top: 0;
+    padding: .45em .35em;              /* room for swashy glyphs inside the mask */
+    white-space: pre; pointer-events: none; color: inherit;
+    -webkit-mask-image: linear-gradient(90deg, transparent 40%, #000 60%);
+            mask-image: linear-gradient(90deg, transparent 40%, #000 60%);
+    -webkit-mask-size: 250% 100%; mask-size: 250% 100%;
+    -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+    -webkit-mask-position: 100% 0; mask-position: 100% 0;
+    transition: -webkit-mask-position .34s cubic-bezier(.33, 0, .2, 1), mask-position .34s cubic-bezier(.33, 0, .2, 1);
   }
-  .fx .ln.on {
-    -webkit-text-stroke-color: var(--c);
-    background-size: 0% 100%;
-    transition: background-size .2s cubic-bezier(.75, 0, .25, 1), -webkit-text-stroke-color 0s;
+  .fx .ln.on .ln-f {
+    -webkit-mask-position: 0% 0; mask-position: 0% 0;
+    transition: -webkit-mask-position .46s cubic-bezier(.65, 0, .35, 1), mask-position .46s cubic-bezier(.65, 0, .35, 1);
   }
-  .insta__link:hover { --c: #D84F2B; }
+  .insta__link:hover { color: #D84F2B; }
 }
 
 /* =====================================================================

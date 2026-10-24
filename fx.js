@@ -1,17 +1,32 @@
-// ===== Big words: split into visual lines, outline a line when its letters are hovered =====
+// ===== Big words: outline on hover, per visual line =====
+// Each line becomes: <span class="ln"><span class="ln-o">…words…</span><span class="ln-f">same text</span></span>
+//   .ln-o — the text itself; turns into a 1.5px INSIDE outline (SVG filter) while active
+//   .ln-f — solid fill layer on top; its mask slides away with a soft gradient edge
+// The line is active only while the pointer is over the letters (ink box of a word),
+// re-checked on scroll too, so it reacts when the page moves under a still mouse.
 (function () {
+  if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
   const SEL = ".hero .t, .manifesto .t, .drugstore .t, .insta .t, .ty-hero .t";
   const els = [...document.querySelectorAll(SEL)];
   if (!els.length) return;
 
-  // 1) wrap every word once: <span class="w">word</span>
+  // inner-stroke filter: glyph minus glyph eroded by 1.5px = 1.5px ring inside the letter
+  const svgNS = "http://www.w3.org/2000/svg";
+  const svg = document.createElementNS(svgNS, "svg");
+  svg.setAttribute("width", "0"); svg.setAttribute("height", "0");
+  svg.style.position = "absolute";
+  svg.innerHTML = '<filter id="ring" x="-5%" y="-30%" width="110%" height="160%" color-interpolation-filters="sRGB">' +
+    '<feMorphology in="SourceAlpha" operator="erode" radius="1.5" result="e"/>' +
+    '<feComposite in="SourceGraphic" in2="e" operator="out"/></filter>';
+  document.body.appendChild(svg);
+
+  // 1) wrap words once
   els.forEach((el) => {
     const walk = (node) => {
       [...node.childNodes].forEach((n) => {
         if (n.nodeType === 3) {
-          const parts = n.textContent.split(/( +)/);
           const frag = document.createDocumentFragment();
-          parts.forEach((p) => {
+          n.textContent.split(/( +)/).forEach((p) => {
             if (!p) return;
             if (/^ +$/.test(p)) frag.appendChild(document.createTextNode(p));
             else { const s = document.createElement("span"); s.className = "w"; s.textContent = p; frag.appendChild(s); }
@@ -23,58 +38,92 @@
     walk(el);
   });
 
-  // 2) group words that sit on the same visual line into <span class="ln">
+  const canvas = document.createElement("canvas").getContext("2d");
+  let lines = [];
+
+  // 2) group words into visual lines, build fill layer, measure ink band
   function group() {
     els.forEach((el) => {
-      el.querySelectorAll(".ln").forEach((ln) => ln.replaceWith(...ln.childNodes));
+      el.querySelectorAll(".ln").forEach((ln) => ln.replaceWith(...ln.querySelector(".ln-o").childNodes));
       el.normalize();
-      let line = null, top = null;
+      let o = null, top = null;
       [...el.childNodes].forEach((n) => {
-        if (n.nodeType === 1 && n.tagName === "BR") { line = null; return; }
+        if (n.nodeType === 1 && n.tagName === "BR") { o = null; return; }
         if (n.nodeType === 1 && n.classList.contains("w")) {
           const t = Math.round(n.getBoundingClientRect().top);
-          if (line === null || Math.abs(t - top) > 4) {
-            line = document.createElement("span"); line.className = "ln";
-            n.before(line); top = t;
+          if (o === null || Math.abs(t - top) > 4) {
+            const ln = document.createElement("span"); ln.className = "ln";
+            o = document.createElement("span"); o.className = "ln-o";
+            ln.appendChild(o); n.before(ln); top = t;
           }
-          line.appendChild(n);
-        } else if (line && n.nodeType === 3) {
-          // a space: keep it inside the line only if the next word stays on this line
+          o.appendChild(n);
+        } else if (o && n.nodeType === 3) {
           const next = n.nextSibling;
           if (next && next.nodeType === 1 && next.classList.contains("w") &&
-              Math.abs(Math.round(next.getBoundingClientRect().top) - top) <= 4) line.appendChild(n);
+              Math.abs(Math.round(next.getBoundingClientRect().top) - top) <= 4) o.appendChild(n);
         }
       });
     });
+
+    lines = [];
+    els.forEach((el) => el.querySelectorAll(".ln").forEach((ln) => {
+      const o = ln.querySelector(".ln-o");
+      const f = document.createElement("span");
+      f.className = "ln-f"; f.setAttribute("aria-hidden", "true");
+      const fi = document.createElement("span");
+      fi.textContent = o.textContent;
+      f.appendChild(fi);
+      ln.appendChild(f);
+      // align fill layer exactly over the text (compare the two inline text boxes → same baseline)
+      const ro = o.getBoundingClientRect(), ri = fi.getBoundingClientRect();
+      f.style.transform = `translate(${ro.left - ri.left}px, ${ro.top - ri.top}px)`;
+      // ink band of capitals/letters relative to the word box top
+      const so = getComputedStyle(o);
+      canvas.font = `${so.fontStyle} ${so.fontWeight} ${so.fontSize} ${so.fontFamily}`;
+      let txt = o.textContent;
+      if (so.textTransform === "uppercase") txt = txt.toUpperCase();
+      const m = canvas.measureText(txt);
+      const asc = m.fontBoundingBoxAscent || parseFloat(so.fontSize) * 0.9;
+      lines.push({
+        el: ln, words: [...o.querySelectorAll(".w")],
+        inkTop: asc - m.actualBoundingBoxAscent, inkBot: asc + m.actualBoundingBoxDescent,
+      });
+    }));
   }
 
-  // 3) hover on the letters (word boxes), not on empty space of the line
-  let timer = null;
-  document.addEventListener("pointerover", (e) => {
-    const w = e.target.closest && e.target.closest(".fx .w");
-    if (!w) return;
-    clearTimeout(timer);
-    const ln = w.closest(".ln");
-    document.querySelectorAll(".fx .ln.on").forEach((x) => x !== ln && x.classList.remove("on"));
-    ln && ln.classList.add("on");
-  });
-  document.addEventListener("pointerout", (e) => {
-    const w = e.target.closest && e.target.closest(".fx .w");
-    if (!w) return;
-    const to = e.relatedTarget && e.relatedTarget.closest && e.relatedTarget.closest(".fx .w");
-    if (to && to.closest(".ln") === w.closest(".ln")) return;
-    clearTimeout(timer);
-    // tiny grace period so moving across the gap between two words doesn't flicker
-    timer = setTimeout(() => {
-      const ln = w.closest(".ln");
-      if (ln && !ln.querySelector(".w:hover")) ln.classList.remove("on");
-    }, 40);
-  });
+  // 3) hit-test the pointer against the letters
+  let px = -1, py = -1, raf = 0, active = null;
+  function check() {
+    raf = 0;
+    let hit = null;
+    if (px >= 0) {
+      for (const L of lines) {
+        for (const w of L.words) {
+          const r = w.getBoundingClientRect();
+          if (py < r.top + L.inkTop - 2 || py > r.top + L.inkBot + 2) break; // same band for the whole line
+          if (px >= r.left - 2 && px <= r.right + 2) { hit = L; break; }
+        }
+        if (hit) break;
+      }
+    }
+    if (hit === active) return;
+    if (active) {
+      const prev = active.el;
+      prev.classList.remove("on");
+      setTimeout(() => { if (!prev.classList.contains("on")) prev.classList.remove("ring"); }, 420);
+    }
+    active = hit;
+    if (hit) hit.el.classList.add("on", "ring");
+  }
+  const schedule = () => { if (!raf) raf = requestAnimationFrame(check); };
+  document.addEventListener("pointermove", (e) => { px = e.clientX; py = e.clientY; schedule(); }, { passive: true });
+  window.addEventListener("scroll", schedule, { passive: true });
+  document.documentElement.addEventListener("pointerleave", () => { px = py = -1; schedule(); });
 
-  const run = () => { group(); document.documentElement.classList.add("fx"); };
+  const run = () => { document.documentElement.classList.add("fx"); group(); schedule(); };
   (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(run);
   let rt;
-  window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(group, 120); });
+  window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { active = null; group(); schedule(); }, 150); });
 })();
 
 // ===== Photos: reveal on scroll =====
