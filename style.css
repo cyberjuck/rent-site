@@ -103,12 +103,21 @@ section, [id] { scroll-margin-top: var(--header-h); }
   padding: 40px 100px; transition: background .15s;
 }
 .lh90 { line-height: .9; }
-/* ticket perforation: column of 18px dots, 29px step, 99px from the right edge */
-.strip::after {
-  content: ""; position: absolute; top: 0; bottom: 0; right: 99px; width: 18px;
-  background: radial-gradient(circle, #020202 8.6px, transparent 9.2px) 0 -9px / 18px 29px repeat-y;
+/* ticket perforation: column of dots, first and last dot centred exactly on the top/bottom edge.
+   The tile is dot + gap; "space" spreads tiles over the whole height, the extra
+   (gap) at the bottom of the area pushes the last gap outside, so dots meet both edges. */
+.strip, .cta-bar { --dot: 18px; --gap: 11px; --dot-right: 99px; }
+.strip::after, .cta-bar::after {
+  content: ""; position: absolute; right: var(--dot-right); width: var(--dot);
+  top: calc(var(--dot) / -2); bottom: calc(var(--dot) / -2 - var(--gap));
+  background: radial-gradient(circle calc(var(--dot) / 2) at 50% calc(var(--dot) / 2), #020202 calc(100% - .6px), transparent 100%) 0 0 / var(--dot) calc(var(--dot) + var(--gap));
+  -webkit-mask: linear-gradient(#000 0 0) top / 100% calc(100% - var(--gap)) no-repeat;
+          mask: linear-gradient(#000 0 0) top / 100% calc(100% - var(--gap)) no-repeat;
+  background-repeat: no-repeat space;
   pointer-events: none;
 }
+.cta-bar { position: relative; overflow: hidden; --dot: 12px; --gap: 8px; --dot-right: 28px; }
+.cta-bar--fixed { position: fixed; }
 .strip:hover { background: var(--pink-hover); }
 
 /* ===== Text + photo rows ===== */
