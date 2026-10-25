@@ -97,9 +97,17 @@ section, [id] { scroll-margin-top: var(--header-h); }
 
 /* ===== Pink strip ===== */
 .strip {
-  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
   background: var(--pink); color: var(--black); text-align: center;
   padding: 40px 100px; transition: background .15s;
+}
+.lh90 { line-height: .9; }
+/* ticket perforation: column of 18px dots, 29px step, 99px from the right edge */
+.strip::after {
+  content: ""; position: absolute; top: 0; bottom: 0; right: 99px; width: 18px;
+  background: radial-gradient(circle, #020202 8.6px, transparent 9.2px) 0 -9px / 18px 29px repeat-y;
+  pointer-events: none;
 }
 .strip:hover { background: var(--pink-hover); }
 
@@ -210,7 +218,7 @@ html[lang="ru"] .cta-bar {
   letter-spacing: -0.03em;
 }
 html[lang="ru"] .strip [data-i18n="strip_buy"] { --k: calc(92 / 90); }
-html[lang="ru"] .strip [data-i18n="strip_from"] { --k: 1; }
+html[lang="ru"] .strip [data-i18n="strip_from"] { --k: calc(32 / 34); line-height: .91; } /* RU: Roboto Flex, not Rock Salt */
 .strip .num { font-size: calc(34em / 32); }
 
 /* ===== Tablet: tighten paddings ===== */
