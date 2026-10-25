@@ -16,7 +16,10 @@
   svg.setAttribute("width", "0"); svg.setAttribute("height", "0");
   svg.style.position = "absolute";
   svg.innerHTML = '<filter id="ring" x="-5%" y="-30%" width="110%" height="160%" color-interpolation-filters="sRGB">' +
-    '<feMorphology in="SourceAlpha" operator="erode" radius="1.5" result="e"/>' +
+    // round erosion (blur + threshold) instead of feMorphology's square one,
+    // so vertical, horizontal and diagonal strokes get exactly the same 1.5px width
+    '<feGaussianBlur in="SourceAlpha" stdDeviation="1.2" result="b"/>' +
+    '<feComponentTransfer in="b" result="e"><feFuncA type="linear" slope="20" intercept="-17.5"/></feComponentTransfer>' +
     '<feComposite in="SourceGraphic" in2="e" operator="out"/></filter>';
   document.body.appendChild(svg);
 
