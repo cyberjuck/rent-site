@@ -143,3 +143,22 @@
   }, { threshold: 0.2 });
   imgs.forEach((el) => io.observe(el));
 })();
+
+// ===== Ticket perforation: spread dots from edge to edge =====
+(function () {
+  const bars = document.querySelectorAll(".strip, .cta-bar");
+  if (!bars.length) return;
+  const fit = (el) => {
+    const cs = getComputedStyle(el);
+    const dot = parseFloat(cs.getPropertyValue("--dot")) || 18;
+    const gap = parseFloat(cs.getPropertyValue("--gap")) || 11;
+    const h = el.getBoundingClientRect().height;
+    if (!h) return;
+    const n = Math.max(1, Math.round(h / (dot + gap))); // number of intervals
+    el.style.setProperty("--step", (h / n) + "px");
+  };
+  const ro = "ResizeObserver" in window ? new ResizeObserver((es) => es.forEach((e) => fit(e.target))) : null;
+  bars.forEach((el) => { fit(el); ro && ro.observe(el); });
+  window.addEventListener("resize", () => bars.forEach(fit));
+  document.fonts && document.fonts.ready.then(() => bars.forEach(fit));
+})();
