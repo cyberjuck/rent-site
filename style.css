@@ -327,3 +327,7 @@ html[lang="ru"] .strip [data-i18n="strip_from"] { --k: 1; }
 @media (prefers-reduced-motion: reduce) {
   .anim .row__img img { clip-path: none !important; transform: none !important; transition: none; }
 }
+
+/* manifesto: its own vertical texture; both layers sit over the text (as in Figma) */
+.manifesto::before, .manifesto::after { background-image: url(images/paper-v.jpg); inset: 0 -6%; }
+.manifesto::before { z-index: 2; }
