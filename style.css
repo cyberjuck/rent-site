@@ -103,19 +103,19 @@ section, [id] { scroll-margin-top: var(--header-h); }
   padding: 40px 100px; transition: background .15s;
 }
 .lh90 { line-height: .9; }
-/* ticket perforation: column of dots; fx.js sets --step so that the first dot is centred
-   exactly on the top edge and the last one exactly on the bottom edge, at any height */
+/* ticket perforation = real holes (mask), so whatever is behind shows through.
+   fx.js sets --step so the first hole is centred on the top edge and the last one on the bottom edge. */
 .strip, .cta-bar { --dot: 18px; --gap: 11px; --dot-right: 99px; }
-.strip::after, .cta-bar::after {
-  content: ""; position: absolute; top: 0; bottom: 0; right: var(--dot-right); width: var(--dot);
-  background-image: radial-gradient(circle calc(var(--dot) / 2) at 50% calc(var(--dot) / 2), #020202 calc(100% - .6px), transparent 100%);
-  background-size: var(--dot) var(--step, calc(var(--dot) + var(--gap)));
-  background-position: 0 calc(var(--dot) / -2);
-  background-repeat: repeat-y;
-  pointer-events: none;
-}
-.cta-bar { position: relative; overflow: hidden; --dot: 12px; --gap: 8px; --dot-right: 28px; }
+.cta-bar { position: relative; --dot: 12px; --gap: 8px; --dot-right: 28px; }
 .cta-bar--fixed { position: fixed; }
+.strip, .cta-bar {
+  --holes: radial-gradient(circle calc(var(--dot) / 2) at 50% calc(var(--dot) / 2), #000 calc(100% - .6px), transparent 100%)
+           calc(100% - var(--dot-right)) calc(var(--dot) / -2) / var(--dot) var(--step, calc(var(--dot) + var(--gap))) repeat-y;
+  -webkit-mask: var(--holes), linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask: var(--holes), linear-gradient(#000 0 0);
+          mask-composite: exclude;
+}
 .strip:hover { background: var(--pink-hover); }
 
 /* ===== Text + photo rows ===== */
@@ -248,7 +248,9 @@ html[lang="ru"] .strip [data-i18n="strip_from"] { --k: calc(32 / 34); line-heigh
   .lhm141 { line-height: 1.41; }
   .lhm131 { line-height: 1.31; }
 
-  .cta-bar--fixed { display: flex; position: fixed; inset: auto 0 0 0; z-index: 40; }
+  /* floating ticket, not touching the screen edge (so mobile Safari doesn't stretch its colour under the toolbar) */
+  .cta-bar--fixed { display: flex; position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); z-index: 40; }
+  .menu .cta-bar { margin: 0 12px calc(12px + env(safe-area-inset-bottom, 0px)); }
   body.menu-open .cta-bar--fixed { display: none; }
   body.menu-open { overflow: hidden; }
 
