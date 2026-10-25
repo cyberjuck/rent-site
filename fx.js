@@ -107,23 +107,25 @@
       }
     }
     if (hit === active) return;
-    if (active) {
-      const prev = active.el;
-      prev.classList.remove("on");
-      setTimeout(() => { if (!prev.classList.contains("on")) prev.classList.remove("ring"); }, 420);
-    }
+    if (active) active.el.classList.remove("on");
     active = hit;
-    if (hit) hit.el.classList.add("on", "ring");
+    if (hit) hit.el.classList.add("on");
   }
   const schedule = () => { if (!raf) raf = requestAnimationFrame(check); };
-  document.addEventListener("pointermove", (e) => { px = e.clientX; py = e.clientY; schedule(); }, { passive: true });
+  document.addEventListener("pointermove", (e) => { px = e.clientX; py = e.clientY; check(); }, { passive: true });
   window.addEventListener("scroll", schedule, { passive: true });
   document.documentElement.addEventListener("pointerleave", () => { px = py = -1; schedule(); });
 
-  const run = () => { document.documentElement.classList.add("fx"); group(); schedule(); };
+  // pre-render the outline layer for blocks on screen, so hover reacts in the very first frame
+  const warm = new IntersectionObserver((entries) => {
+    entries.forEach((e) => e.target.querySelectorAll(".ln").forEach((ln) => ln.classList.toggle("ring", e.isIntersecting)));
+  }, { rootMargin: "200px 0px" });
+  const warmAll = () => new Set(els.map((el) => el.closest("section, a.insta, .insta"))).forEach((s) => { if (s) { warm.unobserve(s); warm.observe(s); } });
+
+  const run = () => { document.documentElement.classList.add("fx"); group(); warmAll(); schedule(); };
   (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(run);
   let rt;
-  window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { active = null; group(); schedule(); }, 150); });
+  window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { active = null; group(); warmAll(); schedule(); }, 150); });
 })();
 
 // ===== Photos: reveal on scroll =====
