@@ -251,6 +251,7 @@ html[lang="ru"] .strip [data-i18n="strip_from"] { --k: calc(32 / 34); line-heigh
   /* floating ticket, not touching the screen edge (so mobile Safari doesn't stretch its colour under the toolbar) */
   .cta-bar--fixed { display: flex; position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); z-index: 40; }
   .menu .cta-bar { margin: 0 12px calc(12px + env(safe-area-inset-bottom, 0px)); }
+  .cta-bar { height: 76px; }
   body.menu-open .cta-bar--fixed { display: none; }
   body.menu-open { overflow: hidden; }
 
@@ -267,7 +268,7 @@ html[lang="ru"] .strip [data-i18n="strip_from"] { --k: calc(32 / 34); line-heigh
   .tickets { padding: 40px 16px; gap: 12px; }
   .insta { padding: 40px 16px; gap: 12px; }
 
-  .footer { padding: 40px 16px 104px; }
+  .footer { padding: 40px 16px 120px; }
   .footer__row { display: flex; flex-direction: column; gap: 16px; padding: 0; }
   .footer__row + .footer__row { margin-top: 16px; }
   .footer__year { text-align: left; }
