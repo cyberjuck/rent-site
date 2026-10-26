@@ -51,26 +51,6 @@ const EN = {
   foot_refund: "Refund policy",
 };
 
-const RU = {
-  ...EN, // TODO: остальные русские тексты
-  nav_about: "ЧТО ТАКОЕ RENT",
-  nav_team: "КОМАНДА",
-  nav_expect: "ЧТО ОЖИДАТЬ",
-  nav_buy: "купить билет",
-
-  about_h: "ЧТО ТАКОЕ «RENT»",
-  our_h: "НАШ «RENT»",
-  every_h: "АРЕНДУЕШЬ ВСЕ",
-  team_h: "КОМАНДА",
-  expect_h: "ЧТО ОЖИДАТЬ",
-  tickets_h: "КУПИТЬ БИЛЕТ",
-  foot_xtix: "Билеты продаются через xtix",
-
-  strip_buy: "КУПИТЬ БИЛЕТ",
-  strip_from: 'ОТ <span class="num">2000</span> ДИН',
-  cta_buy: "КУПИТЬ БИЛЕТ",
-};
-
 const SR = {
   ...EN,
   nav_about: "ŠTA JE RENT",
@@ -117,4 +97,4 @@ const SR = {
   cta_buy: "KUPI ULAZNICU",
 };
 
-const I18N = { en: EN, ru: RU, sr: SR };
+const I18N = { en: EN, sr: SR };

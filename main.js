@@ -1,22 +1,13 @@
 // ===== Language switch =====
-const LANGS = ["en", "sr", "ru"];
-// Temporarily hidden languages (translations are kept). To bring Russian back: []
-const HIDDEN_LANGS = ["ru"];
-
-document.querySelectorAll(".langs button").forEach((b) => {
-  if (HIDDEN_LANGS.includes(b.dataset.lang)) b.hidden = true;
-});
+const LANGS = ["en", "sr"];
 
 function setLang(lang) {
-  if (!LANGS.includes(lang) || HIDDEN_LANGS.includes(lang)) lang = "en";
+  if (!LANGS.includes(lang)) lang = "en";
   const dict = I18N[lang];
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const v = dict[el.dataset.i18n];
     if (v === undefined) return;
-    // menu items: letter Ж is set slightly larger
-    el.innerHTML = el.closest(".header__nav, .menu__nav") || el.classList.contains("header__buy")
-      ? v.replace(/Ж/g, '<span class="zh">Ж</span>')
-      : v;
+    el.innerHTML = v;
   });
   document.documentElement.lang = lang;
   document.querySelectorAll(".langs button").forEach((b) =>

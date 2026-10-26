@@ -28,7 +28,7 @@ section, [id] { scroll-margin-top: var(--header-h); }
 /* --d = size on 1440 desktop, --m = size on 390 mobile (px, unitless) */
 .t {
   display: block;
-  font-size: min(calc(var(--d) * var(--k, 1) * 1px), calc(var(--d) * var(--k, 1) * 100vw / 1440));
+  font-size: min(calc(var(--d) * 1px), calc(var(--d) * 100vw / 1440));
   letter-spacing: -0.04em;
   line-height: 0.91;
 }
@@ -178,56 +178,6 @@ section, [id] { scroll-margin-top: var(--header-h); }
 .footer a:hover { color: var(--pink); }
 .footer .u { text-decoration: underline; }
 
-/* ===== Russian: Roboto Flex (Anton has no Cyrillic), axes from Figma ===== */
-:root {
-  /* pink ticket buttons */
-  --rf-btn: "wght" 700, "wdth" 45, "slnt" 0, "GRAD" 0, "XOPQ" 96, "XTRA" 468,
-            "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 760;
-  /* menu */
-  --rf-menu: "wght" 700, "wdth" 25, "slnt" 0, "GRAD" 0, "XOPQ" 96, "XTRA" 428,
-             "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 760;
-  /* headings */
-  --rf-head: "wght" 700, "wdth" 37, "slnt" 0, "GRAD" 0, "XOPQ" 96, "XTRA" 468,
-             "YOPQ" 79, "YTAS" 750, "YTDE" -203, "YTFI" 738, "YTLC" 514, "YTUC" 726;
-}
-html[lang="ru"] .a[data-i18n],
-html[lang="ru"] .header__nav a,
-html[lang="ru"] .header__buy,
-html[lang="ru"] .menu__nav a,
-html[lang="ru"] .cta-bar {
-  font-family: "Roboto Flex", "Anton", sans-serif;
-  font-weight: 700;
-  font-optical-sizing: auto;
-}
-
-/* headings: 100 instead of 90, -3% */
-html[lang="ru"] .a[data-i18n] {
-  --k: calc(100 / 90);
-  font-variation-settings: var(--rf-head);
-  letter-spacing: -0.03em;
-}
-
-/* menu: 33 instead of 30, -4%, letter Ж 35 */
-html[lang="ru"] .header__nav a,
-html[lang="ru"] .header__buy,
-html[lang="ru"] .menu__nav a {
-  font-variation-settings: var(--rf-menu);
-  letter-spacing: -0.04em;
-}
-html[lang="ru"] .header__nav, html[lang="ru"] .header__buy { font-size: calc(33em / 30); }
-html[lang="ru"] .menu__nav { font-size: calc(48px * 33 / 30); }
-.zh { font-size: calc(35em / 33); }
-
-/* pink ticket buttons: КУПИТЬ БИЛЕТ 92, ОТ/ДИН 32, 2000 34, -3% */
-html[lang="ru"] .strip .t,
-html[lang="ru"] .cta-bar {
-  font-variation-settings: var(--rf-btn);
-  letter-spacing: -0.03em;
-}
-html[lang="ru"] .strip [data-i18n="strip_buy"] { --k: calc(92 / 90); }
-html[lang="ru"] .strip [data-i18n="strip_from"] { --k: calc(32 / 34); line-height: .91; } /* RU: Roboto Flex, not Rock Salt */
-.strip .num { font-size: calc(34em / 32); }
-
 /* ===== Tablet: tighten paddings ===== */
 @media (max-width: 1200px) {
   .header { padding: 0 40px; font-size: 24px; }
@@ -238,7 +188,7 @@ html[lang="ru"] .strip [data-i18n="strip_from"] { --k: calc(32 / 34); line-heigh
 /* ===== Mobile ===== */
 @media (max-width: 899px) {
   :root { --header-h: 60px; }
-  .t { font-size: min(calc(var(--m) * var(--k, 1) * 100vw / 390), calc(var(--m) * var(--k, 1) * 1.6px)); }
+  .t { font-size: min(calc(var(--m) * 100vw / 390), calc(var(--m) * 1.6px)); }
   br.d { display: none; }
 
   .header { padding: 0 16px; justify-content: space-between; }
