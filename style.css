@@ -134,7 +134,7 @@ section, [id] { scroll-margin-top: var(--header-h); }
 }
 .row--rev .row__text { padding: 70px clamp(24px, 6.94vw, 100px) 70px 48px; }
 .row__img { overflow: hidden; }
-.row__img img { width: 100%; height: 100%; object-fit: cover; }
+.row__img img, .row__img video { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 /* ===== Manifesto ===== */
 .manifesto {
@@ -283,19 +283,19 @@ section, [id] { scroll-margin-top: var(--header-h); }
    PHOTOS: slide in when scrolled into view
    desktop — from their side, mobile — from below
    ===================================================================== */
-.anim .row__img img {
+.anim .row__img img, .anim .row__img video {
   transition: clip-path .65s cubic-bezier(.65, 0, .2, 1), transform .85s cubic-bezier(.2, .7, .2, 1);
   transform: scale(1.15);
 }
-.anim .row .row__img img { clip-path: inset(0 0 0 100%); }      /* photo on the right: opens from right */
-.anim .row--rev .row__img img { clip-path: inset(0 100% 0 0); } /* photo on the left: opens from left */
-.anim .row__img.in img { clip-path: inset(0 0 0 0); transform: scale(1); }
+.anim .row .row__img img, .anim .row .row__img video { clip-path: inset(0 0 0 100%); }      /* photo on the right: opens from right */
+.anim .row--rev .row__img img, .anim .row--rev .row__img video { clip-path: inset(0 100% 0 0); } /* photo on the left: opens from left */
+.anim .row__img.in img, .anim .row__img.in video { clip-path: inset(0 0 0 0); transform: scale(1); }
 @media (max-width: 899px) {
-  .anim .row .row__img img, .anim .row--rev .row__img img { clip-path: inset(100% 0 0 0); transform: translateY(40px) scale(1.1); }
-  .anim .row .row__img.in img, .anim .row--rev .row__img.in img { clip-path: inset(0 0 0 0); transform: none; }
+  .anim .row .row__img img, .anim .row--rev .row__img img, .anim .row .row__img video, .anim .row--rev .row__img video { clip-path: inset(100% 0 0 0); transform: translateY(40px) scale(1.1); }
+  .anim .row .row__img.in img, .anim .row--rev .row__img.in img, .anim .row .row__img.in video, .anim .row--rev .row__img.in video { clip-path: inset(0 0 0 0); transform: none; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .anim .row__img img { clip-path: none !important; transform: none !important; transition: none; }
+  .anim .row__img img, .anim .row__img video { clip-path: none !important; transform: none !important; transition: none; }
 }
 
 /* manifesto: its own vertical texture; both layers sit over the text (as in Figma) */
