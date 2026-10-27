@@ -103,6 +103,8 @@ section, [id] { scroll-margin-top: var(--header-h); }
   padding: 40px 100px; transition: background .15s;
 }
 .lh90 { line-height: .9; }
+/* white backdrop so the perforation holes of this strip look white */
+.strip-wrap--white { background: var(--white); }
 /* ticket perforation = real holes (mask), so whatever is behind shows through.
    fx.js sets --step so the first hole is centred on the top edge and the last one on the bottom edge. */
 .strip, .cta-bar { --dot: 18px; --gap: 11px; --dot-right: 99px; }
