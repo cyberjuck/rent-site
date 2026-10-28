@@ -6,22 +6,25 @@
 <title>THANK YOU — RENT MUSICAL BELGRADE</title>
 <meta name="robots" content="noindex">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="f77260aa-2fc8-4497-9ee6-ddd14eaf5aa1"></script>
-<link rel="stylesheet" href="../fonts.css?v=202610281912">
-<link rel="stylesheet" href="../style.css?v=202610281912">
+<link rel="stylesheet" href="../fonts.css?v=202610281914">
+<link rel="stylesheet" href="../style.css?v=202610281914">
 <style>
   /* This page opens inside the xtix widget (iframe), so it is just the pink block,
      scaled to the width of the frame. */
-  html, body.ty { background: var(--violet); padding: 0; min-height: 100%; }
+  html, body.ty { background: var(--black); padding: 0; min-height: 100%; }
   body.ty { min-height: 100vh; display: flex; }
   .ty-hero {
     flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 24px;
-    background: var(--violet); color: var(--black); text-align: center;
+    background: var(--black); color: var(--violet); text-align: center; --c: var(--violet);
     padding: clamp(24px, 3.5vw, 50px) 16px;
   }
   /* size follows the frame width (mobile proportions), never bigger than desktop size */
   .ty-hero .t { font-size: min(calc(var(--m) * 100vw / 390), calc(var(--d) * 1px)); }
   .ty-hero { gap: 12px; }
   /* wider frames: desktop layout from Figma, scaled down to the frame width */
+  /* black block texture, same as the black blocks on the main page */
+  .ty-hero::before { z-index: 0; opacity: .1; mix-blend-mode: normal; }
+  .ty-hero::after { z-index: 2; mix-blend-mode: color-dodge; opacity: 1; }
   @media (min-width: 560px) {
     .ty-hero { gap: clamp(12px, 1.7vw, 24px); }
     .ty-hero .t { font-size: min(calc(var(--d) * 100vw / 1440), calc(var(--d) * 1px)); }
@@ -37,6 +40,6 @@
     <p class="t a up lh98" style="--d:90;--m:50">We’ve sent the ticket to your email,<br class="d"> Please bring it to the entrance</p>
   </div>
 </main>
-<script src="../fx.js?v=202610281912"></script>
+<script src="../fx.js?v=202610281914"></script>
 </body>
 </html>
