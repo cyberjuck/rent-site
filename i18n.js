@@ -62,7 +62,7 @@ const SR = {
   about_p:
     "<p>RENT je <b>rok mjuzikl</b> Džonatana Larsona koji prati <b>godinu dana iz života grupe mladih umetnika u Njujorku početkom devedesetih godina prošlog veka.</b> Oni nemaju novca za kiriju, zaljubljuju se, gube jedni druge i pokušavaju da žive usred epidemije side.</p>" +
     "<p>Larson je ovaj mjuzikl napisao inspirisan sopstvenim prijateljima i krajem u kom je živeo. Preminuo je iznenada u 35. godini, noć uoči premijere, i nikada nije video šta je usledilo: RENT je stigao na <b>Brodvej</b>, osvojio <b>Pulicerovu nagradu</b> i <b>četiri Toni nagrade</b> (uključujući onu za najbolji mjuzikl), izvodio se dvanaest godina i postao jedan od najupečatljivijih mjuzikala svih vremena.</p>" +
-    "<p>Ljudi se razboljevaju, zaljubljuju, odljubljuju i ponašaju se kao potpuni kreteni – i sve to često u istoj pesmi. A nekako ipak na kraju navijaš za njih.</p>" +
+    "<p>Likovi se razboljevaju, zaljubljuju, odljubljuju i ponašaju kao potpuni kreteni – i sve to često u istoj pesmi. A nekako na kraju ipak navijaš za njih.</p>" +
     "<p>Larson je uzeo Pučinijevu operu La Bohème i preselio je u Njujork devedesetih. <b>Trideset godina kasnije, mi njegov Njujork dovodimo u Beograd. I ova priča je ovde i danas podjednako aktuelna.</b></p>",
 
   our_h: "NAŠ RENT",
