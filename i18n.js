@@ -45,7 +45,7 @@ const EN = {
   support_p:
     "<p>We’re an independent team putting this show together entirely on our own. And we want to keep RENT affordable for as many people as possible. That’s why our <b>regular ticket costs 2000 RSD.</b> But to cover what this show actually costs, we need more. So we came up with <b>supporter tickets for 3000, 5000, 7000 or 10000 RSD.</b> You won’t get anything extra. Same show, no special seats. Your support will help us pay for equipment and venue rental, put on more performances of RENT in Belgrade, and hopefully even pay our cast and crew a little something.</p>" +
     "<p><b>And it works both ways.</b> If 2000 RSD is too much but you still want to see the show, just reach out to us. We’ll figure something out! And if you’d like to support our team in a bigger way, we’d love to hear from you too.</p>",
-  offline_h: "offline tickets",
+  offline_h: "paper tickets",
   offline_p:
     "<p>Soon you’ll be able to grab a real paper ticket from our friends at cafes and bars around Belgrade. No platform fees — every dinar goes straight to the show. The list of spots will be posted here and on <a class=\"u\" href=\"https://www.instagram.com/everything.is.rent/\" target=\"_blank\" rel=\"noopener\">Instagram</a> very soon.</p>",
 
@@ -103,7 +103,7 @@ const SR = {
   support_p:
     "<p>Mi smo nezavisna ekipa i ovu predstavu pravimo potpuno sami. Želimo da RENT bude dostupan što većem broju ljudi. Zato <b>obična ulaznica košta 2000 RSD.</b> Ali da bismo pokrili sve što ova predstava stvarno košta, treba nam više. Zato smo smislili i <b>ulaznice podrške od 3000, 5000, 7000 ili 10000 RSD.</b> Uz njih ne dobijaš ništa ekstra: ista predstava, nema posebnih mesta. Tvoja podrška pomoći će nam da platimo opremu i najam prostora, odigramo još izvođenja RENT-a u Beogradu i, nadamo se, damo bar nešto našoj ekipi.</p>" +
     "<p><b>A važi i obrnuto.</b> Ako ti je 2000 RSD previše, a ipak želiš da dođeš, samo nam se javi. Snaći ćemo se! I ako želiš da podržiš našu ekipu na veći način, rado ćemo te čuti.</p>",
-  offline_h: "ulaznice uživo",
+  offline_h: "papirne ulaznice",
   offline_p:
     "<p>Uskoro ćeš moći da kupiš pravu papirnu ulaznicu kod naših prijatelja u kafićima i barovima po Beogradu. Bez provizije platforme — svaki dinar ide pravo u predstavu. Spisak mesta uskoro objavljujemo ovde i na <a class=\"u\" href=\"https://www.instagram.com/everything.is.rent/\" target=\"_blank\" rel=\"noopener\">Instagramu</a>.</p>",
   foot_xtix: "Ulaznice se prodaju preko xtix-a",
