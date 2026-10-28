@@ -5,73 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>THANK YOU — RENT MUSICAL BELGRADE</title>
 <meta name="robots" content="noindex">
-<link rel="icon" href="../favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
-<link rel="apple-touch-icon" href="../apple-touch-icon.png">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="f77260aa-2fc8-4497-9ee6-ddd14eaf5aa1"></script>
-<link rel="stylesheet" href="../fonts.css?v=202610281216">
-<link rel="stylesheet" href="../style.css?v=202610281216">
+<link rel="stylesheet" href="../fonts.css?v=202610281508">
+<link rel="stylesheet" href="../style.css?v=202610281508">
 <style>
+  /* This page opens inside the xtix widget (iframe), so it is just the pink block,
+     scaled to the width of the frame. */
+  html, body.ty { background: var(--violet); padding: 0; min-height: 100%; }
+  body.ty { min-height: 100vh; display: flex; }
   .ty-hero {
+    flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 24px;
     background: var(--violet); color: var(--black); text-align: center;
-    padding: 50px 100px; display: flex; flex-direction: column; gap: 24px;
+    padding: clamp(24px, 3.5vw, 50px) 16px;
   }
-  html { background: var(--violet); } /* solid: Safari ignores gradients for the bounce area */
-  body.ty { background: var(--violet); }
-  .ty-header { background: var(--violet); color: var(--black); justify-content: center; }
-  .ty-back {
-    font-family: "Anton", sans-serif; font-size: 30px; line-height: .91;
-    letter-spacing: -0.04em; text-transform: uppercase;
-    transition: opacity .15s;
-  }
-  .ty-back:hover { opacity: .7; }
-  .ty-back { display: inline-flex; align-items: center; gap: .2em; }
-  .ty-arrow { width: .8em; height: .55em; }
-  @media (max-width: 1200px) { .ty-hero { padding-left: 40px; padding-right: 40px; } }
-  @media (max-width: 899px) {
-    .ty-header { justify-content: center; }
-    .ty-hero { padding: 24px 16px 40px; gap: 12px; }
-    .footer { padding-bottom: 40px; }
+  /* size follows the frame width (mobile proportions), never bigger than desktop size */
+  .ty-hero .t { font-size: min(calc(var(--m) * 100vw / 390), calc(var(--d) * 1px)); }
+  .ty-hero { gap: 12px; }
+  /* wider frames: desktop layout from Figma, scaled down to the frame width */
+  @media (min-width: 560px) {
+    .ty-hero { gap: clamp(12px, 1.7vw, 24px); }
+    .ty-hero .t { font-size: min(calc(var(--d) * 100vw / 1440), calc(var(--d) * 1px)); }
+    .ty-hero br.d { display: inline; }
   }
 </style>
 </head>
 <body class="ty">
-
-<header class="header ty-header">
-  <a class="ty-back" href="../"><svg class="ty-arrow" viewBox="0 0 24 16" aria-hidden="true"><path d="M23 8H3M9 2L3 8l6 6" fill="none" stroke="currentColor" stroke-width="3"/></svg>come back to website</a>
-</header>
-
-<main>
-<section class="ty-hero">
+<main class="ty-hero">
   <p class="t rs up" style="--d:120;--m:43">thank you</p>
   <div>
-    <p class="t a up" style="--d:190;--m:90">for your purchase!</p>
+    <p class="t a up" style="--d:190;--m:90">for your<br class="d"> purchase!</p>
     <p class="t a up lh98" style="--d:90;--m:50">We’ve sent the ticket to your email,<br class="d"> Please bring it to the entrance</p>
   </div>
-</section>
-
-<section class="insta">
-  <span class="t rs up" style="--d:120;--m:37">&amp; subscribe</span>
-  <span class="stack">
-    <span class="t a up" style="--d:190;--m:50">to our</span>
-    <a class="insta__link t a up lh88" style="--d:310;--m:90" href="https://www.instagram.com/everything.is.rent/" target="_blank" rel="noopener">instagram</a>
-  </span>
-</section>
 </main>
-
-<footer class="footer">
-  <div class="footer__row">
-    <p>Udruzenje Kuraz</p>
-    <p>Beograd, Knez Miletina, 43<br>PIB 115641955<br>Maticni broj 28414927</p>
-    <p><a href="mailto:hello@kuraz-theatre.company">hello@kuraz-theatre.company</a><br><a href="tel:+381621673184">+381621673184</a></p>
-  </div>
-  <div class="footer__row">
-    <p><span>Tickets sold via xtix</span><br><a class="u" href="https://xtix.ai/documents/terms-of-service" target="_blank" rel="noopener">Terms of service</a><br><a class="u" href="https://xtix.ai/documents/organizer-refund-policy" target="_blank" rel="noopener">Refund policy</a></p>
-    <p class="footer__wide">This amateur production is presented by arrangement with Music Theatre International.<br>All authorised performance materials are also supplied by MTI www.mtishows.co.uk<br><a class="u" href="../credits-sheet.pdf" target="_blank" rel="noopener">Credits sheet</a></p>
-    <p class="footer__year">2026</p>
-  </div>
-</footer>
-
-<script src="../fx.js?v=202610281216"></script>
+<script src="../fx.js?v=202610281508"></script>
 </body>
 </html>
