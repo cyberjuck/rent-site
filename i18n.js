@@ -41,7 +41,6 @@ const EN = {
 
   tickets_h: "buy a ticket",
 
-  tix_cta: "buy tickets here<br>and support if you can",
   support_h: "support us",
   support_p:
     "<p>We’re an independent team putting this show together entirely on our own. And we want to keep RENT affordable for as many people as possible. That’s why our <b>regular ticket costs 2000 RSD.</b> But to cover what this show actually costs, we need more. So we came up with <b>supporter tickets for 3000, 5000, 7000 or 10000 RSD.</b> You won’t get anything extra. Same show, no special seats. Your support will help us pay for equipment and venue rental, put on more performances of RENT in Belgrade, and hopefully even pay our cast and crew a little something.</p>" +
@@ -100,7 +99,6 @@ const SR = {
 
   tickets_h: "KUPI ULAZNICU",
 
-  tix_cta: "kupi ulaznicu ovde<br>i podrži nas ako možeš",
   support_h: "podrži nas",
   support_p:
     "<p>Mi smo nezavisna ekipa i ovu predstavu pravimo potpuno sami. Želimo da RENT bude dostupan što većem broju ljudi. Zato <b>obična ulaznica košta 2000 RSD.</b> Ali da bismo pokrili sve što ova predstava stvarno košta, treba nam više. Zato smo smislili i <b>ulaznice podrške od 3000, 5000, 7000 ili 10000 RSD.</b> Uz njih ne dobijaš ništa ekstra: ista predstava, nema posebnih mesta. Tvoja podrška pomoći će nam da platimo opremu i najam prostora, odigramo još izvođenja RENT-a u Beogradu i, nadamo se, damo bar nešto našoj ekipi.</p>" +
