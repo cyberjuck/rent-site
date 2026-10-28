@@ -149,11 +149,17 @@ section, [id] { scroll-margin-top: var(--header-h); }
 }
 
 /* ===== Tickets ===== */
+.drugstore { padding-bottom: 16px; }
 .tickets {
-  background: var(--white); text-align: center;
-  padding: 70px 100px; display: flex; flex-direction: column; align-items: center; gap: 24px;
+  background: var(--violet); padding: 12px 100px 70px;
+  display: flex; justify-content: center;
 }
-.tickets__widget { width: 100%; max-width: 736px; min-height: 200px; text-align: left; }
+.tickets__widget { width: 100%; max-width: 715px; min-height: 200px; text-align: left; position: relative; z-index: 3; } /* above the paper texture */
+
+/* ===== Support us / Offline tickets ===== */
+.info { background: var(--white); display: grid; grid-template-columns: 744fr 696fr; }
+.info__col { display: flex; flex-direction: column; gap: 32px; padding: 60px 48px 60px clamp(24px, 6.94vw, 100px); }
+.info__col + .info__col { padding: 60px clamp(24px, 6.94vw, 100px) 60px 0; }
 
 /* ===== Instagram ===== */
 .insta {
@@ -217,8 +223,11 @@ section, [id] { scroll-margin-top: var(--header-h); }
   .body { font-size: 16px; }
 
   .manifesto { padding: 40px 16px; gap: 12px; }
-  .drugstore { padding: 40px 16px; gap: 12px; }
-  .tickets { padding: 40px 16px; gap: 12px; }
+  .drugstore { padding: 40px 16px 12px; gap: 12px; }
+  .tickets { padding: 0 16px 40px; }
+  .info { grid-template-columns: 1fr; }
+  .info__col, .info__col + .info__col { padding: 32px 16px 8px; gap: 16px; }
+  .info__col + .info__col { padding-bottom: 40px; }
   .insta { padding: 40px 16px; gap: 12px; }
 
   .footer { padding: 40px 16px 120px; }
@@ -298,6 +307,15 @@ section, [id] { scroll-margin-top: var(--header-h); }
 @media (prefers-reduced-motion: reduce) {
   .anim .row__img img, .anim .row__img video { clip-path: none !important; transform: none !important; transition: none; }
 }
+
+/* tickets block continues the Drugstore texture (widget stays above it, untouched) */
+.tickets { position: relative; isolation: isolate; overflow: hidden; }
+.tickets::before, .tickets::after {
+  content: ""; position: absolute; inset: -8%; pointer-events: none;
+  background: url(images/paper.jpg) center / cover no-repeat;
+}
+.tickets::before { z-index: 2; mix-blend-mode: color-dodge; opacity: .4; transform: scaleY(-1); }
+.tickets::after { z-index: 2; mix-blend-mode: plus-lighter; opacity: .3; transform: scaleY(-1); }
 
 /* manifesto: its own vertical texture; both layers sit over the text (as in Figma) */
 .manifesto::before, .manifesto::after { background-image: url(images/paper-v.jpg); inset: 0 -6%; }

@@ -14,6 +14,7 @@ function setLang(lang) {
     b.classList.toggle("is-active", b.dataset.lang === lang)
   );
   try { localStorage.setItem("lang", lang); } catch (e) {}
+  document.dispatchEvent(new Event("langchange"));
 }
 
 let saved = "en";

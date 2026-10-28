@@ -41,6 +41,15 @@ const EN = {
 
   tickets_h: "buy a ticket",
 
+  tix_cta: "buy tickets here<br>and support if you can",
+  support_h: "support us",
+  support_p:
+    "<p>We’re an independent team putting this show together entirely on our own. And we want to keep RENT affordable for as many people as possible. That’s why our <b>regular ticket costs 2000 RSD.</b> But to cover what this show actually costs, we need more. So we came up with <b>supporter tickets for 3000, 5000, 7000 or 10000 RSD.</b> You won’t get anything extra. Same show, no special seats. Your support will help us pay for equipment and venue rental, put on more performances of RENT in Belgrade, and hopefully even pay our cast and crew a little something.</p>" +
+    "<p><b>And it works both ways.</b> If 2000 RSD is too much but you still want to see the show, just reach out to us. We’ll figure something out! And if you’d like to support our team in a bigger way, we’d love to hear from you too.</p>",
+  offline_h: "offline tickets",
+  offline_p:
+    "<p>Soon you’ll be able to grab a real paper ticket from our friends at cafes and bars around Belgrade. No platform fees — every dinar goes straight to the show. The list of spots will be posted here and on Instagram very soon.</p>",
+
   // pink ticket bars
   strip_buy: "buy a ticket",
   strip_from: "FROM 2,000 RSD",

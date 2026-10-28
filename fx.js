@@ -23,8 +23,9 @@
     '<feComposite in="SourceGraphic" in2="e" operator="out"/></filter>';
   document.body.appendChild(svg);
 
-  // 1) wrap words once
-  els.forEach((el) => {
+  // 1) wrap words (again after a language switch replaces the text)
+  const wrapWords = () => els.forEach((el) => {
+    if (el.querySelector(".w")) return;
     const walk = (node) => {
       [...node.childNodes].forEach((n) => {
         if (n.nodeType === 3) {
@@ -40,6 +41,7 @@
     };
     walk(el);
   });
+  wrapWords();
 
   const canvas = document.createElement("canvas").getContext("2d");
   let lines = [];
@@ -129,6 +131,7 @@
   (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(run);
   let rt;
   window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { active = null; group(); warmAll(); schedule(); }, 150); });
+  document.addEventListener("langchange", () => { active = null; wrapWords(); group(); warmAll(); schedule(); });
 })();
 
 // ===== Photos: reveal on scroll =====
