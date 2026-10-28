@@ -162,3 +162,17 @@
   window.addEventListener("resize", () => bars.forEach(fit));
   document.fonts && document.fonts.ready.then(() => bars.forEach(fit));
 })();
+
+// ===== Background videos: make sure they play (iOS sometimes blocks autoplay) =====
+(function () {
+  const vids = document.querySelectorAll(".row__img video");
+  if (!vids.length) return;
+  const tryPlay = (v) => { v.muted = true; const p = v.play(); if (p && p.catch) p.catch(() => {}); };
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((es) => es.forEach((e) => e.isIntersecting ? tryPlay(e.target) : e.target.pause()), { threshold: 0.1 });
+    vids.forEach((v) => io.observe(v));
+  } else vids.forEach(tryPlay);
+  // first touch anywhere unlocks playback on devices that blocked autoplay
+  const unlock = () => { vids.forEach(tryPlay); window.removeEventListener("touchstart", unlock); };
+  window.addEventListener("touchstart", unlock, { passive: true });
+})();
