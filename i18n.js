@@ -20,15 +20,15 @@ const EN = {
 
   our_h: "OUR “RENT”",
   our_p:
-    "<p>People who saw RENT when it first opened in New York in 1996 described it like watching your friends walk onto a stage and sing about the life you were all living. Over the years it has been polished into a beautiful, flawless Broadway production.</p>" +
-    "<p><b>We wanted to bring that first feeling back.</b> We cast people who recognise their own lives in this story, and we let them stay themselves on stage. Every night they pour their hearts out, and the show comes out honest in a way you can’t rehearse. That’s exactly how we like it.</p>" +
+    "<p>People who saw RENT when it first opened in New York in 1996 described it as watching your friends walk onto a stage and sing about the life you were all living. Over the years it has been polished into a beautiful, flawless Broadway production.</p>" +
+    "<p><b>We wanted to bring that first feeling back.</b> We cast people who recognise their own lives in this story, and we let them be themselves on stage. Every night they pour their hearts out, and the show comes out honest in a way you can’t rehearse. That’s exactly how we like it.</p>" +
     "<p>A ticket costs 2,000 dinars (about 20 US dollars), the same price RENT charged for its famous front-row seats on Broadway in 1996.</p>",
 
   every_h: "EVERYTHING IS RENT",
   every_p:
     "<p>The small print in your contract doesn’t mention that everything is rent. The flat, the city, the people you call family on a Tuesday night. We take as much as our hearts, our health and our bank cards can manage, and we keep it until our hearts expire (or our visas do).</p>" +
     "<p>For the characters, the crisis was AIDS. Today, everyone in the room has a crisis of their own. For some of us, it came with a war and a packed suitcase. For others, it’s the slow realisation that the place you call home doesn’t feel like yours anymore. It often feels as though there’s nothing we can do. Trust people in power who haven’t listened to us in years? Work ourselves to death just to keep a roof over our heads on a burning planet? <b>RENT is about living right through it and not lowering your voice along the way.</b></p>" +
-    "<p>We are also here to admit there is still love. There is still friendship. There is still sex (safe, please!) No war, no border and no breaking news can take that away, and we’re angry that anyone tried.</p>",
+    "<p>We are also here to remind you there is still love. There is still friendship. There is still sex (safe, please!). No war, no border and no breaking news can take that away, and we’re angry that anyone tried.</p>",
 
   team_h: "TEAM",
   team_p:
