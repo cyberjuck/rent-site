@@ -43,6 +43,16 @@
   });
   wrapWords();
 
+  // keep the fill layer exactly on top of the text (re-run whenever layout shifts)
+  function align(f, o, fi) {
+    f.style.transform = "none";
+    const ro = o.getBoundingClientRect(), ri = fi.getBoundingClientRect();
+    f.style.transform = `translate(${ro.left - ri.left}px, ${ro.top - ri.top}px)`;
+  }
+  const realignAll = () => els.forEach((el) => el.querySelectorAll(".ln").forEach((ln) => {
+    const o = ln.querySelector(".ln-o"), f = ln.querySelector(".ln-f");
+    if (o && f && f.firstChild) align(f, o, f.firstChild);
+  }));
   const canvas = document.createElement("canvas").getContext("2d");
   let lines = [];
 
@@ -80,8 +90,7 @@
       f.appendChild(fi);
       ln.appendChild(f);
       // align fill layer exactly over the text (compare the two inline text boxes → same baseline)
-      const ro = o.getBoundingClientRect(), ri = fi.getBoundingClientRect();
-      f.style.transform = `translate(${ro.left - ri.left}px, ${ro.top - ri.top}px)`;
+      align(f, o, fi);
       // ink band of capitals/letters relative to the word box top
       const so = getComputedStyle(o);
       canvas.font = `${so.fontStyle} ${so.fontWeight} ${so.fontSize} ${so.fontFamily}`;
@@ -131,6 +140,12 @@
   (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(run);
   let rt;
   window.addEventListener("resize", () => { clearTimeout(rt); rt = setTimeout(() => { active = null; group(); warmAll(); schedule(); }, 150); });
+  // page height changes (e.g. the ticket widget grows) → re-align, so nothing drifts
+  if ("ResizeObserver" in window) {
+    let raf2 = 0;
+    new ResizeObserver(() => { cancelAnimationFrame(raf2); raf2 = requestAnimationFrame(realignAll); })
+      .observe(document.body);
+  }
   document.addEventListener("langchange", () => { active = null; wrapWords(); group(); warmAll(); schedule(); });
 })();
 

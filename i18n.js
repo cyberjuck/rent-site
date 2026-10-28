@@ -99,6 +99,15 @@ const SR = {
     "<p>Bićeš mnogo bliže sceni nego inače, dovoljno blizu da vidiš baš sve. A glumci se neće praviti da ne postojiš. Želimo da budeš deo predstave i daćemo sve od sebe da se osećaš kao da si i sam ušao u ovu priču.</p>",
 
   tickets_h: "KUPI ULAZNICU",
+
+  tix_cta: "kupi ulaznicu ovde<br>i podrži nas ako možeš",
+  support_h: "podrži nas",
+  support_p:
+    "<p>Mi smo nezavisna ekipa i ovu predstavu pravimo potpuno sami. Želimo da RENT bude dostupan što većem broju ljudi. Zato <b>obična ulaznica košta 2000 RSD.</b> Ali da bismo pokrili sve što ova predstava stvarno košta, treba nam više. Zato smo smislili i <b>ulaznice podrške od 3000, 5000, 7000 ili 10000 RSD.</b> Uz njih ne dobijaš ništa ekstra: ista predstava, nema posebnih mesta. Tvoja podrška pomoći će nam da platimo opremu i najam prostora, odigramo još izvođenja RENT-a u Beogradu i, nadamo se, damo bar nešto našoj ekipi.</p>" +
+    "<p><b>A važi i obrnuto.</b> Ako ti je 2000 RSD previše, a ipak želiš da dođeš, samo nam se javi. Snaći ćemo se! I ako želiš da podržiš našu ekipu na veći način, rado ćemo te čuti.</p>",
+  offline_h: "ulaznice uživo",
+  offline_p:
+    "<p>Uskoro ćeš moći da kupiš pravu papirnu ulaznicu kod naših prijatelja u kafićima i barovima po Beogradu. Bez provizije platforme — svaki dinar ide pravo u predstavu. Spisak mesta uskoro objavljujemo ovde i na Instagramu.</p>",
   foot_xtix: "Ulaznice se prodaju preko xtix-a",
 
   strip_buy: "KUPI ULAZNICU",
