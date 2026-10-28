@@ -47,7 +47,7 @@ const EN = {
     "<p><b>And it works both ways.</b> If 2000 RSD is too much but you still want to see the show, just reach out to us. We’ll figure something out! And if you’d like to support our team in a bigger way, we’d love to hear from you too.</p>",
   offline_h: "offline tickets",
   offline_p:
-    "<p>Soon you’ll be able to grab a real paper ticket from our friends at cafes and bars around Belgrade. No platform fees — every dinar goes straight to the show. The list of spots will be posted here and on Instagram very soon.</p>",
+    "<p>Soon you’ll be able to grab a real paper ticket from our friends at cafes and bars around Belgrade. No platform fees — every dinar goes straight to the show. The list of spots will be posted here and on <a class=\"u\" href=\"https://www.instagram.com/everything.is.rent/\" target=\"_blank\" rel=\"noopener\">Instagram</a> very soon.</p>",
 
   // pink ticket bars
   strip_buy: "buy a ticket",
@@ -105,7 +105,7 @@ const SR = {
     "<p><b>A važi i obrnuto.</b> Ako ti je 2000 RSD previše, a ipak želiš da dođeš, samo nam se javi. Snaći ćemo se! I ako želiš da podržiš našu ekipu na veći način, rado ćemo te čuti.</p>",
   offline_h: "ulaznice uživo",
   offline_p:
-    "<p>Uskoro ćeš moći da kupiš pravu papirnu ulaznicu kod naših prijatelja u kafićima i barovima po Beogradu. Bez provizije platforme — svaki dinar ide pravo u predstavu. Spisak mesta uskoro objavljujemo ovde i na Instagramu.</p>",
+    "<p>Uskoro ćeš moći da kupiš pravu papirnu ulaznicu kod naših prijatelja u kafićima i barovima po Beogradu. Bez provizije platforme — svaki dinar ide pravo u predstavu. Spisak mesta uskoro objavljujemo ovde i na <a class=\"u\" href=\"https://www.instagram.com/everything.is.rent/\" target=\"_blank\" rel=\"noopener\">Instagramu</a>.</p>",
   foot_xtix: "Ulaznice se prodaju preko xtix-a",
 
   strip_buy: "KUPI ULAZNICU",

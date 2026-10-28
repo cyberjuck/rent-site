@@ -317,3 +317,6 @@ section, [id] { scroll-margin-top: var(--header-h); }
 }
 /* seamless: mirrored tiles, so the repeat never shows a cut */
 .drugstore::before, .drugstore::after { background-image: url(images/paper-tall.jpg); }
+
+.body a.u { text-decoration: underline; text-underline-offset: 2px; }
+.body a.u:hover { color: var(--pink); }
