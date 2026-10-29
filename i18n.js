@@ -105,7 +105,7 @@ const SR = {
     "<p><b>A važi i obrnuto.</b> Ako ti je 2000 RSD previše, a ipak želiš da dođeš na predstavu, samo nam se javi. Naći ćemo rešenje! I ako želiš da podržiš našu ekipu na veći način, rado ćemo čuti tvoje ideje.</p>",
   offline_h: "papirne ulaznice",
   offline_p:
-    "<p>Uskoro ćeš moći da kupiš pravu papirnu ulaznicu kod naših prijatelja u kafićima i barovima po Beogradu. Bez provizije platforme — svaki dinar ide pravo u predstavu. Spisak lokacija uskoro objavljujemo ovde i na <a class=\"u\" href=\"https://www.instagram.com/everything.is.rent/\" target=\"_blank\" rel=\"noopener\">Instagramu</a>.</p>",
+    "<p>Uskoro ćeš moći da kupiš pravu papirnu ulaznicu kod naših prijatelja u kafićima i barovima po Beogradu. Bez provizije platforme – svaki dinar ide pravo u predstavu. Spisak lokacija uskoro objavljujemo ovde i na <a class=\"u\" href=\"https://www.instagram.com/everything.is.rent/\" target=\"_blank\" rel=\"noopener\">Instagramu</a>.</p>",
   foot_xtix: "Ulaznice se prodaju preko xtix-a",
 
   strip_buy: "KUPI ULAZNICU",
