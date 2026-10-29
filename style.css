@@ -343,7 +343,7 @@ section, [id] { scroll-margin-top: var(--header-h); }
 .more-link {
   align-self: flex-start;
   font-family: "Anton", sans-serif; font-size: 30px; line-height: .91; letter-spacing: -0.02em;
-  text-transform: uppercase; color: var(--pink); text-decoration: underline; text-underline-offset: 4px;
+  text-transform: uppercase; color: var(--pink); text-decoration: none;
   transition: color .15s;
 }
 .more-link:hover { color: var(--pink-hover); }
