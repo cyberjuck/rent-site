@@ -333,7 +333,23 @@ section, [id] { scroll-margin-top: var(--header-h); }
 .pgrid--text { column-gap: 36px; row-gap: 36px; max-width: calc(4 * 283px + 3 * 36px); }
 .pcard { width: 304px; margin: 0; display: flex; flex-direction: column; gap: 12px; }
 .pgrid--text .pcard { width: 283px; }
-.pcard__img { aspect-ratio: 304 / 380; background: #e9e9e9; overflow: hidden; }
+.pcard__img { aspect-ratio: 304 / 380; background: #e9e9e9; overflow: hidden; position: relative; }
+/* colour photo on hover: wipes in left→right with a soft edge, same feel as the outline effect */
+.pcard__color {
+  position: absolute; inset: 0;
+  -webkit-mask-image: linear-gradient(90deg, #000 40%, transparent 60%);
+          mask-image: linear-gradient(90deg, #000 40%, transparent 60%);
+  -webkit-mask-size: 250% 100%; mask-size: 250% 100%;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-position: 100% 0; mask-position: 100% 0;
+  transition: -webkit-mask-position .34s cubic-bezier(.33, 0, .2, 1), mask-position .34s cubic-bezier(.33, 0, .2, 1);
+}
+@media (hover: hover) {
+  .pcard:hover .pcard__color {
+    -webkit-mask-position: 0% 0; mask-position: 0% 0;
+    transition: -webkit-mask-position .42s cubic-bezier(.15, .7, .25, 1), mask-position .42s cubic-bezier(.15, .7, .25, 1);
+  }
+}
 .pcard__img img { width: 100%; height: 100%; object-fit: cover; display: block; color: transparent; font-size: 0; }
 .pcard figcaption { display: flex; flex-direction: column; gap: 4px; font-family: "Anton", sans-serif; text-transform: uppercase; line-height: .98; }
 .pcard__name { font-size: 42px; letter-spacing: -0.04em; }
