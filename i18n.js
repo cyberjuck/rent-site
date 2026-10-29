@@ -101,11 +101,11 @@ const SR = {
 
   support_h: "podrži nas",
   support_p:
-    "<p>Mi smo nezavisna ekipa i ovu predstavu pravimo potpuno sami. Želimo da RENT bude dostupan što većem broju ljudi. Zato <b>obična ulaznica košta 2000 RSD.</b> Ali da bismo pokrili sve što ova predstava stvarno košta, treba nam više. Zato smo smislili i <b>ulaznice podrške od 3000, 5000, 7000 ili 10000 RSD.</b> Uz njih ne dobijaš ništa ekstra: ista predstava, nema posebnih mesta. Tvoja podrška pomoći će nam da platimo opremu i najam prostora, odigramo još izvođenja RENT-a u Beogradu i, nadamo se, damo bar nešto našoj ekipi.</p>" +
-    "<p><b>A važi i obrnuto.</b> Ako ti je 2000 RSD previše, a ipak želiš da dođeš, samo nam se javi. Snaći ćemo se! I ako želiš da podržiš našu ekipu na veći način, rado ćemo te čuti.</p>",
+    "<p>Mi smo nezavisna ekipa i ovu predstavu pravimo potpuno sami. Želimo da RENT bude dostupan što većem broju ljudi. <b>Obična ulaznica košta 2000 RSD</b> – ali to ne pokriva sve troškove naše predstave. Zato su dostupne i <b>ulaznice podrške od 3000, 5000, 7000 ili 10000 RSD.</b> Uz njih ne dobijaš ništa dodatno: ista predstava, nema posebnih mesta. Tvoja podrška će nam pomoći da platimo opremu i najam prostora, organizujemo još izvođenja RENT-a u Beogradu i, nadamo se, damo bar nešto našoj ekipi.</p>" +
+    "<p><b>A važi i obrnuto.</b> Ako ti je 2000 RSD previše, a ipak želiš da dođeš na predstavu, samo nam se javi. Naći ćemo rešenje! I ako želiš da podržiš našu ekipu na veći način, rado ćemo čuti tvoje ideje.</p>",
   offline_h: "papirne ulaznice",
   offline_p:
-    "<p>Uskoro ćeš moći da kupiš pravu papirnu ulaznicu kod naših prijatelja u kafićima i barovima po Beogradu. Bez provizije platforme — svaki dinar ide pravo u predstavu. Spisak mesta uskoro objavljujemo ovde i na <a class=\"u\" href=\"https://www.instagram.com/everything.is.rent/\" target=\"_blank\" rel=\"noopener\">Instagramu</a>.</p>",
+    "<p>Uskoro ćeš moći da kupiš pravu papirnu ulaznicu kod naših prijatelja u kafićima i barovima po Beogradu. Bez provizije platforme — svaki dinar ide pravo u predstavu. Spisak lokacija uskoro objavljujemo ovde i na <a class=\"u\" href=\"https://www.instagram.com/everything.is.rent/\" target=\"_blank\" rel=\"noopener\">Instagramu</a>.</p>",
   foot_xtix: "Ulaznice se prodaju preko xtix-a",
 
   strip_buy: "KUPI ULAZNICU",
