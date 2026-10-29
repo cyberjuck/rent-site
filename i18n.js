@@ -5,6 +5,14 @@
   Bold in body text: <b>...</b>. New paragraph: <p>...</p>.
 */
 const EN = {
+
+  team_more: "learn more",
+  tp_cast: "cast", tp_band: "band", tp_creative: "creative team",
+  band_keys: "keys", band_guitar: "guitar", band_bass: "bass", band_drums: "drums",
+  cr_director: "director, plays maureen", cr_assistant: "assistant director, dramaturg", cr_vocal: "vocal coach",
+  cr_choreo: "choreography coach", cr_art: "art director, designer", cr_marketing: "head of marketing",
+  cr_producer: "producer", cr_set: "set designer", cr_smm: "smm manager", cr_tango: "tango coach",
+  cr_soundeng: "sound engineer", cr_sounddes: "sound designer", cr_soundass: "sound assistant",
   nav_rent: "RENT",
   nav_about: "what is rent",
   nav_team: "team",
@@ -61,6 +69,14 @@ const EN = {
 
 const SR = {
   ...EN,
+
+  team_more: "saznaj više",
+  tp_cast: "glumci", tp_band: "bend", tp_creative: "kreativni tim",
+  band_keys: "klavijature", band_guitar: "gitara", band_bass: "bas", band_drums: "bubnjevi",
+  cr_director: "režija, igra Maureen", cr_assistant: "asistencija režije, dramaturgija", cr_vocal: "vokalna priprema",
+  cr_choreo: "koreografija", cr_art: "art direkcija, dizajn", cr_marketing: "marketing",
+  cr_producer: "produkcija", cr_set: "scenografija", cr_smm: "društvene mreže", cr_tango: "tango",
+  cr_soundeng: "ton majstor", cr_sounddes: "dizajn zvuka", cr_soundass: "asistencija za zvuk",
   nav_about: "ŠTA JE RENT",
   nav_team: "EKIPA",
   nav_expect: "ŠTA DA OČEKUJETE",
