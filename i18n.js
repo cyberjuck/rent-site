@@ -73,7 +73,7 @@ const SR = {
   team_more: "saznaj više",
   tp_cast: "glumački ansambl", tp_band: "bend", tp_creative: "kreativni tim",
   band_keys: "klavijature", band_guitar: "gitara", band_bass: "bas", band_drums: "bubnjevi",
-  cr_director: "režija, igra Maureen", cr_assistant: "dramaturgija, saradnica u&nbsp;režiji", cr_vocal: "vokalna priprema",
+  cr_director: "režija, igra Maureen", cr_assistant: "dramaturgija, saradnica&nbsp;u&nbsp;režiji", cr_vocal: "vokalna priprema",
   cr_choreo: "koreografija", cr_art: "art direkcija, dizajn", cr_marketing: "marketing",
   cr_producer: "produkcija", cr_set: "scenografija", cr_smm: "društvene mreže", cr_tango: "tango koreografija",
   cr_soundeng: "ton majstor", cr_sounddes: "dizajn zvuka", cr_soundass: "saradnik za zvuk",
