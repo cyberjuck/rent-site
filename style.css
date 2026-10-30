@@ -378,3 +378,13 @@ section, [id] { scroll-margin-top: var(--header-h); }
   .pcard__role { font-size: 16px; }
   .more-link { font-size: 24px; }
 }
+
+/* Team grid: on desktop always 4 per row — cards shrink instead of wrapping to 3 */
+@media (min-width: 900px) {
+  .pgrid, .pgrid--text { width: 100%; container-type: inline-size; }
+  .pgrid { --cw: min(304px, calc((100cqi - 3 * 8px) / 4)); }
+  .pgrid--text { --cw: min(283px, calc((100cqi - 3 * 36px) / 4)); }
+  .pcard, .pgrid--text .pcard { width: var(--cw); }
+  .pcard__name { font-size: min(42px, calc(var(--cw) * 42 / 304)); }
+  .pcard__role { font-size: min(24px, max(14px, calc(var(--cw) * 24 / 304))); }
+}
