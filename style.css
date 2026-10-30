@@ -390,28 +390,23 @@ section, [id] { scroll-margin-top: var(--header-h); }
 }
 
 /* xtix widget: on mobile it renders a "buy ticket" button instead of the inline form.
-   Restyle it as our ticket (classes from xtix docs: btn-widget / tc-widget-button). */
+   Restyle it (classes from xtix docs: btn-widget / tc-widget-button): black button, violet text. */
 .tickets__widget button,
 .tickets__widget .btn-widget,
 .tickets__widget .tc-widget-button,
 .tickets__widget a[class*="widget"] {
   display: flex !important; align-items: center !important; justify-content: center !important;
-  width: 100% !important; height: 76px !important; margin: 0 auto !important; padding: 0 64px !important;
-  background: var(--pink) !important; background-image: none !important;
-  color: var(--black) !important; text-shadow: none !important;
+  width: 100% !important; height: 76px !important; margin: 0 auto !important; padding: 0 24px !important;
+  background: var(--black) !important; background-image: none !important;
+  color: var(--violet) !important; text-shadow: none !important;
   font-family: "Anton", sans-serif !important; font-size: 30px !important; font-weight: 400 !important;
   letter-spacing: -0.04em !important; text-transform: uppercase !important; line-height: 1 !important;
   border: 0 !important; border-radius: 0 !important; box-shadow: none !important;
-  cursor: pointer !important; transition: background .15s !important;
-  /* ticket perforation, same as our bars */
-  --dot: 12px; --gap: 8px; --dot-right: 28px;
-  -webkit-mask: radial-gradient(circle 6px at 50% 6px, #000 calc(100% - .6px), transparent 100%) calc(100% - 28px) -6px / 12px 19px repeat-y, linear-gradient(#000 0 0) !important;
-  -webkit-mask-composite: xor !important;
-          mask: radial-gradient(circle 6px at 50% 6px, #000 calc(100% - .6px), transparent 100%) calc(100% - 28px) -6px / 12px 19px repeat-y, linear-gradient(#000 0 0) !important;
-          mask-composite: exclude !important;
+  -webkit-mask: none !important; mask: none !important;
+  cursor: pointer !important; transition: color .15s, background .15s !important;
 }
 .tickets__widget button:hover,
 .tickets__widget .btn-widget:hover,
 .tickets__widget .tc-widget-button:hover,
-.tickets__widget a[class*="widget"]:hover { background: var(--pink-hover) !important; }
+.tickets__widget a[class*="widget"]:hover { color: var(--white) !important; }
 @media (max-width: 899px) { .tickets__widget { min-height: 0; } }
