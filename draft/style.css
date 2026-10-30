@@ -1,0 +1,412 @@
+/* ===== Colors ===== */
+:root {
+  --black: #000;
+  --white: #fff;
+  --pink: #FC347A;        /* ticket strips, manifesto text */
+  --pink-hover: #EA3675;  /* hover on all ticket buttons */
+  --violet: #E950D7;      /* hero text, Drugstore background */
+  --orange: #F8643C;      /* Instagram block */
+  --header-h: 75px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; background: var(--black); } /* color seen when page bounces on scroll */
+body {
+  /* solid color (Safari ignores gradients for the bounce area) */
+  background: var(--black);
+  color: var(--black);
+  font-family: "Inter", system-ui, sans-serif;
+  font-variation-settings: "opsz" 32; /* Inter Display look */
+  padding-top: var(--header-h);
+}
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+img { display: block; max-width: 100%; }
+section, [id] { scroll-margin-top: var(--header-h); }
+
+/* ===== Type ===== */
+/* --d = size on 1440 desktop, --m = size on 390 mobile (px, unitless) */
+.t {
+  display: block;
+  font-size: min(calc(var(--d) * 1px), calc(var(--d) * 100vw / 1440));
+  letter-spacing: -0.04em;
+  line-height: 0.91;
+}
+.a  { font-family: "Anton", sans-serif; font-weight: 400; }
+.rs { font-family: "Rock Salt", cursive; font-weight: 400; }
+.up { text-transform: uppercase; }
+.lh98 { line-height: 0.98; }
+.lh92 { line-height: 0.92; }
+.lh88 { line-height: 0.88; }
+.ls2 { letter-spacing: -0.02em; }
+
+.body { font-size: 20px; line-height: 1.3; max-width: 700px; }
+.body p + p { margin-top: 12px; }
+.body b { font-weight: 700; }
+
+.stack { display: flex; flex-direction: column; gap: 4px; }
+
+/* ===== Header ===== */
+.header {
+  position: fixed; inset: 0 0 auto 0; z-index: 50;
+  height: var(--header-h);
+  background: var(--black); color: var(--white);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 100px;
+  font-family: "Anton", sans-serif; font-size: 30px;
+  line-height: 0.91; letter-spacing: -0.04em; text-transform: uppercase;
+}
+.header__nav { display: flex; gap: 32px; }
+.header__right { display: flex; align-items: center; gap: 48px; }
+.header__buy { text-decoration: underline; text-underline-offset: 3px; transition: color .15s; }
+.header__buy:hover { color: var(--pink-hover); }
+.header__nav a:hover { opacity: .7; }
+.langs { display: flex; gap: 10px; }
+.langs button { opacity: .45; text-transform: uppercase; letter-spacing: -0.04em; }
+.langs button.is-active, .langs button:hover { opacity: 1; }
+.burger { display: none; }
+.logo { display: none; }
+
+/* ===== Mobile menu ===== */
+.menu {
+  position: fixed; inset: 0; z-index: 60;
+  background: var(--black); color: var(--white);
+  display: none; flex-direction: column;
+  font-family: "Anton", sans-serif; text-transform: uppercase; letter-spacing: -0.04em;
+}
+.menu.is-open { display: flex; }
+.menu__top { height: 60px; padding: 0 16px; display: flex; align-items: center; justify-content: flex-end; }
+.menu__langs { padding: 0 16px 24px; gap: 24px; font-size: 48px; line-height: .91; }
+.menu__nav { flex: 1; display: flex; flex-direction: column; gap: 20px; padding: 40px 16px; font-size: 48px; line-height: .91; }
+
+/* ===== Ticket bars ===== */
+.cta-bar {
+  display: flex; align-items: center; justify-content: center;
+  height: 64px; background: var(--pink); color: var(--black);
+  font-family: "Anton", sans-serif; font-size: 30px; letter-spacing: -0.04em;
+  transition: background .15s;
+}
+.cta-bar:hover { background: var(--pink-hover); }
+.cta-bar--fixed { display: none; }
+
+/* ===== Hero ===== */
+.hero {
+  background: var(--black); color: var(--violet); text-align: center;
+  padding: 50px 100px; display: flex; flex-direction: column; gap: 24px;
+}
+
+/* ===== Pink strip ===== */
+.strip {
+  position: relative; overflow: hidden;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  background: var(--pink); color: var(--black); text-align: center;
+  padding: 40px 100px; transition: background .15s;
+}
+.lh90 { line-height: .9; }
+/* white backdrop so the perforation holes of this strip look white */
+.strip-wrap--white { background: var(--white); }
+/* ticket perforation = real holes (mask), so whatever is behind shows through.
+   fx.js sets --step so the first hole is centred on the top edge and the last one on the bottom edge. */
+.strip, .cta-bar { --dot: 18px; --gap: 11px; --dot-right: 99px; }
+.cta-bar { position: relative; --dot: 12px; --gap: 8px; --dot-right: 28px; }
+.cta-bar--fixed { position: fixed; }
+.strip, .cta-bar {
+  --holes: radial-gradient(circle calc(var(--dot) / 2) at 50% calc(var(--dot) / 2), #000 calc(100% - .6px), transparent 100%)
+           calc(100% - var(--dot-right)) calc(var(--dot) / -2) / var(--dot) var(--step, calc(var(--dot) + var(--gap))) repeat-y;
+  -webkit-mask: var(--holes), linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask: var(--holes), linear-gradient(#000 0 0);
+          mask-composite: exclude;
+}
+.strip:hover { background: var(--pink-hover); }
+
+/* ===== Text + photo rows ===== */
+.row {
+  background: var(--white);
+  display: grid; grid-template-columns: 848fr 592fr;
+  min-height: min(588px, calc(588 * 100vw / 1440));
+}
+.row--rev { grid-template-columns: 592fr 848fr; }
+.row--rev .row__img { order: -1; }
+.row__text {
+  display: flex; flex-direction: column; justify-content: center; gap: 32px;
+  padding: 60px 48px 60px clamp(24px, 6.94vw, 100px);
+}
+.row--rev .row__text { padding: 70px clamp(24px, 6.94vw, 100px) 70px 48px; }
+.row__img { overflow: hidden; }
+.row__img img, .row__img video { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+/* ===== Manifesto ===== */
+.manifesto {
+  background: var(--black); color: var(--pink); text-align: center;
+  padding: 70px 100px; display: flex; flex-direction: column; gap: 36px;
+}
+
+/* ===== Drugstore ===== */
+.drugstore {
+  background: var(--violet); color: var(--black); text-align: center;
+  padding: 70px 100px; display: flex; flex-direction: column; gap: 28px;
+}
+
+/* ===== Tickets ===== */
+.drugstore { padding-bottom: 70px; }
+.tickets__widget { width: 100%; max-width: 640px; min-height: 200px; text-align: left; position: relative; z-index: 3 !important; align-self: center; } /* above the paper texture */
+
+/* ===== Support us / Offline tickets ===== */
+.info { background: var(--white); display: grid; grid-template-columns: 744fr 696fr; }
+.info__col { display: flex; flex-direction: column; gap: 32px; padding: 60px 48px 60px clamp(24px, 6.94vw, 100px); }
+.info__col + .info__col { padding: 60px clamp(24px, 6.94vw, 100px) 60px 0; }
+
+/* ===== Instagram ===== */
+.insta {
+  display: flex; flex-direction: column; gap: 24px;
+  background: var(--black); color: var(--orange); text-align: center;
+  padding: 70px 100px;
+}
+.insta__link { align-self: center; transition: color .15s; }
+.insta__link:hover { color: #D84F2B; }
+
+/* ===== Footer ===== */
+.footer {
+  background: var(--black); color: var(--white);
+  font-size: 14px; line-height: 1.3;
+}
+/* two rows, columns aligned across rows (Figma: padding 60 / 70) */
+.footer__row {
+  display: grid; grid-template-columns: minmax(0, 294px) minmax(0, 294px) 1fr auto; column-gap: 24px;
+  padding: 70px 60px;
+}
+.footer__row + .footer__row { padding-top: 0; }
+.footer__wide { grid-column: 2 / 4; }
+.footer__year { grid-column: 4; text-align: right; }
+.footer a:hover { color: var(--pink); }
+.footer .u { text-decoration: underline; }
+
+/* ===== Tablet: tighten paddings ===== */
+@media (max-width: 1200px) {
+  .header { padding: 0 40px; font-size: 24px; }
+  .hero, .strip, .manifesto, .drugstore, .insta { padding-left: 40px; padding-right: 40px; }
+  .body { font-size: 18px; }
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 899px) {
+  :root { --header-h: 60px; }
+  .t { font-size: min(calc(var(--m) * 100vw / 390), calc(var(--m) * 1.6px)); }
+  br.d { display: none; }
+
+  .header { padding: 0 16px; justify-content: space-between; }
+  .header__nav, .header__right { display: none; }
+  .burger { display: block; height: 28px; }
+  .logo { display: block; font-size: 30px; line-height: .91; letter-spacing: -0.04em; }
+  .lhm141 { line-height: 1.41; }
+  .lhm131 { line-height: 1.31; }
+
+  /* floating ticket, not touching the screen edge (so mobile Safari doesn't stretch its colour under the toolbar) */
+  .cta-bar--fixed { display: flex; position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); z-index: 40; }
+  .menu .cta-bar { margin: 0 12px calc(12px + env(safe-area-inset-bottom, 0px)); }
+  .cta-bar { height: 76px; }
+  body.menu-open .cta-bar--fixed { display: none; }
+  body.menu-open { overflow: hidden; }
+
+  .hero { padding: 40px 16px; gap: 12px; }
+  .strip { display: none; }
+
+  .row, .row--rev { grid-template-columns: 1fr; min-height: 0; }
+  .row__img { order: -1; height: calc(360 * 100vw / 390); max-height: 560px; }
+  .row__img:has(video) { height: auto; max-height: none; aspect-ratio: 1 / 1; } /* show the whole square video */
+  .row__text, .row--rev .row__text { padding: 32px 16px 40px; gap: 16px; }
+  .body { font-size: 16px; }
+
+  .manifesto { padding: 40px 16px; gap: 12px; }
+  .drugstore { padding: 40px 16px; gap: 12px; }
+  .info { grid-template-columns: 1fr; }
+  .info__col, .info__col + .info__col { padding: 32px 16px 8px; gap: 16px; }
+  .info__col + .info__col { padding-bottom: 40px; }
+  .insta { padding: 40px 16px; gap: 12px; }
+
+  .footer { padding: 40px 16px 120px; }
+  .footer__row { display: flex; flex-direction: column; gap: 16px; padding: 0; }
+  .footer__row + .footer__row { margin-top: 16px; }
+  .footer__year { text-align: left; }
+}
+
+/* =====================================================================
+   PAPER TEXTURE on big-word blocks (as in Figma: PAPER3 layers)
+   ::before = under the text, ::after = over the text
+   ===================================================================== */
+.hero, .manifesto, .drugstore, .insta, .ty-hero {
+  position: relative; isolation: isolate; overflow: hidden;
+}
+.hero > *, .manifesto > *, .drugstore > *, .insta > *, .ty-hero > * { position: relative; z-index: 1; }
+.hero::before, .hero::after,
+.manifesto::before, .manifesto::after,
+.drugstore::before, .drugstore::after,
+.insta::before, .insta::after,
+.ty-hero::before, .ty-hero::after {
+  content: ""; position: absolute; inset: -8%;
+  background: url(../images/paper.jpg) center / cover no-repeat;
+  pointer-events: none;
+}
+/* black blocks: paper 10% under the text + color dodge 100% over it */
+.hero::before, .manifesto::before, .insta::before { z-index: 0; opacity: .1; }
+.hero::after, .manifesto::after, .insta::after { z-index: 2; mix-blend-mode: color-dodge; }
+/* pink blocks: color dodge 40% + linear dodge 30%, both over the text */
+.drugstore::before, .ty-hero::before { z-index: 2; mix-blend-mode: color-dodge; opacity: .4; }
+.drugstore::after, .ty-hero::after { z-index: 2; mix-blend-mode: plus-lighter; opacity: .3; }
+
+/* =====================================================================
+   BIG WORDS: on hover each line turns into an outline (fill wipes away)
+   ===================================================================== */
+.hero { --c: var(--violet); }
+.manifesto { --c: var(--pink); }
+.drugstore, .ty-hero { --c: var(--black); }
+.insta { --c: var(--orange); }
+/* fx.js: per visual line — .ln-o (text, gets a 1.5px inside outline) + .ln-f (fill on top, wipes away) */
+@media (hover: hover) and (pointer: fine) {
+  .fx .ln { position: relative; }
+  .fx .ln.ring .ln-o { filter: url(#ring); }
+  .fx .ln-f {
+    position: absolute; left: 0; top: 0;
+    padding: .45em .35em;              /* room for swashy glyphs inside the mask */
+    white-space: pre; pointer-events: none; color: inherit;
+    -webkit-mask-image: linear-gradient(90deg, transparent 44%, #000 60%);
+            mask-image: linear-gradient(90deg, transparent 44%, #000 60%);
+    -webkit-mask-size: 250% 100%; mask-size: 250% 100%;
+    -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+    -webkit-mask-position: 100% 0; mask-position: 100% 0;
+    transition: -webkit-mask-position .34s cubic-bezier(.33, 0, .2, 1), mask-position .34s cubic-bezier(.33, 0, .2, 1);
+  }
+  .fx .ln.on .ln-f {
+    -webkit-mask-position: 0% 0; mask-position: 0% 0;
+    transition: -webkit-mask-position .42s cubic-bezier(.15, .7, .25, 1), mask-position .42s cubic-bezier(.15, .7, .25, 1); /* starts instantly, settles softly */
+  }
+  .insta__link:hover { color: #D84F2B; }
+}
+
+/* =====================================================================
+   PHOTOS: slide in when scrolled into view
+   desktop — from their side, mobile — from below
+   ===================================================================== */
+.anim .row__img img, .anim .row__img video {
+  transition: clip-path .65s cubic-bezier(.65, 0, .2, 1), transform .85s cubic-bezier(.2, .7, .2, 1);
+  transform: scale(1.15);
+}
+.anim .row .row__img img, .anim .row .row__img video { clip-path: inset(0 0 0 100%); }      /* photo on the right: opens from right */
+.anim .row--rev .row__img img, .anim .row--rev .row__img video { clip-path: inset(0 100% 0 0); } /* photo on the left: opens from left */
+.anim .row__img.in img, .anim .row__img.in video { clip-path: inset(0 0 0 0); transform: scale(1); }
+@media (max-width: 899px) {
+  .anim .row .row__img img, .anim .row--rev .row__img img, .anim .row .row__img video, .anim .row--rev .row__img video { clip-path: inset(100% 0 0 0); transform: translateY(40px) scale(1.1); }
+  .anim .row .row__img.in img, .anim .row--rev .row__img.in img, .anim .row .row__img.in video, .anim .row--rev .row__img.in video { clip-path: inset(0 0 0 0); transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .anim .row__img img, .anim .row__img video { clip-path: none !important; transform: none !important; transition: none; }
+}
+
+/* manifesto: its own vertical texture; both layers sit over the text (as in Figma) */
+.manifesto::before, .manifesto::after { background-image: url(../images/paper-v.jpg); inset: 0 -6%; }
+.manifesto::before { z-index: 2; }
+
+/* Drugstore + widget: texture size must not depend on block height —
+   the widget changes its height while you pick dates/tickets, and "cover" would rescale and jump. */
+.drugstore::before, .drugstore::after {
+  inset: 0 -4%;
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: repeat-y;
+}
+/* seamless: mirrored tiles, so the repeat never shows a cut */
+.drugstore::before, .drugstore::after { background-image: url(../images/paper-tall.jpg); }
+
+.body a.u { text-decoration: underline; text-underline-offset: 2px; }
+.body a.u:hover { color: var(--pink); }
+
+/* =====================================================================
+   TEAM PAGE
+   ===================================================================== */
+.teampage main { background: var(--white); }
+.tsec { display: flex; flex-direction: column; align-items: center; gap: 0; padding: 40px 100px 40px; text-align: center; }
+.tsec--first { padding-top: 100px; }
+.tsec--last { padding-bottom: 100px; }
+.tsec > .t { margin-bottom: 40px; }
+.pgrid { display: flex; flex-wrap: wrap; justify-content: center; column-gap: 8px; row-gap: 60px; max-width: calc(4 * 304px + 3 * 8px); }
+.pgrid--text { column-gap: 36px; row-gap: 36px; max-width: calc(4 * 283px + 3 * 36px); }
+.pcard { width: 304px; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+.pgrid--text .pcard { width: 283px; }
+.pcard__img { aspect-ratio: 304 / 380; background: #e9e9e9; overflow: hidden; position: relative; }
+/* colour photo on hover: wipes in left→right with a soft edge */
+.pcard__color {
+  position: absolute; inset: 0;
+  -webkit-mask-image: linear-gradient(90deg, #000 40%, transparent 60%);
+          mask-image: linear-gradient(90deg, #000 40%, transparent 60%);
+  -webkit-mask-size: 250% 100%; mask-size: 250% 100%;
+  -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+  -webkit-mask-position: 100% 0; mask-position: 100% 0;
+  transition: -webkit-mask-position .22s cubic-bezier(.33, 0, .2, 1), mask-position .22s cubic-bezier(.33, 0, .2, 1);
+}
+@media (hover: hover) {
+  .pcard:hover .pcard__color {
+    -webkit-mask-position: 0% 0; mask-position: 0% 0;
+    transition: -webkit-mask-position .28s cubic-bezier(.15, .7, .25, 1), mask-position .28s cubic-bezier(.15, .7, .25, 1);
+  }
+}
+.pcard__img img { width: 100%; height: 100%; object-fit: cover; display: block; color: transparent; font-size: 0; }
+.pcard figcaption { display: flex; flex-direction: column; gap: 4px; font-family: "Anton", sans-serif; text-transform: uppercase; line-height: .98; }
+.pcard__name { font-size: 42px; letter-spacing: -0.04em; }
+.pcard__role { font-size: 24px; letter-spacing: -0.02em; }
+
+/* "learn more" link in the TEAM block on the main page */
+.more-link {
+  align-self: flex-start;
+  font-family: "Anton", sans-serif; font-size: 30px; line-height: .91; letter-spacing: -0.02em;
+  text-transform: uppercase; color: var(--pink); text-decoration: none;
+  transition: color .15s;
+}
+.more-link:hover { color: var(--pink-hover); }
+
+@media (max-width: 1200px) { .tsec { padding-left: 40px; padding-right: 40px; } }
+@media (max-width: 899px) {
+  .tsec { padding: 24px 16px; }
+  .tsec--first { padding-top: 40px; }
+  .tsec--last { padding-bottom: 120px; }
+  .tsec > .t { margin-bottom: 24px; }
+  .pgrid { column-gap: 8px; row-gap: 32px; }
+  .pcard, .pgrid--text .pcard { width: calc((100vw - 32px - 8px) / 2); }
+  .pgrid--text { column-gap: 8px; row-gap: 24px; }
+  .pcard { gap: 8px; }
+  .pcard__name { font-size: 26px; }
+  .pcard__role { font-size: 16px; }
+  .more-link { font-size: 24px; }
+}
+
+/* Team grid: on desktop always 4 per row — cards shrink instead of wrapping to 3 */
+@media (min-width: 900px) {
+  .pgrid, .pgrid--text { width: 100%; container-type: inline-size; }
+  .pgrid { --cw: min(304px, calc((100cqi - 3 * 8px) / 4)); }
+  .pgrid--text { --cw: min(283px, calc((100cqi - 3 * 36px) / 4)); }
+  .pcard, .pgrid--text .pcard { width: var(--cw); }
+  .pcard__name { font-size: min(42px, calc(var(--cw) * 42 / 304)); }
+  .pcard__role { font-size: min(24px, max(14px, calc(var(--cw) * 24 / 304))); }
+}
+
+/* xtix widget: on mobile it renders a "buy ticket" button instead of the inline form.
+   Restyle it (classes from xtix docs: btn-widget / tc-widget-button): black button, violet text. */
+.tickets__widget button,
+.tickets__widget .btn-widget,
+.tickets__widget .tc-widget-button,
+.tickets__widget a[class*="widget"] {
+  display: flex !important; align-items: center !important; justify-content: center !important;
+  width: 100% !important; height: 76px !important; margin: 0 auto !important; padding: 0 24px !important;
+  background: var(--black) !important; background-image: none !important;
+  color: var(--violet) !important; text-shadow: none !important;
+  font-family: "Anton", sans-serif !important; font-size: 30px !important; font-weight: 400 !important;
+  letter-spacing: -0.04em !important; text-transform: uppercase !important; line-height: 1 !important;
+  border: 0 !important; border-radius: 0 !important; box-shadow: none !important;
+  -webkit-mask: none !important; mask: none !important;
+  cursor: pointer !important; transition: color .15s, background .15s !important;
+}
+.tickets__widget button:hover,
+.tickets__widget .btn-widget:hover,
+.tickets__widget .tc-widget-button:hover,
+.tickets__widget a[class*="widget"]:hover { color: var(--white) !important; }
+@media (max-width: 899px) { .tickets__widget { min-height: 0; } }
