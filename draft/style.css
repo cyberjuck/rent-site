@@ -512,3 +512,4 @@ section, [id] { scroll-margin-top: var(--header-h); }
   transition: transform .15s;
 }
 .sx__link:hover::after { transform: translateX(4px); }
+.sx-img video { object-position: var(--op, 50% 50%); }
