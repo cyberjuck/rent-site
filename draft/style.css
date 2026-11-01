@@ -522,3 +522,8 @@ section, [id] { scroll-margin-top: var(--header-h); }
 }
 /* faces photo: no overlap with the text above — it starts after the block's bottom padding */
 .faces, .sx-wrap .faces { margin-top: 0 !important; }
+/* halve the visible gap between paper tickets text and the faces photo */
+.faces, .sx-wrap .faces { margin-top: -24px !important; }
+@media (min-width: 900px) {
+  .faces, .sx-wrap .faces { margin-top: calc(-0.5 * min(100px, 6.94vw) * var(--z)) !important; }
+}
