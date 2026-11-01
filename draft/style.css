@@ -527,3 +527,5 @@ section, [id] { scroll-margin-top: var(--header-h); }
 @media (min-width: 900px) {
   .faces, .sx-wrap .faces { margin-top: calc(-0.5 * min(100px, 6.94vw) * var(--z)) !important; }
 }
+/* no photo reveal animation — photos always visible */
+.anim .sx-img img, .anim .sx-img video, .anim .row__img img, .anim .row__img video { clip-path: none !important; transform: none !important; transition: none !important; }
