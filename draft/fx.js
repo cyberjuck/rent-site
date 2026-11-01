@@ -183,7 +183,7 @@
 
 // ===== Background videos: make sure they play (iOS sometimes blocks autoplay) =====
 (function () {
-  const vids = document.querySelectorAll(".row__img video");
+  const vids = document.querySelectorAll(".row__img video, .sx-img video");
   if (!vids.length) return;
   const tryPlay = (v) => { v.muted = true; const p = v.play(); if (p && p.catch) p.catch(() => {}); };
   if ("IntersectionObserver" in window) {

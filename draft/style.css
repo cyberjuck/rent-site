@@ -438,7 +438,7 @@ section, [id] { scroll-margin-top: var(--header-h); }
 .o-l6 { padding-left: 50%; }
 .o-r4 { padding-right: 33.333%; }
 .sx-img { overflow: hidden; }
-.sx-img img { display: block; width: 100%; aspect-ratio: var(--r); object-fit: cover; }
+.sx-img img, .sx-img video { display: block; width: 100%; aspect-ratio: var(--r); object-fit: cover; }
 
 /* manifesto photo */
 .man__photo { display: block; width: min(370px, 25.7vw); aspect-ratio: 370 / 433; object-fit: cover; margin: 0 auto; position: relative; z-index: 1; }
@@ -448,8 +448,8 @@ section, [id] { scroll-margin-top: var(--header-h); }
 .faces { display: block; width: 100%; height: auto; margin-top: -8.9vw; position: relative; z-index: 0; }
 
 /* photo reveal for new images */
-.anim .sx-img img { clip-path: inset(0 0 0 100%); transform: scale(1.15); transition: clip-path .65s cubic-bezier(.65, 0, .2, 1), transform .85s cubic-bezier(.2, .7, .2, 1); }
-.anim .sx-img.in img { clip-path: inset(0 0 0 0); transform: scale(1); }
+.anim .sx-img img, .anim .sx-img video { clip-path: inset(0 0 0 100%); transform: scale(1.15); transition: clip-path .65s cubic-bezier(.65, 0, .2, 1), transform .85s cubic-bezier(.2, .7, .2, 1); }
+.anim .sx-img.in img, .anim .sx-img.in video { clip-path: inset(0 0 0 0); transform: scale(1); }
 
 @media (max-width: 899px) {
   .hero__photo { width: 100%; }
@@ -464,7 +464,41 @@ section, [id] { scroll-margin-top: var(--header-h); }
   .o-l6 { padding-left: 96px; }
   .o-r4 { padding-right: 64px; }
   .man__photo { width: 56vw; }
-  .anim .sx-img img { clip-path: inset(100% 0 0 0); transform: translateY(40px) scale(1.1); }
-  .anim .sx-img.in img { clip-path: inset(0 0 0 0); transform: none; }
+  .anim .sx-img img, .anim .sx-img video { clip-path: inset(100% 0 0 0); transform: translateY(40px) scale(1.1); }
+  .anim .sx-img.in img, .anim .sx-img.in video { clip-path: inset(0 0 0 0); transform: none; }
 }
 @media (prefers-reduced-motion: reduce) { .anim .sx-img img { clip-path: none !important; transform: none !important; } }
+
+/* =====================================================================
+   DRAFT: side margins like Figma's preview — the whole 1440 layout is shown
+   at ~86% width (z = .857), centred; block backgrounds still run edge to edge.
+   ===================================================================== */
+@media (min-width: 900px) {
+  :root { --z: .857; --gut: 7.15vw; --header-h: 64px; }
+  /* scale everything that was sized for 1440 */
+  .t { font-size: min(calc(var(--d) * var(--z) * 1px), calc(var(--d) * var(--z) * 100vw / 1440)); }
+  .sx__p { font-size: min(calc(30px * var(--z)), max(16px, calc(2.083vw * var(--z)))); }
+  .sx__q { font-size: min(calc(56px * var(--z)), max(24px, calc(3.89vw * var(--z)))); }
+  .header { font-size: calc(30px * var(--z)); padding: 0 calc(var(--gut) + min(100px, 6.94vw) * var(--z)); }
+  .header__nav { gap: calc(32px * var(--z)); }
+  .header__right { gap: calc(48px * var(--z)); }
+
+  /* side gutters on every block */
+  .hero, .manifesto, .drugstore, .insta, .strip {
+    padding-left: calc(var(--gut) + min(100px, 6.94vw) * var(--z));
+    padding-right: calc(var(--gut) + min(100px, 6.94vw) * var(--z));
+  }
+  .sx {
+    padding-left: calc(var(--gut) + min(120px, 8.33vw) * var(--z));
+    padding-right: calc(var(--gut) + min(120px, 8.33vw) * var(--z));
+    padding-top: calc(min(100px, 6.94vw) * var(--z));
+  }
+  .sx--pb { padding-bottom: calc(min(100px, 6.94vw) * var(--z)); }
+  .footer__row { padding-left: calc(var(--gut) + 60px * var(--z)); padding-right: calc(var(--gut) + 60px * var(--z)); }
+
+  /* photos and ticket strip details, scaled the same way */
+  .hero__photo { width: min(calc(778px * var(--z)), calc(54vw * var(--z))); }
+  .man__photo { width: min(calc(370px * var(--z)), calc(25.7vw * var(--z))); }
+  .strip { --dot: 25px; --gap: 16px; --dot-right: calc(var(--gut) + min(155px, 10.76vw) * var(--z)); }
+  .faces { width: calc(100% - 2 * var(--gut)); margin-left: auto; margin-right: auto; margin-top: calc(-8.9vw * var(--z)); }
+}
