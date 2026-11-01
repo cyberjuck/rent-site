@@ -5,169 +5,169 @@
   Bold in body text: <b>...</b>. New paragraph: <p>...</p>.
 */
 const EN = {
-  dx_ab1: "RENT is a rock musical by Jonathan Larson about a year in the life of a group of young artists in New York in the early nineties. They can’t pay the rent, they fall in love, they lose each other, and they’re right in the middle of the AIDS crisis.",
-  dx_ab2: "Larson wrote it about his own friends and neighbourhood. He died suddenly, at age 35, the night before the first preview of the show, and never saw what came next: RENT moved to Broadway, won the Pulitzer Prize and four Tony Awards (including Best Musical), ran for twelve years and became one of the most iconic musicals ever written.",
-  dx_ab3: "People get sick, fall in and out of love, behave like complete assholes — often all in the same song. Somehow, you end up rooting for them. Larson took Puccini’s La Bohème and moved it to 1990s New York.",
-  dx_abq: "Thirty years later, we’re bringing his New York to Belgrade, and it feels just as relevant here and now.",
-  dx_our1: "People who saw RENT when it first opened in New York in 1996 described it as watching your friends walk onto a stage and sing about the life you were all living. Over the years it has been polished into a beautiful, flawless Broadway production.",
-  dx_ourq: "We wanted to bring that first feeling back.",
-  dx_our2: "We cast people who recognise their own lives in this story, and we let them be themselves on stage. Every night they pour their hearts out, and the show comes out honest in a way you can’t rehearse. That’s exactly how we like it.",
-  dx_our3: "A ticket costs 2,000 dinars (about 20 US dollars), the same price RENT charged for its famous front-row seats on Broadway in 1996.",
-  dx_ev1: "The small print in your contract doesn’t mention that everything is rent. The flat, the city, the people you call family on a Tuesday night. We take as much as our hearts, our health and our bank cards can manage, and we keep it until our hearts expire (or our visas do).",
-  dx_ev2: "For the characters, the crisis was AIDS. Today, everyone in the room has a crisis of their own. For some of us, it came with a war and a packed suitcase. For others, it’s the slow realisation that the place you call home doesn’t feel like yours anymore. It often feels as though there’s nothing we can do. Trust people in power who haven’t listened to us in years? Work ourselves to death just to keep a roof over our heads on a burning planet?",
-  dx_evq: "RENT is about living right through it and not lowering your voice along the way.",
-  dx_ev3: "We are also here to remind you there is still love. There is still friendship. There is still sex (safe, please!). No war, no border and no breaking news can take that away, and we’re angry that anyone tried.",
-  dx_tm1: "We’re a cast and crew from Serbia, Russia and the US who decided to stage a Broadway musical with whatever time and money we could offer. We did it because we love this show deeply, and because right now Belgrade needs this story more than ever.",
-  dx_tmlink: "get to know us better",
-  dx_exq: "During the first act, you’ll be standing, so feel free to dance and move around like you’re at a gig.",
-  dx_ex1: "For the second act, you’ll have a seat, just like in a regular theatre. The bar is open before the show and during intermission.",
-  dx_ex2: "You’ll be much closer to the stage than usual, close enough to see everything, and the actors won’t pretend you’re invisible. We’d love for you to be part of the show, and we’ll do our best to make you feel like you’re right inside the story.",
-  dx_sp1: "We’re an independent team putting this show together entirely on our own. And we want to keep RENT affordable for as many people as possible. That’s why our regular ticket costs 2000 RSD. But to cover what this show actually costs, we need more.",
-  dx_spq: "So we came up with supporter tickets for 3000, 5000, 7000 or 10000 RSD.",
-  dx_sp2: "You won’t get anything extra. Same show, no special seats. Your support will help us pay for equipment and venue rental, put on more performances of RENT in Belgrade, and hopefully even pay our cast and crew a little something.",
-  dx_sp3: "And it works both ways. If 2000 RSD is too much but you still want to see the show, just reach out to us. We’ll figure something out! And if you’d like to support our team in a bigger way, we’d love to hear from you too.",
+  dx_ab1: "RENT is&nbsp;a&nbsp;rock musical by&nbsp;Jonathan&nbsp;Larson about a&nbsp;year in&nbsp;the life of&nbsp;a&nbsp;group of&nbsp;young artists in&nbsp;New&nbsp;York in&nbsp;the early nineties. They can’t&nbsp;pay the rent, they fall in&nbsp;love, they lose each other, and they’re&nbsp;right in&nbsp;the middle of&nbsp;the&nbsp;AIDS&nbsp;crisis.",
+  dx_ab2: "Larson wrote it&nbsp;about his own friends and neighbourhood. He&nbsp;died suddenly, at&nbsp;age&nbsp;35, the night before the first preview of&nbsp;the show, and never saw what came next: RENT moved to&nbsp;Broadway, won the Pulitzer&nbsp;Prize and four Tony&nbsp;Awards (including Best&nbsp;Musical), ran for twelve years and became one of&nbsp;the most iconic musicals ever&nbsp;written.",
+  dx_ab3: "People get sick, fall in&nbsp;and out of&nbsp;love, behave like complete assholes&nbsp;— often all in&nbsp;the same song. Somehow, you end up&nbsp;rooting for them. Larson took Puccini’s&nbsp;La&nbsp;Bohème and moved it&nbsp;to&nbsp;1990s&nbsp;New&nbsp;York.",
+  dx_abq: "Thirty years later, we’re&nbsp;bringing his New&nbsp;York to&nbsp;Belgrade, and it&nbsp;feels just as&nbsp;relevant here and&nbsp;now.",
+  dx_our1: "People who saw RENT when it&nbsp;first opened in&nbsp;New&nbsp;York in&nbsp;1996 described it&nbsp;as&nbsp;watching your friends walk onto a&nbsp;stage and sing about the life you were all living. Over the years it&nbsp;has been polished into a&nbsp;beautiful, flawless Broadway&nbsp;production.",
+  dx_ourq: "We&nbsp;wanted to&nbsp;bring that first feeling&nbsp;back.",
+  dx_our2: "We&nbsp;cast people who recognise their own lives in&nbsp;this story, and we&nbsp;let them be&nbsp;themselves on&nbsp;stage. Every night they pour their hearts out, and the show comes out honest in&nbsp;a&nbsp;way you can’t&nbsp;rehearse. That’s&nbsp;exactly how we&nbsp;like&nbsp;it.",
+  dx_our3: "A&nbsp;ticket costs 2,000&nbsp;dinars (about 20&nbsp;US&nbsp;dollars), the same price RENT charged for its famous front-row&nbsp;seats on&nbsp;Broadway&nbsp;in&nbsp;1996.",
+  dx_ev1: "The small print in&nbsp;your contract doesn’t&nbsp;mention that everything is&nbsp;rent. The flat, the city, the people you call family on&nbsp;a&nbsp;Tuesday night. We&nbsp;take as&nbsp;much as&nbsp;our hearts, our health and our bank cards can manage, and we&nbsp;keep it&nbsp;until our hearts expire (or&nbsp;our visas&nbsp;do).",
+  dx_ev2: "For the characters, the crisis was AIDS. Today, everyone in&nbsp;the room has a&nbsp;crisis of&nbsp;their own. For some of&nbsp;us, it&nbsp;came with a&nbsp;war and a&nbsp;packed suitcase. For others, it’s&nbsp;the slow realisation that the place you call home doesn’t&nbsp;feel like yours anymore. It&nbsp;often feels as&nbsp;though there’s&nbsp;nothing we&nbsp;can do. Trust people in&nbsp;power who haven’t&nbsp;listened to&nbsp;us&nbsp;in&nbsp;years? Work ourselves to&nbsp;death just to&nbsp;keep a&nbsp;roof over our heads on&nbsp;a&nbsp;burning&nbsp;planet?",
+  dx_evq: "RENT is&nbsp;about living right through it&nbsp;and not lowering your voice along the&nbsp;way.",
+  dx_ev3: "We&nbsp;are also here to&nbsp;remind you there is&nbsp;still love. There is&nbsp;still friendship. There is&nbsp;still sex (safe, please!). No&nbsp;war, no&nbsp;border and no&nbsp;breaking news can take that away, and we’re&nbsp;angry that anyone&nbsp;tried.",
+  dx_tm1: "We’re&nbsp;a&nbsp;cast and crew from Serbia, Russia and the US&nbsp;who decided to&nbsp;stage a&nbsp;Broadway musical with whatever time and money we&nbsp;could offer. We&nbsp;did it&nbsp;because we&nbsp;love this show deeply, and because right now Belgrade needs this story more than&nbsp;ever.",
+  dx_tmlink: "get to&nbsp;know us&nbsp;better",
+  dx_exq: "During the first act, you’ll&nbsp;be&nbsp;standing, so&nbsp;feel free to&nbsp;dance and move around like&nbsp;you’re&nbsp;at&nbsp;a&nbsp;gig.",
+  dx_ex1: "For the second act, you’ll&nbsp;have a&nbsp;seat, just like in&nbsp;a&nbsp;regular theatre. The bar is&nbsp;open before the show and during&nbsp;intermission.",
+  dx_ex2: "You’ll&nbsp;be&nbsp;much closer to&nbsp;the stage than usual, close enough to&nbsp;see everything, and the actors won’t&nbsp;pretend you’re&nbsp;invisible. We’d&nbsp;love for you to&nbsp;be&nbsp;part of&nbsp;the show, and we’ll&nbsp;do&nbsp;our best to&nbsp;make you feel like you’re&nbsp;right inside the&nbsp;story.",
+  dx_sp1: "We’re&nbsp;an&nbsp;independent team putting this show together entirely on&nbsp;our own. And we&nbsp;want to&nbsp;keep RENT affordable for as&nbsp;many people as&nbsp;possible. That’s&nbsp;why our regular ticket costs 2000&nbsp;RSD. But to&nbsp;cover what this show actually costs, we&nbsp;need&nbsp;more.",
+  dx_spq: "So&nbsp;we&nbsp;came up&nbsp;with supporter tickets for 3000, 5000, 7000&nbsp;or&nbsp;10000&nbsp;RSD.",
+  dx_sp2: "You won’t&nbsp;get anything extra. Same show, no&nbsp;special seats. Your support will help us&nbsp;pay for equipment and venue rental, put on&nbsp;more performances of&nbsp;RENT in&nbsp;Belgrade, and hopefully even pay our cast and crew a&nbsp;little&nbsp;something.",
+  dx_sp3: "And it&nbsp;works both ways. If&nbsp;2000&nbsp;RSD is&nbsp;too much but you still want to&nbsp;see the show, just reach out to&nbsp;us. We’ll&nbsp;figure something out! And if&nbsp;you’d&nbsp;like to&nbsp;support our team in&nbsp;a&nbsp;bigger way, we’d&nbsp;love to&nbsp;hear from you&nbsp;too.",
 
   team_more: "learn more",
   tp_cast: "cast", tp_band: "band", tp_creative: "creative team",
   band_keys: "keys", band_guitar: "guitar", band_bass: "bass", band_drums: "drums",
   cr_director: "director, plays maureen", cr_assistant: "assistant director, dramaturg", cr_vocal: "vocal coach",
-  cr_choreo: "choreography coach", cr_art: "art director, designer", cr_marketing: "head of marketing",
+  cr_choreo: "choreography coach", cr_art: "art director, designer", cr_marketing: "head of&nbsp;marketing",
   cr_producer: "producer", cr_set: "set designer", cr_smm: "smm manager", cr_tango: "tango coach",
   cr_soundeng: "sound engineer", cr_sounddes: "sound designer", cr_soundass: "sound assistant",
   nav_rent: "RENT",
-  nav_about: "what is rent",
+  nav_about: "what is&nbsp;rent",
   nav_team: "team",
-  nav_expect: "what to expect",
-  nav_buy: "buy a ticket",
+  nav_expect: "what to&nbsp;expect",
+  nav_buy: "buy a&nbsp;ticket",
 
-  about_h: "WHAT IS “RENT”",
+  about_h: "WHAT IS&nbsp;“RENT”",
   about_p:
-    "<p>RENT is a <b>rock musical</b> by Jonathan Larson about <b>a year in the life of a group of young artists in New York in the early nineties.</b> They can’t pay the rent, they fall in love, they lose each other, and they’re right in the middle of the AIDS crisis.</p>" +
-    "<p>Larson wrote it about his own friends and neighbourhood. He died suddenly, at age 35, the night before the first preview of the show, and never saw what came next: RENT moved to <b>Broadway</b>, won the <b>Pulitzer Prize</b> and <b>four Tony Awards</b> (including Best Musical), ran for twelve years and became one of the most iconic musicals ever written.</p>" +
-    "<p>People get sick, fall in and out of love, behave like complete assholes — often all in the same song. Somehow, you end up rooting for them.</p>" +
-    "<p>Larson took Puccini’s La Bohème and moved it to 1990s New York. <b>Thirty years later, we’re bringing his New York to Belgrade, and it feels just as relevant here and now.</b></p>",
+    "<p>RENT is&nbsp;a <b>rock musical</b> by&nbsp;Jonathan&nbsp;Larson about <b>a&nbsp;year in&nbsp;the life of&nbsp;a&nbsp;group of&nbsp;young artists in&nbsp;New&nbsp;York in&nbsp;the early nineties.</b> They can’t&nbsp;pay the rent, they fall in&nbsp;love, they lose each other, and they’re&nbsp;right in&nbsp;the middle of&nbsp;the&nbsp;AIDS&nbsp;crisis.</p>" +
+    "<p>Larson wrote it&nbsp;about his own friends and neighbourhood. He&nbsp;died suddenly, at&nbsp;age&nbsp;35, the night before the first preview of&nbsp;the show, and never saw what came next: RENT moved to <b>Broadway</b>, won the <b>Pulitzer&nbsp;Prize</b> and <b>four Tony&nbsp;Awards</b> (including Best&nbsp;Musical), ran for twelve years and became one of&nbsp;the most iconic musicals ever&nbsp;written.</p>" +
+    "<p>People get sick, fall in&nbsp;and out of&nbsp;love, behave like complete assholes&nbsp;— often all in&nbsp;the same song. Somehow, you end up&nbsp;rooting for&nbsp;them.</p>" +
+    "<p>Larson took Puccini’s&nbsp;La&nbsp;Bohème and moved it&nbsp;to&nbsp;1990s New&nbsp;York. <b>Thirty years later, we’re&nbsp;bringing his New&nbsp;York to&nbsp;Belgrade, and it&nbsp;feels just as&nbsp;relevant here and&nbsp;now.</b></p>",
 
   our_h: "OUR “RENT”",
   our_p:
-    "<p>People who saw RENT when it first opened in New York in 1996 described it as watching your friends walk onto a stage and sing about the life you were all living. Over the years it has been polished into a beautiful, flawless Broadway production.</p>" +
-    "<p><b>We wanted to bring that first feeling back.</b> We cast people who recognise their own lives in this story, and we let them be themselves on stage. Every night they pour their hearts out, and the show comes out honest in a way you can’t rehearse. That’s exactly how we like it.</p>" +
-    "<p>A ticket costs 2,000 dinars (about 20 US dollars), the same price RENT charged for its famous front-row seats on Broadway in 1996.</p>",
+    "<p>People who saw RENT when it&nbsp;first opened in&nbsp;New&nbsp;York in&nbsp;1996 described it&nbsp;as&nbsp;watching your friends walk onto a&nbsp;stage and sing about the life you were all living. Over the years it&nbsp;has been polished into a&nbsp;beautiful, flawless Broadway&nbsp;production.</p>" +
+    "<p><b>We&nbsp;wanted to&nbsp;bring that first feeling back.</b> We&nbsp;cast people who recognise their own lives in&nbsp;this story, and we&nbsp;let them be&nbsp;themselves on&nbsp;stage. Every night they pour their hearts out, and the show comes out honest in&nbsp;a&nbsp;way you can’t&nbsp;rehearse. That’s&nbsp;exactly how we&nbsp;like&nbsp;it.</p>" +
+    "<p>A&nbsp;ticket costs 2,000&nbsp;dinars (about 20&nbsp;US&nbsp;dollars), the same price RENT charged for its famous front-row&nbsp;seats on&nbsp;Broadway&nbsp;in&nbsp;1996.</p>",
 
-  every_h: "EVERYTHING IS RENT",
+  every_h: "EVERYTHING IS&nbsp;RENT",
   every_p:
-    "<p>The small print in your contract doesn’t mention that everything is rent. The flat, the city, the people you call family on a Tuesday night. We take as much as our hearts, our health and our bank cards can manage, and we keep it until our hearts expire (or our visas do).</p>" +
-    "<p>For the characters, the crisis was AIDS. Today, everyone in the room has a crisis of their own. For some of us, it came with a war and a packed suitcase. For others, it’s the slow realisation that the place you call home doesn’t feel like yours anymore. It often feels as though there’s nothing we can do. Trust people in power who haven’t listened to us in years? Work ourselves to death just to keep a roof over our heads on a burning planet? <b>RENT is about living right through it and not lowering your voice along the way.</b></p>" +
-    "<p>We are also here to remind you there is still love. There is still friendship. There is still sex (safe, please!). No war, no border and no breaking news can take that away, and we’re angry that anyone tried.</p>",
+    "<p>The small print in&nbsp;your contract doesn’t&nbsp;mention that everything is&nbsp;rent. The flat, the city, the people you call family on&nbsp;a&nbsp;Tuesday night. We&nbsp;take as&nbsp;much as&nbsp;our hearts, our health and our bank cards can manage, and we&nbsp;keep it&nbsp;until our hearts expire (or&nbsp;our visas&nbsp;do).</p>" +
+    "<p>For the characters, the crisis was AIDS. Today, everyone in&nbsp;the room has a&nbsp;crisis of&nbsp;their own. For some of&nbsp;us, it&nbsp;came with a&nbsp;war and a&nbsp;packed suitcase. For others, it’s&nbsp;the slow realisation that the place you call home doesn’t&nbsp;feel like yours anymore. It&nbsp;often feels as&nbsp;though there’s&nbsp;nothing we&nbsp;can do. Trust people in&nbsp;power who haven’t&nbsp;listened to&nbsp;us&nbsp;in&nbsp;years? Work ourselves to&nbsp;death just to&nbsp;keep a&nbsp;roof over our heads on&nbsp;a&nbsp;burning planet? <b>RENT is&nbsp;about living right through it&nbsp;and not lowering your voice along the&nbsp;way.</b></p>" +
+    "<p>We&nbsp;are also here to&nbsp;remind you there is&nbsp;still love. There is&nbsp;still friendship. There is&nbsp;still sex (safe, please!). No&nbsp;war, no&nbsp;border and no&nbsp;breaking news can take that away, and we’re&nbsp;angry that anyone&nbsp;tried.</p>",
 
   team_h: "TEAM",
   team_p:
-    "<p>We’re a cast and crew from Serbia, Russia and the US who decided to stage a Broadway musical with whatever time and money we could offer. We did it because we love this show deeply, and because right now Belgrade needs this story more than ever.</p>",
+    "<p>We’re&nbsp;a&nbsp;cast and crew from Serbia, Russia and the US&nbsp;who decided to&nbsp;stage a&nbsp;Broadway musical with whatever time and money we&nbsp;could offer. We&nbsp;did it&nbsp;because we&nbsp;love this show deeply, and because right now Belgrade needs this story more than&nbsp;ever.</p>",
 
-  expect_h: "WHAT TO EXPECT",
+  expect_h: "WHAT TO&nbsp;EXPECT",
   expect_p:
-    "<p>During the first act, you’ll be standing, so feel free to dance and move around like you’re at a gig. For the second act, you’ll have a seat, just like in a regular theatre. The bar is open before the show and during intermission.</p>" +
-    "<p>You’ll be much closer to the stage than usual, close enough to see everything, and the actors won’t pretend you’re invisible. We’d love for you to be part of the show, and we’ll do our best to make you feel like you’re right inside the story.</p>",
+    "<p>During the first act, you’ll&nbsp;be&nbsp;standing, so&nbsp;feel free to&nbsp;dance and move around like you’re&nbsp;at&nbsp;a&nbsp;gig. For the second act, you’ll&nbsp;have a&nbsp;seat, just like in&nbsp;a&nbsp;regular theatre. The bar is&nbsp;open before the show and during&nbsp;intermission.</p>" +
+    "<p>You’ll&nbsp;be&nbsp;much closer to&nbsp;the stage than usual, close enough to&nbsp;see everything, and the actors won’t&nbsp;pretend you’re&nbsp;invisible. We’d&nbsp;love for you to&nbsp;be&nbsp;part of&nbsp;the show, and we’ll&nbsp;do&nbsp;our best to&nbsp;make you feel like you’re&nbsp;right inside the&nbsp;story.</p>",
 
-  tickets_h: "buy a ticket",
+  tickets_h: "buy a&nbsp;ticket",
 
   support_h: "support us",
   support_p:
-    "<p>We’re an independent team putting this show together entirely on our own. And we want to keep RENT affordable for as many people as possible. That’s why our <b>regular ticket costs 2000 RSD.</b> But to cover what this show actually costs, we need more. So we came up with <b>supporter tickets for 3000, 5000, 7000 or 10000 RSD.</b> You won’t get anything extra. Same show, no special seats. Your support will help us pay for equipment and venue rental, put on more performances of RENT in Belgrade, and hopefully even pay our cast and crew a little something.</p>" +
-    "<p><b>And it works both ways.</b> If 2000 RSD is too much but you still want to see the show, just reach out to us. We’ll figure something out! And if you’d like to support our team in a bigger way, we’d love to hear from you too.</p>",
+    "<p>We’re&nbsp;an&nbsp;independent team putting this show together entirely on&nbsp;our own. And we&nbsp;want to&nbsp;keep RENT affordable for as&nbsp;many people as&nbsp;possible. That’s&nbsp;why our <b>regular ticket costs 2000&nbsp;RSD.</b> But to&nbsp;cover what this show actually costs, we&nbsp;need more. So&nbsp;we&nbsp;came up&nbsp;with <b>supporter tickets for 3000, 5000, 7000 or&nbsp;10000&nbsp;RSD.</b> You won’t&nbsp;get anything extra. Same show, no&nbsp;special seats. Your support will help us&nbsp;pay for equipment and venue rental, put on&nbsp;more performances of&nbsp;RENT in&nbsp;Belgrade, and hopefully even pay our cast and crew a&nbsp;little&nbsp;something.</p>" +
+    "<p><b>And it&nbsp;works both ways.</b> If&nbsp;2000&nbsp;RSD is&nbsp;too much but you still want to&nbsp;see the show, just reach out to&nbsp;us. We’ll&nbsp;figure something out! And if&nbsp;you’d&nbsp;like to&nbsp;support our team in&nbsp;a&nbsp;bigger way, we’d&nbsp;love to&nbsp;hear from you&nbsp;too.</p>",
   offline_h: "paper tickets",
   offline_p:
-    "<p>Soon you’ll be able to grab a real paper ticket from our friends at cafes and bars around Belgrade. No platform fees — every dinar goes straight to the show. The list of spots will be posted here and on <a class=\"u\" href=\"https://www.instagram.com/everything.is.rent/\" target=\"_blank\" rel=\"noopener\">Instagram</a> very soon.</p>",
+    "<p>Soon you’ll&nbsp;be&nbsp;able to&nbsp;grab a&nbsp;real paper ticket from our friends at&nbsp;cafes and bars around Belgrade. No&nbsp;platform fees&nbsp;— every dinar goes straight to&nbsp;the show. The list of&nbsp;spots will be&nbsp;posted here and on <a class=\"u\" href=\"https://www.instagram.com/everything.is.rent/\" target=\"_blank\" rel=\"noopener\">Instagram</a> very&nbsp;soon.</p>",
 
   // pink ticket bars
-  strip_buy: "buy a ticket",
-  strip_from: "FROM 2,000 RSD",
-  cta_buy: "BUY A TICKET",
+  strip_buy: "buy a&nbsp;ticket",
+  strip_from: "FROM 2,000&nbsp;RSD",
+  cta_buy: "BUY A&nbsp;TICKET",
 
   foot_xtix: "Tickets sold via xtix",
-  foot_terms: "Terms of service",
+  foot_terms: "Terms of&nbsp;service",
   foot_refund: "Refund policy",
 };
 
 const SR = {
   ...EN,
-  dx_ab1: "RENT je rok mjuzikl Džonatana Larsona koji prati godinu dana iz života grupe mladih umetnika u Njujorku početkom devedesetih godina prošlog veka. Oni nemaju novca za kiriju, zaljubljuju se, gube jedni druge i pokušavaju da žive usred epidemije side.",
-  dx_ab2: "Larson je ovaj mjuzikl napisao inspirisan sopstvenim prijateljima i krajem u kom je živeo. Preminuo je iznenada u 35. godini, noć uoči premijere, i nikada nije video šta je usledilo: RENT je stigao na Brodvej, osvojio Pulicerovu nagradu i četiri Toni nagrade (uključujući onu za najbolji mjuzikl), izvodio se dvanaest godina i postao jedan od najupečatljivijih mjuzikala svih vremena.",
-  dx_ab3: "Likovi se razboljevaju, zaljubljuju, odljubljuju i ponašaju kao potpuni kreteni – i sve to često u istoj pesmi. A nekako na kraju ipak navijaš za njih. Larson je uzeo Pučinijevu operu La Bohème i preselio je u Njujork devedesetih.",
-  dx_abq: "Trideset godina kasnije, mi njegov Njujork dovodimo u Beograd. I ova priča je ovde i danas podjednako aktuelna.",
-  dx_our1: "Ljudi koji su gledali RENT kada je prvi put izveden u Njujorku 1996. godine opisali su taj osećaj kao da su njihovi prijatelji izašli na scenu i počeli da pevaju o životu koji svi zajedno žive. Tokom godina, predstava je izbrušena do savršenstva klasične brodvejske produkcije.",
-  dx_ourq: "Mi hoćemo da vratimo taj prvobitni osećaj.",
-  dx_our2: "Okupili smo ljude koji u ovoj priči prepoznaju sopstvene živote i pustili ih da na sceni budu ono što jesu. Zato svake večeri ostavljaju srce na sceni, a predstava postaje iskrena na način koji ne može da se uvežba. I baš tako nam se sviđa.",
-  dx_our3: "Ulaznica košta 2.000 dinara (oko 20 američkih dolara), isto koliko su 1996. godine koštale čuvene ulaznice za prvi red na Brodveju.",
-  dx_ev1: "Ni najsitnija slova u ugovorima ne pominju da iznajmljujemo mnogo više od stana u kom živimo. Zapravo, sve je pod kirijom. Stan, grad, ljudi koje jednog običnog utorka uveče zoveš porodicom. Uzimamo od života onoliko koliko nam srce, zdravlje i računi u banci dozvoljavaju. Držimo se toga dok nam ne istekne rok trajanja – ili viza.",
-  dx_ev2: "Za likove iz RENT-a kriza je bila epidemija side. Danas, svako od nas nosi neku svoju krizu. Nekima je došla zajedno s ratom i spakovanim koferom. Drugima se polako uvukla u život kroz spoznaju da mesto koje zovu domom više ne osećaju kao svoje. Često nam se čini da ne možemo ništa da promenimo. Da verujemo ljudima na vlasti koji nas godinama ne slušaju? Da radimo do iznemoglosti samo da bismo imali krov nad glavom, i to na planeti koja gori?",
-  dx_evq: "RENT je priča o tome kako živeti usred svega toga – i ne stišavati glas.",
-  dx_ev3: "A tu smo i da priznamo nešto: ljubav još postoji. Prijateljstvo još postoji. I seks još postoji (bezbedan, molimo!). Nijedan rat, nijedna granica i nijedna udarna vest to ne mogu da nam oduzmu. I besni smo što je iko uopšte pokušao.",
-  dx_tm1: "Mi smo ekipa umetnika iz Srbije, Rusije i SAD-a koji su odlučili da postave brodvejski mjuzikl sa malim budžetom, u ono malo slobodnog vremena koje nam ostaje posle posla. Radimo to zato što iskreno volimo ovu predstavu. I zato što verujemo da je Beogradu baš sada ova priča potrebnija nego ikad.",
+  dx_ab1: "RENT je&nbsp;rok mjuzikl Džonatana&nbsp;Larsona koji prati godinu dana iz&nbsp;života grupe mladih umetnika u&nbsp;Njujorku početkom devedesetih godina prošlog veka. Oni nemaju novca za&nbsp;kiriju, zaljubljuju se, gube jedni druge i&nbsp;pokušavaju da&nbsp;žive usred epidemije&nbsp;side.",
+  dx_ab2: "Larson je&nbsp;ovaj mjuzikl napisao inspirisan sopstvenim prijateljima i&nbsp;krajem u&nbsp;kom je&nbsp;živeo. Preminuo je&nbsp;iznenada u&nbsp;35.&nbsp;godini, noć uoči premijere, i&nbsp;nikada nije video šta je&nbsp;usledilo: RENT je&nbsp;stigao na&nbsp;Brodvej, osvojio Pulicerovu&nbsp;nagradu i&nbsp;četiri Toni&nbsp;nagrade (uključujući onu za&nbsp;najbolji mjuzikl), izvodio se&nbsp;dvanaest godina i&nbsp;postao jedan od&nbsp;najupečatljivijih mjuzikala svih&nbsp;vremena.",
+  dx_ab3: "Likovi se&nbsp;razboljevaju, zaljubljuju, odljubljuju i&nbsp;ponašaju kao potpuni kreteni&nbsp;– i&nbsp;sve to&nbsp;često u&nbsp;istoj pesmi. A&nbsp;nekako na&nbsp;kraju ipak navijaš za&nbsp;njih. Larson je&nbsp;uzeo Pučinijevu operu La&nbsp;Bohème i&nbsp;preselio je&nbsp;u&nbsp;Njujork&nbsp;devedesetih.",
+  dx_abq: "Trideset godina kasnije, mi&nbsp;njegov Njujork dovodimo u&nbsp;Beograd. I&nbsp;ova priča je&nbsp;ovde i&nbsp;danas podjednako&nbsp;aktuelna.",
+  dx_our1: "Ljudi koji su&nbsp;gledali RENT kada je&nbsp;prvi put izveden u&nbsp;Njujorku 1996.&nbsp;godine opisali su&nbsp;taj osećaj kao da&nbsp;su&nbsp;njihovi prijatelji izašli na&nbsp;scenu i&nbsp;počeli da&nbsp;pevaju o&nbsp;životu koji svi zajedno žive. Tokom godina, predstava je&nbsp;izbrušena do&nbsp;savršenstva klasične brodvejske&nbsp;produkcije.",
+  dx_ourq: "Mi&nbsp;hoćemo da&nbsp;vratimo taj prvobitni&nbsp;osećaj.",
+  dx_our2: "Okupili smo ljude koji u&nbsp;ovoj priči prepoznaju sopstvene živote i&nbsp;pustili ih&nbsp;da&nbsp;na&nbsp;sceni budu ono što jesu. Zato svake večeri ostavljaju srce na&nbsp;sceni, a&nbsp;predstava postaje iskrena na&nbsp;način koji ne&nbsp;može da&nbsp;se&nbsp;uvežba. I&nbsp;baš tako nam&nbsp;se&nbsp;sviđa.",
+  dx_our3: "Ulaznica košta 2.000&nbsp;dinara (oko 20&nbsp;američkih&nbsp;dolara), isto koliko su&nbsp;1996.&nbsp;godine koštale čuvene ulaznice za&nbsp;prvi red&nbsp;na&nbsp;Brodveju.",
+  dx_ev1: "Ni&nbsp;najsitnija slova u&nbsp;ugovorima ne&nbsp;pominju da&nbsp;iznajmljujemo mnogo više od&nbsp;stana u&nbsp;kom živimo. Zapravo, sve je&nbsp;pod kirijom. Stan, grad, ljudi koje jednog običnog utorka uveče zoveš porodicom. Uzimamo od&nbsp;života onoliko koliko nam srce, zdravlje i&nbsp;računi u&nbsp;banci dozvoljavaju. Držimo se&nbsp;toga dok nam ne&nbsp;istekne rok trajanja&nbsp;– ili&nbsp;viza.",
+  dx_ev2: "Za&nbsp;likove iz&nbsp;RENT-a&nbsp;kriza je&nbsp;bila epidemija side. Danas, svako od&nbsp;nas nosi neku svoju krizu. Nekima je&nbsp;došla zajedno s&nbsp;ratom i&nbsp;spakovanim koferom. Drugima se&nbsp;polako uvukla u&nbsp;život kroz spoznaju da&nbsp;mesto koje zovu domom više ne&nbsp;osećaju kao svoje. Često nam se&nbsp;čini da&nbsp;ne&nbsp;možemo ništa da&nbsp;promenimo. Da&nbsp;verujemo ljudima na&nbsp;vlasti koji nas godinama ne&nbsp;slušaju? Da&nbsp;radimo do&nbsp;iznemoglosti samo da&nbsp;bismo imali krov nad glavom, i&nbsp;to&nbsp;na&nbsp;planeti koja&nbsp;gori?",
+  dx_evq: "RENT je&nbsp;priča o&nbsp;tome kako živeti usred svega toga&nbsp;– i&nbsp;ne&nbsp;stišavati&nbsp;glas.",
+  dx_ev3: "A&nbsp;tu&nbsp;smo i&nbsp;da&nbsp;priznamo nešto: ljubav još postoji. Prijateljstvo još postoji. I&nbsp;seks još postoji (bezbedan, molimo!). Nijedan rat, nijedna granica i&nbsp;nijedna udarna vest to&nbsp;ne&nbsp;mogu da&nbsp;nam oduzmu. I&nbsp;besni smo što je&nbsp;iko uopšte&nbsp;pokušao.",
+  dx_tm1: "Mi&nbsp;smo ekipa umetnika iz&nbsp;Srbije, Rusije i&nbsp;SAD-a&nbsp;koji su&nbsp;odlučili da&nbsp;postave brodvejski mjuzikl sa&nbsp;malim budžetom, u&nbsp;ono malo slobodnog vremena koje nam ostaje posle posla. Radimo to&nbsp;zato što iskreno volimo ovu predstavu. I&nbsp;zato što verujemo da&nbsp;je&nbsp;Beogradu baš sada ova priča potrebnija nego&nbsp;ikad.",
   dx_tmlink: "upoznaj nas bolje",
-  dx_exq: "Prvi čin se gleda stojeći, što znači da slobodno možeš da plešeš i da se krećeš, baš kao na svirci.",
-  dx_ex1: "Za drugi čin imaćeš svoje mesto za sedenje, kao u običnom pozorištu. Bar je otvoren pre predstave i tokom pauze između činova.",
-  dx_ex2: "Bićeš mnogo bliže sceni nego inače, dovoljno blizu da vidiš baš sve. A glumci se neće praviti da ne postojiš. Želimo da budeš deo predstave i daćemo sve od sebe da se osećaš kao da si i sam ušao u ovu priču.",
-  dx_sp1: "Mi smo nezavisna ekipa i ovu predstavu pravimo potpuno sami. Želimo da RENT bude dostupan što većem broju ljudi. Obična ulaznica košta 2000 RSD – ali to ne pokriva sve troškove naše predstave.",
-  dx_spq: "Zato su dostupne i ulaznice podrške od 3000, 5000, 7000 ili 10000 RSD.",
-  dx_sp2: "Uz njih ne dobijaš ništa dodatno: ista predstava, nema posebnih mesta. Tvoja podrška će nam pomoći da platimo opremu i najam prostora, organizujemo još izvođenja RENT-a u Beogradu i, nadamo se, damo bar nešto našoj ekipi.",
-  dx_sp3: "A važi i obrnuto. Ako ti je 2000 RSD previše, a ipak želiš da dođeš na predstavu, samo nam se javi. Naći ćemo rešenje! I ako želiš da podržiš našu ekipu na veći način, rado ćemo čuti tvoje ideje.",
+  dx_exq: "Prvi čin se&nbsp;gleda stojeći, što znači da&nbsp;slobodno možeš da&nbsp;plešeš i&nbsp;da&nbsp;se&nbsp;krećeš, baš kao&nbsp;na&nbsp;svirci.",
+  dx_ex1: "Za&nbsp;drugi čin imaćeš svoje mesto za&nbsp;sedenje, kao u&nbsp;običnom pozorištu. Bar je&nbsp;otvoren pre predstave i&nbsp;tokom pauze između&nbsp;činova.",
+  dx_ex2: "Bićeš mnogo bliže sceni nego inače, dovoljno blizu da&nbsp;vidiš baš sve. A&nbsp;glumci se&nbsp;neće praviti da&nbsp;ne&nbsp;postojiš. Želimo da&nbsp;budeš deo predstave i&nbsp;daćemo sve od&nbsp;sebe da&nbsp;se&nbsp;osećaš kao da&nbsp;si&nbsp;i&nbsp;sam ušao u&nbsp;ovu&nbsp;priču.",
+  dx_sp1: "Mi&nbsp;smo nezavisna ekipa i&nbsp;ovu predstavu pravimo potpuno sami. Želimo da&nbsp;RENT bude dostupan što većem broju ljudi. Obična ulaznica košta 2000&nbsp;RSD&nbsp;– ali to&nbsp;ne&nbsp;pokriva sve troškove naše&nbsp;predstave.",
+  dx_spq: "Zato su&nbsp;dostupne i&nbsp;ulaznice podrške od&nbsp;3000, 5000, 7000 ili&nbsp;10000&nbsp;RSD.",
+  dx_sp2: "Uz&nbsp;njih ne&nbsp;dobijaš ništa dodatno: ista predstava, nema posebnih mesta. Tvoja podrška će&nbsp;nam pomoći da&nbsp;platimo opremu i&nbsp;najam prostora, organizujemo još izvođenja RENT-a&nbsp;u&nbsp;Beogradu i, nadamo se, damo bar nešto našoj&nbsp;ekipi.",
+  dx_sp3: "A&nbsp;važi i&nbsp;obrnuto. Ako ti&nbsp;je&nbsp;2000&nbsp;RSD previše, a&nbsp;ipak želiš da&nbsp;dođeš na&nbsp;predstavu, samo nam se&nbsp;javi. Naći ćemo rešenje! I&nbsp;ako želiš da&nbsp;podržiš našu ekipu na&nbsp;veći način, rado ćemo čuti tvoje&nbsp;ideje.",
 
   team_more: "saznaj više",
   tp_cast: "glumački ansambl", tp_band: "bend", tp_creative: "kreativni tim",
   band_keys: "klavijature", band_guitar: "gitara", band_bass: "bas", band_drums: "bubnjevi",
-  cr_director: "režija, igra Maureen", cr_assistant: "dramaturgija, saradnica&nbsp;u&nbsp;režiji", cr_vocal: "vokalna priprema",
+  cr_director: "režija, igra Maureen", cr_assistant: "dramaturgija,&nbsp;saradnica&nbsp;u&nbsp;režiji", cr_vocal: "vokalna priprema",
   cr_choreo: "koreografija", cr_art: "art direkcija, dizajn", cr_marketing: "marketing",
   cr_producer: "produkcija", cr_set: "scenografija", cr_smm: "društvene mreže", cr_tango: "tango koreografija",
-  cr_soundeng: "ton majstor", cr_sounddes: "dizajn zvuka", cr_soundass: "saradnik za zvuk",
-  nav_about: "ŠTA JE RENT",
+  cr_soundeng: "ton majstor", cr_sounddes: "dizajn zvuka", cr_soundass: "saradnik za&nbsp;zvuk",
+  nav_about: "ŠTA JE&nbsp;RENT",
   nav_team: "EKIPA",
-  nav_expect: "ŠTA DA OČEKUJETE",
+  nav_expect: "ŠTA DA&nbsp;OČEKUJETE",
   nav_buy: "KUPI ULAZNICU",
 
-  about_h: "ŠTA JE RENT",
+  about_h: "ŠTA JE&nbsp;RENT",
   about_p:
-    "<p>RENT je <b>rok mjuzikl</b> Džonatana Larsona koji prati <b>godinu dana iz života grupe mladih umetnika u Njujorku početkom devedesetih godina prošlog veka.</b> Oni nemaju novca za kiriju, zaljubljuju se, gube jedni druge i pokušavaju da žive usred epidemije side.</p>" +
-    "<p>Larson je ovaj mjuzikl napisao inspirisan sopstvenim prijateljima i krajem u kom je živeo. Preminuo je iznenada u 35. godini, noć uoči premijere, i nikada nije video šta je usledilo: RENT je stigao na <b>Brodvej</b>, osvojio <b>Pulicerovu nagradu</b> i <b>četiri Toni nagrade</b> (uključujući onu za najbolji mjuzikl), izvodio se dvanaest godina i postao jedan od najupečatljivijih mjuzikala svih vremena.</p>" +
-    "<p>Likovi se razboljevaju, zaljubljuju, odljubljuju i ponašaju kao potpuni kreteni – i sve to često u istoj pesmi. A nekako na kraju ipak navijaš za njih.</p>" +
-    "<p>Larson je uzeo Pučinijevu operu La Bohème i preselio je u Njujork devedesetih. <b>Trideset godina kasnije, mi njegov Njujork dovodimo u Beograd. I ova priča je ovde i danas podjednako aktuelna.</b></p>",
+    "<p>RENT je <b>rok mjuzikl</b> Džonatana&nbsp;Larsona koji prati <b>godinu dana iz&nbsp;života grupe mladih umetnika u&nbsp;Njujorku početkom devedesetih godina prošlog veka.</b> Oni nemaju novca za&nbsp;kiriju, zaljubljuju se, gube jedni druge i&nbsp;pokušavaju da&nbsp;žive usred epidemije&nbsp;side.</p>" +
+    "<p>Larson je&nbsp;ovaj mjuzikl napisao inspirisan sopstvenim prijateljima i&nbsp;krajem u&nbsp;kom je&nbsp;živeo. Preminuo je&nbsp;iznenada u&nbsp;35.&nbsp;godini, noć uoči premijere, i&nbsp;nikada nije video šta je&nbsp;usledilo: RENT je&nbsp;stigao na <b>Brodvej</b>, osvojio <b>Pulicerovu&nbsp;nagradu</b> i <b>četiri Toni&nbsp;nagrade</b> (uključujući onu za&nbsp;najbolji mjuzikl), izvodio se&nbsp;dvanaest godina i&nbsp;postao jedan od&nbsp;najupečatljivijih mjuzikala svih&nbsp;vremena.</p>" +
+    "<p>Likovi se&nbsp;razboljevaju, zaljubljuju, odljubljuju i&nbsp;ponašaju kao potpuni kreteni&nbsp;– i&nbsp;sve to&nbsp;često u&nbsp;istoj pesmi. A&nbsp;nekako na&nbsp;kraju ipak navijaš&nbsp;za&nbsp;njih.</p>" +
+    "<p>Larson je&nbsp;uzeo Pučinijevu operu La&nbsp;Bohème i&nbsp;preselio je&nbsp;u&nbsp;Njujork devedesetih. <b>Trideset godina kasnije, mi&nbsp;njegov Njujork dovodimo u&nbsp;Beograd. I&nbsp;ova priča je&nbsp;ovde i&nbsp;danas podjednako&nbsp;aktuelna.</b></p>",
 
   our_h: "NAŠ RENT",
   our_p:
-    "<p>Ljudi koji su gledali RENT kada je prvi put izveden u Njujorku 1996. godine opisali su taj osećaj kao da su njihovi prijatelji izašli na scenu i počeli da pevaju o životu koji svi zajedno žive. Tokom godina, predstava je izbrušena do savršenstva klasične brodvejske produkcije.</p>" +
-    "<p><b>Mi hoćemo da vratimo taj prvobitni osećaj.</b> Okupili smo ljude koji u ovoj priči prepoznaju sopstvene živote i pustili ih da na sceni budu ono što jesu. Zato svake večeri ostavljaju srce na sceni, a predstava postaje iskrena na način koji ne može da se uvežba. I baš tako nam se sviđa.</p>" +
-    "<p>Ulaznica košta 2.000 dinara (oko 20 američkih dolara), isto koliko su 1996. godine koštale čuvene ulaznice za prvi red na Brodveju.</p>",
+    "<p>Ljudi koji su&nbsp;gledali RENT kada je&nbsp;prvi put izveden u&nbsp;Njujorku 1996.&nbsp;godine opisali su&nbsp;taj osećaj kao da&nbsp;su&nbsp;njihovi prijatelji izašli na&nbsp;scenu i&nbsp;počeli da&nbsp;pevaju o&nbsp;životu koji svi zajedno žive. Tokom godina, predstava je&nbsp;izbrušena do&nbsp;savršenstva klasične brodvejske&nbsp;produkcije.</p>" +
+    "<p><b>Mi&nbsp;hoćemo da&nbsp;vratimo taj prvobitni osećaj.</b> Okupili smo ljude koji u&nbsp;ovoj priči prepoznaju sopstvene živote i&nbsp;pustili ih&nbsp;da&nbsp;na&nbsp;sceni budu ono što jesu. Zato svake večeri ostavljaju srce na&nbsp;sceni, a&nbsp;predstava postaje iskrena na&nbsp;način koji ne&nbsp;može da&nbsp;se&nbsp;uvežba. I&nbsp;baš tako nam&nbsp;se&nbsp;sviđa.</p>" +
+    "<p>Ulaznica košta 2.000&nbsp;dinara (oko 20&nbsp;američkih&nbsp;dolara), isto koliko su&nbsp;1996.&nbsp;godine koštale čuvene ulaznice za&nbsp;prvi red&nbsp;na&nbsp;Brodveju.</p>",
 
-  every_h: "SVE JE RENT",
+  every_h: "SVE JE&nbsp;RENT",
   every_p:
-    "<p>Ni najsitnija slova u ugovorima ne pominju da iznajmljujemo mnogo više od stana u kom živimo. Zapravo, sve je pod kirijom. Stan, grad, ljudi koje jednog običnog utorka uveče zoveš porodicom. Uzimamo od života onoliko koliko nam srce, zdravlje i računi u banci dozvoljavaju. Držimo se toga dok nam ne istekne rok trajanja – ili viza.</p>" +
-    "<p>Za likove iz RENT-a kriza je bila epidemija side. Danas, svako od nas nosi neku svoju krizu. Nekima je došla zajedno s ratom i spakovanim koferom. Drugima se polako uvukla u život kroz spoznaju da mesto koje zovu domom više ne osećaju kao svoje.</p>" +
-    "<p>Često nam se čini da ne možemo ništa da promenimo. Da verujemo ljudima na vlasti koji nas godinama ne slušaju? Da radimo do iznemoglosti samo da bismo imali krov nad glavom, i to na planeti koja gori?</p>" +
-    "<p><b>RENT je priča o tome kako živeti usred svega toga – i ne stišavati glas.</b></p>" +
-    "<p>A tu smo i da priznamo nešto: ljubav još postoji. Prijateljstvo još postoji. I seks još postoji (bezbedan, molimo!). Nijedan rat, nijedna granica i nijedna udarna vest to ne mogu da nam oduzmu. I besni smo što je iko uopšte pokušao.</p>",
+    "<p>Ni&nbsp;najsitnija slova u&nbsp;ugovorima ne&nbsp;pominju da&nbsp;iznajmljujemo mnogo više od&nbsp;stana u&nbsp;kom živimo. Zapravo, sve je&nbsp;pod kirijom. Stan, grad, ljudi koje jednog običnog utorka uveče zoveš porodicom. Uzimamo od&nbsp;života onoliko koliko nam srce, zdravlje i&nbsp;računi u&nbsp;banci dozvoljavaju. Držimo se&nbsp;toga dok nam ne&nbsp;istekne rok trajanja&nbsp;– ili&nbsp;viza.</p>" +
+    "<p>Za&nbsp;likove iz&nbsp;RENT-a&nbsp;kriza je&nbsp;bila epidemija side. Danas, svako od&nbsp;nas nosi neku svoju krizu. Nekima je&nbsp;došla zajedno s&nbsp;ratom i&nbsp;spakovanim koferom. Drugima se&nbsp;polako uvukla u&nbsp;život kroz spoznaju da&nbsp;mesto koje zovu domom više ne&nbsp;osećaju kao&nbsp;svoje.</p>" +
+    "<p>Često nam se&nbsp;čini da&nbsp;ne&nbsp;možemo ništa da&nbsp;promenimo. Da&nbsp;verujemo ljudima na&nbsp;vlasti koji nas godinama ne&nbsp;slušaju? Da&nbsp;radimo do&nbsp;iznemoglosti samo da&nbsp;bismo imali krov nad glavom, i&nbsp;to&nbsp;na&nbsp;planeti koja&nbsp;gori?</p>" +
+    "<p><b>RENT je&nbsp;priča o&nbsp;tome kako živeti usred svega toga&nbsp;– i&nbsp;ne&nbsp;stišavati&nbsp;glas.</b></p>" +
+    "<p>A&nbsp;tu&nbsp;smo i&nbsp;da&nbsp;priznamo nešto: ljubav još postoji. Prijateljstvo još postoji. I&nbsp;seks još postoji (bezbedan, molimo!). Nijedan rat, nijedna granica i&nbsp;nijedna udarna vest to&nbsp;ne&nbsp;mogu da&nbsp;nam oduzmu. I&nbsp;besni smo što je&nbsp;iko uopšte&nbsp;pokušao.</p>",
 
   team_h: "EKIPA",
   team_p:
-    "<p>Mi smo ekipa umetnika iz Srbije, Rusije i SAD-a koji su odlučili da postave brodvejski mjuzikl sa malim budžetom, u ono malo slobodnog vremena koje nam ostaje posle posla.</p>" +
-    "<p>Radimo to zato što iskreno volimo ovu predstavu. I zato što verujemo da je Beogradu baš sada ova priča potrebnija nego ikad.</p>",
+    "<p>Mi&nbsp;smo ekipa umetnika iz&nbsp;Srbije, Rusije i&nbsp;SAD-a&nbsp;koji su&nbsp;odlučili da&nbsp;postave brodvejski mjuzikl sa&nbsp;malim budžetom, u&nbsp;ono malo slobodnog vremena koje nam ostaje posle&nbsp;posla.</p>" +
+    "<p>Radimo to&nbsp;zato što iskreno volimo ovu predstavu. I&nbsp;zato što verujemo da&nbsp;je&nbsp;Beogradu baš sada ova priča potrebnija nego&nbsp;ikad.</p>",
 
-  expect_h: "ŠTA DA OČEKUJETE",
+  expect_h: "ŠTA DA&nbsp;OČEKUJETE",
   expect_p:
-    "<p>Prvi čin se gleda stojeći, što znači da slobodno možeš da plešeš i da se krećeš, baš kao na svirci. Za drugi čin imaćeš svoje mesto za sedenje, kao u običnom pozorištu. Bar je otvoren pre predstave i tokom pauze između činova.</p>" +
-    "<p>Bićeš mnogo bliže sceni nego inače, dovoljno blizu da vidiš baš sve. A glumci se neće praviti da ne postojiš. Želimo da budeš deo predstave i daćemo sve od sebe da se osećaš kao da si i sam ušao u ovu priču.</p>",
+    "<p>Prvi čin se&nbsp;gleda stojeći, što znači da&nbsp;slobodno možeš da&nbsp;plešeš i&nbsp;da&nbsp;se&nbsp;krećeš, baš kao na&nbsp;svirci. Za&nbsp;drugi čin imaćeš svoje mesto za&nbsp;sedenje, kao u&nbsp;običnom pozorištu. Bar je&nbsp;otvoren pre predstave i&nbsp;tokom pauze između&nbsp;činova.</p>" +
+    "<p>Bićeš mnogo bliže sceni nego inače, dovoljno blizu da&nbsp;vidiš baš sve. A&nbsp;glumci se&nbsp;neće praviti da&nbsp;ne&nbsp;postojiš. Želimo da&nbsp;budeš deo predstave i&nbsp;daćemo sve od&nbsp;sebe da&nbsp;se&nbsp;osećaš kao da&nbsp;si&nbsp;i&nbsp;sam ušao u&nbsp;ovu&nbsp;priču.</p>",
 
   tickets_h: "KUPI ULAZNICU",
 
   support_h: "podrži nas",
   support_p:
-    "<p>Mi smo nezavisna ekipa i ovu predstavu pravimo potpuno sami. Želimo da RENT bude dostupan što većem broju ljudi. <b>Obična ulaznica košta 2000 RSD</b> – ali to ne pokriva sve troškove naše predstave. Zato su dostupne i <b>ulaznice podrške od 3000, 5000, 7000 ili 10000 RSD.</b> Uz njih ne dobijaš ništa dodatno: ista predstava, nema posebnih mesta. Tvoja podrška će nam pomoći da platimo opremu i najam prostora, organizujemo još izvođenja RENT-a u Beogradu i, nadamo se, damo bar nešto našoj ekipi.</p>" +
-    "<p><b>A važi i obrnuto.</b> Ako ti je 2000 RSD previše, a ipak želiš da dođeš na predstavu, samo nam se javi. Naći ćemo rešenje! I ako želiš da podržiš našu ekipu na veći način, rado ćemo čuti tvoje ideje.</p>",
+    "<p>Mi&nbsp;smo nezavisna ekipa i&nbsp;ovu predstavu pravimo potpuno sami. Želimo da&nbsp;RENT bude dostupan što većem broju ljudi. <b>Obična ulaznica košta 2000&nbsp;RSD</b>&nbsp;– ali to&nbsp;ne&nbsp;pokriva sve troškove naše predstave. Zato su&nbsp;dostupne i <b>ulaznice podrške od&nbsp;3000, 5000, 7000 ili 10000&nbsp;RSD.</b> Uz&nbsp;njih ne&nbsp;dobijaš ništa dodatno: ista predstava, nema posebnih mesta. Tvoja podrška će&nbsp;nam pomoći da&nbsp;platimo opremu i&nbsp;najam prostora, organizujemo još izvođenja RENT-a&nbsp;u&nbsp;Beogradu i, nadamo se, damo bar nešto našoj&nbsp;ekipi.</p>" +
+    "<p><b>A&nbsp;važi i&nbsp;obrnuto.</b> Ako ti&nbsp;je&nbsp;2000&nbsp;RSD previše, a&nbsp;ipak želiš da&nbsp;dođeš na&nbsp;predstavu, samo nam se&nbsp;javi. Naći ćemo rešenje! I&nbsp;ako želiš da&nbsp;podržiš našu ekipu na&nbsp;veći način, rado ćemo čuti tvoje&nbsp;ideje.</p>",
   offline_h: "papirne ulaznice",
   offline_p:
-    "<p>Uskoro ćeš moći da kupiš pravu papirnu ulaznicu kod naših prijatelja u kafićima i barovima po Beogradu. Bez provizije platforme – svaki dinar ide pravo u predstavu. Spisak lokacija uskoro objavljujemo ovde i na <a class=\"u\" href=\"https://www.instagram.com/everything.is.rent/\" target=\"_blank\" rel=\"noopener\">Instagramu</a>.</p>",
-  foot_xtix: "Ulaznice se prodaju preko xtix-a",
+    "<p>Uskoro ćeš moći da&nbsp;kupiš pravu papirnu ulaznicu kod naših prijatelja u&nbsp;kafićima i&nbsp;barovima po&nbsp;Beogradu. Bez provizije platforme&nbsp;– svaki dinar ide pravo u&nbsp;predstavu. Spisak lokacija uskoro objavljujemo ovde i&nbsp;na <a class=\"u\" href=\"https://www.instagram.com/everything.is.rent/\" target=\"_blank\" rel=\"noopener\">Instagramu</a>.</p>",
+  foot_xtix: "Ulaznice se&nbsp;prodaju preko xtix-a",
 
   strip_buy: "KUPI ULAZNICU",
-  strip_from: "OD 2.000 RSD",
+  strip_from: "OD&nbsp;2.000&nbsp;RSD",
   cta_buy: "KUPI ULAZNICU",
 };
 
