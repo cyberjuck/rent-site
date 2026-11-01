@@ -151,7 +151,7 @@
 
 // ===== Photos: reveal on scroll =====
 (function () {
-  const imgs = document.querySelectorAll(".row__img");
+  const imgs = document.querySelectorAll(".row__img, .sx-img");
   if (!imgs.length || !("IntersectionObserver" in window)) return;
   document.documentElement.classList.add("anim");
   const io = new IntersectionObserver((entries) => {
