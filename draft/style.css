@@ -502,3 +502,13 @@ section, [id] { scroll-margin-top: var(--header-h); }
   .strip { --dot: 25px; --gap: 16px; --dot-right: calc(var(--gut) + min(155px, 10.76vw) * var(--z)); }
   .faces { width: calc(100% - 2 * var(--gut)); margin-left: auto; margin-right: auto; margin-top: calc(-8.9vw * var(--z)); }
 }
+
+/* arrow after "get to know us better" (Anton has no arrow glyph → drawn with an SVG mask) */
+.sx__link::after {
+  content: ""; display: inline-block; width: .9em; height: .62em; margin-left: .25em; vertical-align: .08em;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'%3E%3Cpath d='M0 10h26M18 2l8 8-8 8' fill='none' stroke='%23000' stroke-width='4'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'%3E%3Cpath d='M0 10h26M18 2l8 8-8 8' fill='none' stroke='%23000' stroke-width='4'/%3E%3C/svg%3E") center / contain no-repeat;
+  transition: transform .15s;
+}
+.sx__link:hover::after { transform: translateX(4px); }
