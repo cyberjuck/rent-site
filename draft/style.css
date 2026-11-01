@@ -520,3 +520,5 @@ section, [id] { scroll-margin-top: var(--header-h); }
   /* faces photo goes edge to edge (no side margins) */
   .faces { width: 100%; margin-left: 0; margin-right: 0; margin-top: calc(-8.9vw * var(--z)); }
 }
+/* faces photo: no overlap with the text above — it starts after the block's bottom padding */
+.faces, .sx-wrap .faces { margin-top: 0 !important; }
