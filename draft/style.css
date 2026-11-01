@@ -513,3 +513,10 @@ section, [id] { scroll-margin-top: var(--header-h); }
 }
 .sx__link:hover::after { transform: translateX(4px); }
 .sx-img video { object-position: var(--op, 50% 50%); }
+/* faces photo: never covered by the white text block above it — whole image visible */
+.sx-wrap .sx { background: transparent; }
+.faces { z-index: 2; pointer-events: none; }
+@media (min-width: 900px) {
+  /* faces photo goes edge to edge (no side margins) */
+  .faces { width: 100%; margin-left: 0; margin-right: 0; margin-top: calc(-8.9vw * var(--z)); }
+}
