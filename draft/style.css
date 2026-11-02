@@ -534,3 +534,7 @@ section, [id] { scroll-margin-top: var(--header-h); }
 .sx__q, .sx__link { color: var(--orange); }
 .sx__link { text-decoration: underline; text-decoration-thickness: .06em; text-underline-offset: .12em; }
 .sx__link:hover { color: #D84F2B; }
+/* ticket strip: whole shape grows a little on hover */
+.strip { position: relative; z-index: 3; transition: transform .25s cubic-bezier(.2, .7, .2, 1), background-color .15s; }
+@media (hover: hover) and (pointer: fine) { .strip:hover { transform: scale(1.03); } }
+html, body { overflow-x: clip; }
