@@ -266,6 +266,9 @@ section, [id] { scroll-margin-top: var(--header-h); }
 @media (hover: hover) and (pointer: fine) {
   .fx .ln { position: relative; }
   .fx .ln.ring .ln-o { filter: url(#ring); }
+  /* outline layer only exists while hovered (stays until the fill has slid back over it) */
+  .fx .ln .ln-o { opacity: 0; transition: opacity 0s .34s; }
+  .fx .ln.on .ln-o { opacity: 1; transition: none; }
   .fx .ln-f {
     position: absolute; left: 0; top: 0;
     padding: .45em .35em;              /* room for swashy glyphs inside the mask */

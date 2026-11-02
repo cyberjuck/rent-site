@@ -5,8 +5,8 @@
   Bold in body text: <b>...</b>. New paragraph: <p>...</p>.
 */
 const EN = {
-  dx_ab1: "RENT is&nbsp;a&nbsp;rock musical by&nbsp;Jonathan&nbsp;Larson about a&nbsp;year in&nbsp;the life of&nbsp;a&nbsp;group of&nbsp;young artists in&nbsp;New&nbsp;York in&nbsp;the early nineties. They can’t&nbsp;pay the rent, they fall in&nbsp;love, they lose each other, and they’re&nbsp;right in&nbsp;the middle of&nbsp;the&nbsp;AIDS&nbsp;crisis.",
-  dx_ab2: "Larson wrote it&nbsp;about his own friends and neighbourhood. He&nbsp;died suddenly, at&nbsp;age&nbsp;35, the night before the first preview of&nbsp;the show, and never saw what came next: RENT moved to&nbsp;Broadway, won the Pulitzer&nbsp;Prize and four Tony&nbsp;Awards (including Best&nbsp;Musical), ran for twelve years and became one of&nbsp;the most iconic musicals ever&nbsp;written.",
+  dx_ab1: "RENT is&nbsp;a&nbsp;<b>rock musical</b> by&nbsp;Jonathan&nbsp;Larson about <b>a&nbsp;year in&nbsp;the life of&nbsp;a&nbsp;group of&nbsp;young artists in&nbsp;New&nbsp;York in&nbsp;the early nineties.</b> They can’t&nbsp;pay the rent, they fall in&nbsp;love, they lose each other, and they’re&nbsp;right in&nbsp;the middle of&nbsp;the&nbsp;AIDS&nbsp;crisis.",
+  dx_ab2: "Larson wrote it&nbsp;about his own friends and neighbourhood. He&nbsp;died suddenly, at&nbsp;age&nbsp;35, the night before the first preview of&nbsp;the show, and never saw what came next: RENT moved to&nbsp;<b>Broadway</b>, won the <b>Pulitzer&nbsp;Prize</b> and <b>four Tony&nbsp;Awards</b> (including Best&nbsp;Musical), ran for twelve years and became one of&nbsp;the most iconic musicals ever&nbsp;written.",
   dx_ab3: "People get sick, fall in&nbsp;and out of&nbsp;love, behave like complete assholes&nbsp;— often all in&nbsp;the same song. Somehow, you end up&nbsp;rooting for them. Larson took Puccini’s&nbsp;La&nbsp;Bohème and moved it&nbsp;to&nbsp;1990s&nbsp;New&nbsp;York.",
   dx_abq: "Thirty years later, we’re&nbsp;bringing his New&nbsp;York to&nbsp;Belgrade, and it&nbsp;feels just as&nbsp;relevant here and&nbsp;now.",
   dx_our1: "People who saw RENT when it&nbsp;first opened in&nbsp;New&nbsp;York in&nbsp;1996 described it&nbsp;as&nbsp;watching your friends walk onto a&nbsp;stage and sing about the life you were all living. Over the years it&nbsp;has been polished into a&nbsp;beautiful, flawless Broadway&nbsp;production.",
@@ -22,10 +22,10 @@ const EN = {
   dx_exq: "During the first act, you’ll&nbsp;be&nbsp;standing, so&nbsp;feel free to&nbsp;dance and move around like&nbsp;you’re&nbsp;at&nbsp;a&nbsp;gig.",
   dx_ex1: "For the second act, you’ll&nbsp;have a&nbsp;seat, just like in&nbsp;a&nbsp;regular theatre. The bar is&nbsp;open before the show and during&nbsp;intermission.",
   dx_ex2: "You’ll&nbsp;be&nbsp;much closer to&nbsp;the stage than usual, close enough to&nbsp;see everything, and the actors won’t&nbsp;pretend you’re&nbsp;invisible. We’d&nbsp;love for you to&nbsp;be&nbsp;part of&nbsp;the show, and we’ll&nbsp;do&nbsp;our best to&nbsp;make you feel like you’re&nbsp;right inside the&nbsp;story.",
-  dx_sp1: "We’re&nbsp;an&nbsp;independent team putting this show together entirely on&nbsp;our own. And we&nbsp;want to&nbsp;keep RENT affordable for as&nbsp;many people as&nbsp;possible. That’s&nbsp;why our regular ticket costs 2000&nbsp;RSD. But to&nbsp;cover what this show actually costs, we&nbsp;need&nbsp;more.",
+  dx_sp1: "We’re&nbsp;an&nbsp;independent team putting this show together entirely on&nbsp;our own. And we&nbsp;want to&nbsp;keep RENT affordable for as&nbsp;many people as&nbsp;possible. That’s&nbsp;why our <b>regular ticket costs 2000&nbsp;RSD.</b> But to&nbsp;cover what this show actually costs, we&nbsp;need&nbsp;more.",
   dx_spq: "So&nbsp;we&nbsp;came up&nbsp;with supporter tickets for 3000, 5000, 7000&nbsp;or&nbsp;10000&nbsp;RSD.",
   dx_sp2: "You won’t&nbsp;get anything extra. Same show, no&nbsp;special seats. Your support will help us&nbsp;pay for equipment and venue rental, put on&nbsp;more performances of&nbsp;RENT in&nbsp;Belgrade, and hopefully even pay our cast and crew a&nbsp;little&nbsp;something.",
-  dx_sp3: "And it&nbsp;works both ways. If&nbsp;2000&nbsp;RSD is&nbsp;too much but you still want to&nbsp;see the show, just reach out to&nbsp;us. We’ll&nbsp;figure something out! And if&nbsp;you’d&nbsp;like to&nbsp;support our team in&nbsp;a&nbsp;bigger way, we’d&nbsp;love to&nbsp;hear from you&nbsp;too.",
+  dx_sp3: "<b>And it&nbsp;works both ways.</b> If&nbsp;2000&nbsp;RSD is&nbsp;too much but you still want to&nbsp;see the show, just reach out to&nbsp;us. We’ll&nbsp;figure something out! And if&nbsp;you’d&nbsp;like to&nbsp;support our team in&nbsp;a&nbsp;bigger way, we’d&nbsp;love to&nbsp;hear from you&nbsp;too.",
 
   team_more: "learn more",
   tp_cast: "cast", tp_band: "band", tp_creative: "creative team",
@@ -90,8 +90,8 @@ const EN = {
 
 const SR = {
   ...EN,
-  dx_ab1: "RENT je&nbsp;rok mjuzikl Džonatana&nbsp;Larsona koji prati godinu dana iz&nbsp;života grupe mladih umetnika u&nbsp;Njujorku početkom devedesetih godina prošlog veka. Oni nemaju novca za&nbsp;kiriju, zaljubljuju se, gube jedni druge i&nbsp;pokušavaju da&nbsp;žive usred epidemije&nbsp;side.",
-  dx_ab2: "Larson je&nbsp;ovaj mjuzikl napisao inspirisan sopstvenim prijateljima i&nbsp;krajem u&nbsp;kom je&nbsp;živeo. Preminuo je&nbsp;iznenada u&nbsp;35.&nbsp;godini, noć uoči premijere, i&nbsp;nikada nije video šta je&nbsp;usledilo: RENT je&nbsp;stigao na&nbsp;Brodvej, osvojio Pulicerovu&nbsp;nagradu i&nbsp;četiri Toni&nbsp;nagrade (uključujući onu za&nbsp;najbolji mjuzikl), izvodio se&nbsp;dvanaest godina i&nbsp;postao jedan od&nbsp;najupečatljivijih mjuzikala svih&nbsp;vremena.",
+  dx_ab1: "RENT je&nbsp;<b>rok mjuzikl</b> Džonatana&nbsp;Larsona koji prati <b>godinu dana iz&nbsp;života grupe mladih umetnika u&nbsp;Njujorku početkom devedesetih godina prošlog veka.</b> Oni nemaju novca za&nbsp;kiriju, zaljubljuju se, gube jedni druge i&nbsp;pokušavaju da&nbsp;žive usred epidemije&nbsp;side.",
+  dx_ab2: "Larson je&nbsp;ovaj mjuzikl napisao inspirisan sopstvenim prijateljima i&nbsp;krajem u&nbsp;kom je&nbsp;živeo. Preminuo je&nbsp;iznenada u&nbsp;35.&nbsp;godini, noć uoči premijere, i&nbsp;nikada nije video šta je&nbsp;usledilo: RENT je&nbsp;stigao na&nbsp;<b>Brodvej</b>, osvojio <b>Pulicerovu&nbsp;nagradu</b> i&nbsp;<b>četiri Toni&nbsp;nagrade</b> (uključujući onu za&nbsp;najbolji mjuzikl), izvodio se&nbsp;dvanaest godina i&nbsp;postao jedan od&nbsp;najupečatljivijih mjuzikala svih&nbsp;vremena.",
   dx_ab3: "Likovi se&nbsp;razboljevaju, zaljubljuju, odljubljuju i&nbsp;ponašaju kao potpuni kreteni&nbsp;– i&nbsp;sve to&nbsp;često u&nbsp;istoj pesmi. A&nbsp;nekako na&nbsp;kraju ipak navijaš za&nbsp;njih. Larson je&nbsp;uzeo Pučinijevu operu La&nbsp;Bohème i&nbsp;preselio je&nbsp;u&nbsp;Njujork&nbsp;devedesetih.",
   dx_abq: "Trideset godina kasnije, mi&nbsp;njegov Njujork dovodimo u&nbsp;Beograd. I&nbsp;ova priča je&nbsp;ovde i&nbsp;danas podjednako&nbsp;aktuelna.",
   dx_our1: "Ljudi koji su&nbsp;gledali RENT kada je&nbsp;prvi put izveden u&nbsp;Njujorku 1996.&nbsp;godine opisali su&nbsp;taj osećaj kao da&nbsp;su&nbsp;njihovi prijatelji izašli na&nbsp;scenu i&nbsp;počeli da&nbsp;pevaju o&nbsp;životu koji svi zajedno žive. Tokom godina, predstava je&nbsp;izbrušena do&nbsp;savršenstva klasične brodvejske&nbsp;produkcije.",
@@ -107,10 +107,10 @@ const SR = {
   dx_exq: "Prvi čin se&nbsp;gleda stojeći, što znači da&nbsp;slobodno možeš da&nbsp;plešeš i&nbsp;da&nbsp;se&nbsp;krećeš, baš kao&nbsp;na&nbsp;svirci.",
   dx_ex1: "Za&nbsp;drugi čin imaćeš svoje mesto za&nbsp;sedenje, kao u&nbsp;običnom pozorištu. Bar je&nbsp;otvoren pre predstave i&nbsp;tokom pauze između&nbsp;činova.",
   dx_ex2: "Bićeš mnogo bliže sceni nego inače, dovoljno blizu da&nbsp;vidiš baš sve. A&nbsp;glumci se&nbsp;neće praviti da&nbsp;ne&nbsp;postojiš. Želimo da&nbsp;budeš deo predstave i&nbsp;daćemo sve od&nbsp;sebe da&nbsp;se&nbsp;osećaš kao da&nbsp;si&nbsp;i&nbsp;sam ušao u&nbsp;ovu&nbsp;priču.",
-  dx_sp1: "Mi&nbsp;smo nezavisna ekipa i&nbsp;ovu predstavu pravimo potpuno sami. Želimo da&nbsp;RENT bude dostupan što većem broju ljudi. Obična ulaznica košta 2000&nbsp;RSD&nbsp;– ali to&nbsp;ne&nbsp;pokriva sve troškove naše&nbsp;predstave.",
+  dx_sp1: "Mi&nbsp;smo nezavisna ekipa i&nbsp;ovu predstavu pravimo potpuno sami. Želimo da&nbsp;RENT bude dostupan što većem broju ljudi. <b>Obična ulaznica košta 2000&nbsp;RSD</b>&nbsp;– ali to&nbsp;ne&nbsp;pokriva sve troškove naše&nbsp;predstave.",
   dx_spq: "Zato su&nbsp;dostupne i&nbsp;ulaznice podrške od&nbsp;3000, 5000, 7000 ili&nbsp;10000&nbsp;RSD.",
   dx_sp2: "Uz&nbsp;njih ne&nbsp;dobijaš ništa dodatno: ista predstava, nema posebnih mesta. Tvoja podrška će&nbsp;nam pomoći da&nbsp;platimo opremu i&nbsp;najam prostora, organizujemo još izvođenja RENT-a&nbsp;u&nbsp;Beogradu i, nadamo se, damo bar nešto našoj&nbsp;ekipi.",
-  dx_sp3: "A&nbsp;važi i&nbsp;obrnuto. Ako ti&nbsp;je&nbsp;2000&nbsp;RSD previše, a&nbsp;ipak želiš da&nbsp;dođeš na&nbsp;predstavu, samo nam se&nbsp;javi. Naći ćemo rešenje! I&nbsp;ako želiš da&nbsp;podržiš našu ekipu na&nbsp;veći način, rado ćemo čuti tvoje&nbsp;ideje.",
+  dx_sp3: "<b>A&nbsp;važi i&nbsp;obrnuto.</b> Ako ti&nbsp;je&nbsp;2000&nbsp;RSD previše, a&nbsp;ipak želiš da&nbsp;dođeš na&nbsp;predstavu, samo nam se&nbsp;javi. Naći ćemo rešenje! I&nbsp;ako želiš da&nbsp;podržiš našu ekipu na&nbsp;veći način, rado ćemo čuti tvoje&nbsp;ideje.",
 
   team_more: "saznaj više",
   tp_cast: "glumački ansambl", tp_band: "bend", tp_creative: "kreativni tim",
