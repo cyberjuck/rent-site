@@ -266,6 +266,7 @@ section, [id] { scroll-margin-top: var(--header-h); }
 @media (hover: hover) and (pointer: fine) {
   .fx .ln { position: relative; }
   .fx .ln.ring .ln-o { filter: url(#ring); }
+  .fx .ln.ring .ln-o.sharp { color: #00f; -webkit-text-stroke: 3.4px rgba(255, 0, 0, .5); filter: var(--ringf); }
   .fx .ln-f {
     position: absolute; left: 0; top: 0;
     padding: .45em .35em;              /* room for swashy glyphs inside the mask */

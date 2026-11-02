@@ -23,6 +23,22 @@
     '<feComposite in="SourceGraphic" in2="e" operator="out"/></filter>';
   document.body.appendChild(svg);
 
+  // sharp inner stroke (like Figma "inside"): text drawn blue + 3px half-transparent red stroke on top;
+  // pixels that are inside the glyph (alpha 1) AND under the stroke (red) = exact 1.5px inner ring with crisp corners
+  const ringIds = {};
+  const ringFor = (color) => {
+    if (ringIds[color]) return ringIds[color];
+    const id = "ring" + Object.keys(ringIds).length;
+    const f = document.createElementNS(svgNS, "filter");
+    f.setAttribute("id", id);
+    ["x", "y", "width", "height"].forEach((k, i) => f.setAttribute(k, ["-5%", "-30%", "110%", "160%"][i]));
+    f.setAttribute("color-interpolation-filters", "sRGB");
+    f.innerHTML = '<feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  4 0 0 8 -9" result="m"/>' +
+      '<feFlood flood-color="' + color + '"/><feComposite in2="m" operator="in"/>';
+    svg.appendChild(f);
+    return (ringIds[color] = id);
+  };
+
   // 1) wrap words (again after a language switch replaces the text)
   const wrapWords = () => els.forEach((el) => {
     if (el.querySelector(".w")) return;
@@ -89,6 +105,10 @@
       fi.textContent = o.textContent;
       f.appendChild(fi);
       ln.appendChild(f);
+      if (!el.classList.contains("rs")) {
+        o.classList.add("sharp");
+        o.style.setProperty("--ringf", "url(#" + ringFor(getComputedStyle(ln).color) + ")");
+      }
       // align fill layer exactly over the text (compare the two inline text boxes → same baseline)
       align(f, o, fi);
       // ink band of capitals/letters relative to the word box top
