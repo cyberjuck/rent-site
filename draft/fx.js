@@ -6,7 +6,7 @@
 // re-checked on scroll too, so it reacts when the page moves under a still mouse.
 (function () {
   if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
-  const SEL = ".hero .t, .manifesto .t, .drugstore .t, .insta .t, .ty-hero .t";
+  const SEL = ".sx__h, .hero .t, .manifesto .t, .drugstore .t, .insta .t, .ty-hero .t";
   const els = [...document.querySelectorAll(SEL)];
   if (!els.length) return;
 
