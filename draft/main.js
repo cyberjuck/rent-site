@@ -58,6 +58,6 @@ document.querySelectorAll(".row__img img").forEach((img) => {
       imgs[i].classList.remove("is-on");
       i = (i + 1) % imgs.length;
       imgs[i].classList.add("is-on");
-    }, 280);
+    }, 200);
   });
 })();
