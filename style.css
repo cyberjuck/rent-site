@@ -551,8 +551,8 @@ html, body { overflow-x: clip; }
 .hero { position: relative; }
 .sold {
   position: absolute; z-index: 5; left: 0; top: 0; visibility: hidden; pointer-events: none;
-  background: var(--pink); color: var(--black);
-  font-family: "Anton", sans-serif; text-transform: uppercase; white-space: nowrap; line-height: 1;
-  padding: .28em .9em; transform-origin: center; 
+  background: #E8497B; color: var(--black); text-align: center; box-sizing: border-box;
+  font-family: "Anton", sans-serif; font-weight: 400; text-transform: uppercase; white-space: nowrap;
+  transform-origin: center;
 }
 .sold.is-placed { visibility: visible; }

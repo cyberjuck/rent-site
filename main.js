@@ -76,15 +76,15 @@ document.querySelectorAll(".row__img img").forEach((img) => {
       if (i < 0) continue;
       const r = document.createRange(); r.setStart(n, i); r.setEnd(n, i + 5);
       const b = r.getBoundingClientRect(), h = hero.getBoundingClientRect();
-      const fs = parseFloat(getComputedStyle(n.parentElement).fontSize);
-      tag.style.fontSize = fs * 0.3 + "px";
-      tag.style.width = b.width * 1.25 + "px";
-      tag.style.textAlign = "center";
-      tag.style.padding = ".28em 0";
-      const cx = b.left - h.left + b.width / 2, cy = b.top - h.top + b.height * 0.58;
-      tag.style.left = cx - tag.offsetWidth / 2 + "px";
-      tag.style.top = cy - tag.offsetHeight / 2 + "px";
-      tag.style.transform = "rotate(-8deg)";
+      // sizes from Figma (desktop, date line 90px): 183×24, Anton 20/24, padding 0 12, rotated 12.14°
+      const k = parseFloat(getComputedStyle(n.parentElement).fontSize) / 90;
+      Object.assign(tag.style, {
+        width: 183 * k + "px", height: 24 * k + "px", fontSize: 20 * k + "px",
+        lineHeight: 24 * k + "px", padding: "0 " + 12 * k + "px", transform: "rotate(-12.14deg)",
+      });
+      const cx = b.left - h.left + b.width * 0.52, cy = b.top - h.top + b.height * 0.55;
+      tag.style.left = cx - 183 * k / 2 + "px";
+      tag.style.top = cy - 24 * k / 2 + "px";
       tag.classList.add("is-placed");
       return;
     }
