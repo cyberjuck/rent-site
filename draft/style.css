@@ -541,3 +541,8 @@ section, [id] { scroll-margin-top: var(--header-h); }
 .strip-wrap { position: relative; z-index: 3; transition: transform .25s cubic-bezier(.2, .7, .2, 1); }
 @media (hover: hover) and (pointer: fine) { .strip-wrap:hover { transform: scale(1.03); } }
 html, body { overflow-x: clip; }
+
+/* hero: fast photo switching */
+.hero__slides { position: relative; overflow: hidden; }
+.hero__slides img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; visibility: hidden; }
+.hero__slides img.is-on { visibility: visible; }
