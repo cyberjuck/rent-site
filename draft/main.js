@@ -47,14 +47,17 @@ document.querySelectorAll(".row__img img").forEach((img) => {
 });
 
 
-// ===== Hero: fast photo switching =====
+// ===== Fast photo switching (hero + photo blocks) =====
 (function () {
-  const imgs = document.querySelectorAll(".hero__slides img");
-  if (imgs.length < 2 || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  let i = 0;
-  setInterval(() => {
-    imgs[i].classList.remove("is-on");
-    i = (i + 1) % imgs.length;
-    imgs[i].classList.add("is-on");
-  }, 280);
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  document.querySelectorAll(".slides").forEach((box) => {
+    const imgs = box.querySelectorAll("img");
+    if (imgs.length < 2) return;
+    let i = 0;
+    setInterval(() => {
+      imgs[i].classList.remove("is-on");
+      i = (i + 1) % imgs.length;
+      imgs[i].classList.add("is-on");
+    }, 280);
+  });
 })();
