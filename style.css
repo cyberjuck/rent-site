@@ -203,8 +203,8 @@ section, [id] { scroll-margin-top: var(--header-h); }
   .lhm131 { line-height: 1.31; }
 
   /* floating ticket, not touching the screen edge (so mobile Safari doesn't stretch its colour under the toolbar) */
-  .cta-bar--fixed { display: flex; position: fixed; left: 12px; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); z-index: 40; }
-  .menu .cta-bar { margin: 0 12px calc(12px + env(safe-area-inset-bottom, 0px)); }
+  .cta-bar--fixed { display: flex; position: fixed; left: 16px; right: 16px; bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 40; }
+  .menu .cta-bar { margin: 0 16px calc(16px + env(safe-area-inset-bottom, 0px)); }
   .cta-bar { height: 76px; }
   body.menu-open .cta-bar--fixed { display: none; }
   body.menu-open { overflow: hidden; }
