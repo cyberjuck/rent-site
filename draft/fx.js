@@ -18,12 +18,17 @@
   svg.innerHTML = '<filter id="ring" x="-5%" y="-30%" width="110%" height="160%" color-interpolation-filters="sRGB">' +
     // round erosion (blur + threshold) instead of feMorphology's square one,
     // so vertical, horizontal and diagonal strokes get exactly the same 1.5px width
-    '<feGaussianBlur in="SourceAlpha" stdDeviation="1.2" result="b"/>' +
+    // close tiny seams where neighbouring letters overlap (otherwise they show up as stray lines)
+    '<feComponentTransfer in="SourceAlpha" result="c"><feFuncA type="linear" slope="1.4"/></feComponentTransfer>' +
+    '<feGaussianBlur in="c" stdDeviation="1.2" result="b"/>' +
     '<feComponentTransfer in="b" result="e"><feFuncA type="linear" slope="20" intercept="-17.5"/></feComponentTransfer>' +
     // + square erosion, merged: keeps the inner corners sharp (no blobs in the corners)
-    '<feMorphology in="SourceAlpha" operator="erode" radius="1.4" result="sq"/>' +
+    '<feMorphology in="c" operator="erode" radius="1.4" result="sq"/>' +
     '<feComposite in="e" in2="sq" operator="arithmetic" k2="1" k3="1" result="u"/>' +
-    '<feComposite in="SourceGraphic" in2="u" operator="out"/></filter>';
+    // text colour with the seam-free alpha, then cut the eroded core out of it
+    '<feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0 1" result="o"/>' +
+    '<feComposite in="o" in2="c" operator="in" result="g"/>' +
+    '<feComposite in="g" in2="u" operator="out"/></filter>';
   document.body.appendChild(svg);
 
   // 1) wrap words (again after a language switch replaces the text)
