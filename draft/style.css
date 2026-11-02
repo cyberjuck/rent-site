@@ -529,3 +529,7 @@ section, [id] { scroll-margin-top: var(--header-h); }
 }
 /* no photo reveal animation — photos always visible */
 .anim .sx-img img, .anim .sx-img video, .anim .row__img img, .anim .row__img video { clip-path: none !important; transform: none !important; transition: none !important; }
+/* quotes + team link in our orange, link underlined */
+.sx__q, .sx__link { color: var(--orange); }
+.sx__link { text-decoration: underline; text-decoration-thickness: .06em; text-underline-offset: .12em; }
+.sx__link:hover { color: #D84F2B; }
