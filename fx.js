@@ -6,7 +6,7 @@
 // re-checked on scroll too, so it reacts when the page moves under a still mouse.
 (function () {
   if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
-  const SEL = ".hero .t, .manifesto .t, .drugstore .t, .insta .t, .ty-hero .t";
+  const SEL = ".sx__h, .hero .t, .manifesto .t, .drugstore .t, .insta .t, .ty-hero .t";
   const els = [...document.querySelectorAll(SEL)];
   if (!els.length) return;
 
@@ -18,9 +18,17 @@
   svg.innerHTML = '<filter id="ring" x="-5%" y="-30%" width="110%" height="160%" color-interpolation-filters="sRGB">' +
     // round erosion (blur + threshold) instead of feMorphology's square one,
     // so vertical, horizontal and diagonal strokes get exactly the same 1.5px width
-    '<feGaussianBlur in="SourceAlpha" stdDeviation="1.2" result="b"/>' +
+    // close tiny seams where neighbouring letters overlap (otherwise they show up as stray lines)
+    '<feComponentTransfer in="SourceAlpha" result="c"><feFuncA type="linear" slope="1.4"/></feComponentTransfer>' +
+    '<feGaussianBlur in="c" stdDeviation="1.2" result="b"/>' +
     '<feComponentTransfer in="b" result="e"><feFuncA type="linear" slope="20" intercept="-17.5"/></feComponentTransfer>' +
-    '<feComposite in="SourceGraphic" in2="e" operator="out"/></filter>';
+    // + square erosion, merged: keeps the inner corners sharp (no blobs in the corners)
+    '<feMorphology in="c" operator="erode" radius="1.4" result="sq"/>' +
+    '<feComposite in="e" in2="sq" operator="arithmetic" k2="1" k3="1" result="u"/>' +
+    // text colour with the seam-free alpha, then cut the eroded core out of it
+    '<feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 0 1" result="o"/>' +
+    '<feComposite in="o" in2="c" operator="in" result="g"/>' +
+    '<feComposite in="g" in2="u" operator="out"/></filter>';
   document.body.appendChild(svg);
 
   // 1) wrap words (again after a language switch replaces the text)
@@ -151,7 +159,7 @@
 
 // ===== Photos: reveal on scroll =====
 (function () {
-  const imgs = document.querySelectorAll(".row__img");
+  const imgs = document.querySelectorAll(".row__img, .sx-img");
   if (!imgs.length || !("IntersectionObserver" in window)) return;
   document.documentElement.classList.add("anim");
   const io = new IntersectionObserver((entries) => {
@@ -183,7 +191,7 @@
 
 // ===== Background videos: make sure they play (iOS sometimes blocks autoplay) =====
 (function () {
-  const vids = document.querySelectorAll(".row__img video");
+  const vids = document.querySelectorAll(".row__img video, .sx-img video");
   if (!vids.length) return;
   const tryPlay = (v) => { v.muted = true; const p = v.play(); if (p && p.catch) p.catch(() => {}); };
   if ("IntersectionObserver" in window) {

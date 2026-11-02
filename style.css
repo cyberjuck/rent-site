@@ -266,6 +266,9 @@ section, [id] { scroll-margin-top: var(--header-h); }
 @media (hover: hover) and (pointer: fine) {
   .fx .ln { position: relative; }
   .fx .ln.ring .ln-o { filter: url(#ring); }
+  /* outline layer only exists while hovered (stays until the fill has slid back over it) */
+  .fx .ln .ln-o { opacity: 0; transition: opacity 0s .34s; }
+  .fx .ln.on .ln-o { opacity: 1; transition: none; }
   .fx .ln-f {
     position: absolute; left: 0; top: 0;
     padding: .45em .35em;              /* room for swashy glyphs inside the mask */
@@ -410,3 +413,136 @@ section, [id] { scroll-margin-top: var(--header-h); }
 .tickets__widget .tc-widget-button:hover,
 .tickets__widget a[class*="widget"]:hover { color: var(--white) !important; }
 @media (max-width: 899px) { .tickets__widget { min-height: 0; } }
+
+/* =====================================================================
+   DRAFT v2 — layout from Figma "update"
+   ===================================================================== */
+/* hero: photo under the dates, vertical paper texture */
+.hero__photo { display: block; width: min(778px, 54vw); aspect-ratio: 778 / 976; object-fit: cover; margin: 0 auto; }
+.hero::before, .hero::after { background-image: url(images/paper-v.jpg); }
+.hero::after { opacity: .7; }
+
+/* big pink ticket strips */
+.strip { padding: clamp(40px, 6.94vw, 100px) 100px; gap: 6px; --dot: 29px; --gap: 18px; --dot-right: min(155px, 10.76vw); }
+
+/* staggered text sections */
+.sx { position: relative; z-index: 1; background: var(--white); padding: clamp(48px, 6.94vw, 100px) clamp(24px, 8.33vw, 120px) 0; }
+.sx--pb { padding-bottom: clamp(48px, 6.94vw, 100px); }
+.sx__h { text-align: left; line-height: .98; margin-bottom: clamp(20px, 2.22vw, 32px); }
+.sx__body { display: flex; flex-direction: column; gap: 8px; }
+.sx__p { font-family: "Public Sans", "Inter", sans-serif; font-weight: 400; font-size: min(30px, max(18px, 2.083vw)); line-height: 1.3; }
+.sx__p p { margin: 0; }
+.sx__q { font-family: "Anton", sans-serif; font-weight: 400; text-transform: uppercase; font-size: min(56px, max(26px, 3.89vw)); line-height: 1.2; }
+.sx__link { color: var(--pink); transition: color .15s; }
+.sx__link:hover { color: var(--pink-hover); }
+/* offsets in twelfths of the 1200px column: 200 / 400 / 600 */
+.o-l2 { padding-left: 16.667%; }
+.o-l4 { padding-left: 33.333%; }
+.o-l6 { padding-left: 50%; }
+.o-r4 { padding-right: 33.333%; }
+.sx-img { overflow: hidden; }
+.sx-img img, .sx-img video { display: block; width: 100%; aspect-ratio: var(--r); object-fit: cover; }
+
+/* manifesto photo */
+.man__photo { display: block; width: min(370px, 25.7vw); aspect-ratio: 370 / 433; object-fit: cover; margin: 0 auto; position: relative; z-index: 1; }
+
+/* support / paper tickets + faces at the bottom */
+.sx-wrap { background: var(--white); position: relative; }
+.faces { display: block; width: 100%; height: auto; margin-top: -8.9vw; position: relative; z-index: 0; }
+
+/* photo reveal for new images */
+.anim .sx-img img, .anim .sx-img video { clip-path: inset(0 0 0 100%); transform: scale(1.15); transition: clip-path .65s cubic-bezier(.65, 0, .2, 1), transform .85s cubic-bezier(.2, .7, .2, 1); }
+.anim .sx-img.in img, .anim .sx-img.in video { clip-path: inset(0 0 0 0); transform: scale(1); }
+
+@media (max-width: 899px) {
+  .hero__photo { width: 100%; }
+  .sx { padding: 48px 16px 0; }
+  .sx--pb { padding-bottom: 48px; }
+  .sx__body { gap: 12px; }
+  .sx__p { font-size: 17px; }
+  .sx__q { font-size: 26px; }
+  /* same stagger idea, smaller steps: 200/400/600 → 32/64/96 */
+  .o-l2 { padding-left: 32px; }
+  .o-l4 { padding-left: 64px; }
+  .o-l6 { padding-left: 96px; }
+  .o-r4 { padding-right: 64px; }
+  .man__photo { width: 56vw; }
+  .anim .sx-img img, .anim .sx-img video { clip-path: inset(100% 0 0 0); transform: translateY(40px) scale(1.1); }
+  .anim .sx-img.in img, .anim .sx-img.in video { clip-path: inset(0 0 0 0); transform: none; }
+}
+@media (prefers-reduced-motion: reduce) { .anim .sx-img img { clip-path: none !important; transform: none !important; } }
+
+/* =====================================================================
+   DRAFT: side margins like Figma's preview — the whole 1440 layout is shown
+   at ~86% width (z = .857), centred; block backgrounds still run edge to edge.
+   ===================================================================== */
+@media (min-width: 900px) {
+  :root { --z: .857; --gut: 7.15vw; --header-h: 64px; }
+  /* scale everything that was sized for 1440 */
+  .t { font-size: min(calc(var(--d) * var(--z) * 1px), calc(var(--d) * var(--z) * 100vw / 1440)); }
+  .sx__p { font-size: min(calc(30px * var(--z)), max(16px, calc(2.083vw * var(--z)))); }
+  .sx__q { font-size: min(calc(56px * var(--z)), max(24px, calc(3.89vw * var(--z)))); }
+  .header { font-size: calc(30px * var(--z)); padding: 0 calc(var(--gut) + min(100px, 6.94vw) * var(--z)); }
+  .header__nav { gap: calc(32px * var(--z)); }
+  .header__right { gap: calc(48px * var(--z)); }
+
+  /* side gutters on every block */
+  .hero, .manifesto, .drugstore, .insta, .strip {
+    padding-left: calc(var(--gut) + min(100px, 6.94vw) * var(--z));
+    padding-right: calc(var(--gut) + min(100px, 6.94vw) * var(--z));
+  }
+  .sx {
+    padding-left: calc(var(--gut) + min(120px, 8.33vw) * var(--z));
+    padding-right: calc(var(--gut) + min(120px, 8.33vw) * var(--z));
+    padding-top: calc(min(100px, 6.94vw) * var(--z));
+  }
+  .sx--pb { padding-bottom: calc(min(100px, 6.94vw) * var(--z)); }
+  .footer__row { padding-left: calc(var(--gut) + 60px * var(--z)); padding-right: calc(var(--gut) + 60px * var(--z)); }
+
+  /* photos and ticket strip details, scaled the same way */
+  .hero__photo { width: min(calc(778px * var(--z)), calc(54vw * var(--z))); }
+  .man__photo { width: min(calc(370px * var(--z)), calc(25.7vw * var(--z))); }
+  .strip { --dot: 25px; --gap: 16px; --dot-right: calc(var(--gut) + min(155px, 10.76vw) * var(--z)); }
+  .faces { width: calc(100% - 2 * var(--gut)); margin-left: auto; margin-right: auto; margin-top: calc(-8.9vw * var(--z)); }
+}
+
+/* arrow after "get to know us better" (Anton has no arrow glyph → drawn with an SVG mask) */
+.sx__link::after {
+  content: ""; display: inline-block; width: .9em; height: .62em; margin-left: .25em; vertical-align: .08em;
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'%3E%3Cpath d='M0 10h26M18 2l8 8-8 8' fill='none' stroke='%23000' stroke-width='4'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 20'%3E%3Cpath d='M0 10h26M18 2l8 8-8 8' fill='none' stroke='%23000' stroke-width='4'/%3E%3C/svg%3E") center / contain no-repeat;
+  transition: transform .15s;
+}
+.sx__link:hover::after { transform: translateX(4px); }
+.sx-img video { object-position: var(--op, 50% 50%); }
+/* faces photo: never covered by the white text block above it — whole image visible */
+.sx-wrap .sx { background: transparent; }
+.faces { z-index: 2; pointer-events: none; }
+@media (min-width: 900px) {
+  /* faces photo goes edge to edge (no side margins) */
+  .faces { width: 100%; margin-left: 0; margin-right: 0; margin-top: calc(-8.9vw * var(--z)); }
+}
+/* faces photo: no overlap with the text above — it starts after the block's bottom padding */
+.faces, .sx-wrap .faces { margin-top: 0 !important; }
+/* halve the visible gap between paper tickets text and the faces photo */
+.faces, .sx-wrap .faces { margin-top: -24px !important; }
+@media (min-width: 900px) {
+  .faces, .sx-wrap .faces { margin-top: calc(-0.5 * min(100px, 6.94vw) * var(--z)) !important; }
+}
+/* no photo reveal animation — photos always visible */
+.anim .sx-img img, .anim .sx-img video, .anim .row__img img, .anim .row__img video { clip-path: none !important; transform: none !important; transition: none !important; }
+/* quotes + team link in our orange, link underlined */
+.sx__q, .sx__link { color: var(--orange); }
+.sx__link { text-decoration: underline; text-decoration-thickness: .06em; text-underline-offset: .12em; }
+.sx__link:hover { color: #D84F2B; }
+/* ticket strip: whole shape grows a little on hover */
+.strip-wrap--black { background: var(--black); }
+.strip-wrap { position: relative; z-index: 3; transition: transform .25s cubic-bezier(.2, .7, .2, 1); }
+@media (hover: hover) and (pointer: fine) { .strip-wrap:hover { transform: scale(1.03); } }
+html, body { overflow-x: clip; }
+
+/* hero: fast photo switching */
+.slides { position: relative; overflow: hidden; }
+.slides img, .sx-img .slides img { position: absolute; inset: 0; width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; visibility: hidden; }
+.slides img.is-on, .sx-img .slides img.is-on { visibility: visible; }
