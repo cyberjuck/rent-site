@@ -76,7 +76,7 @@ const EN = {
     "<p><b>And it&nbsp;works both ways.</b> If&nbsp;2000&nbsp;RSD is&nbsp;too much but you still want to&nbsp;see the show, just reach out to&nbsp;us. We’ll&nbsp;figure something out! And if&nbsp;you’d&nbsp;like to&nbsp;support our team in&nbsp;a&nbsp;bigger way, we’d&nbsp;love to&nbsp;hear from you&nbsp;too.</p>",
   offline_h: "paper tickets",
   offline_p:
-    "<p>Soon you’ll&nbsp;be&nbsp;able to&nbsp;grab a&nbsp;real paper ticket from our friends at&nbsp;cafes and bars around Belgrade. No&nbsp;platform fees&nbsp;— every dinar goes straight to&nbsp;the show. The list of&nbsp;spots will be&nbsp;posted here and on <a class=\"u\" href=\"https://www.instagram.com/everything.is.rent/\" target=\"_blank\" rel=\"noopener\">Instagram</a> very&nbsp;soon.</p>",
+    "<p>Get a&nbsp;real paper ticket from our friends in&nbsp;Belgrade:</p><ul class=\"venues\"><li><a class=\"u\" href=\"https://www.instagram.com/kcgrad/\" target=\"_blank\" rel=\"noopener\">KC&nbsp;Grad</a></li><li><a class=\"u\" href=\"https://www.instagram.com/skart.bgd/\" target=\"_blank\" rel=\"noopener\">Škart</a></li><li><a class=\"u\" href=\"https://www.instagram.com/auditoria_belgrade/\" target=\"_blank\" rel=\"noopener\">Auditoria</a></li></ul><p>At&nbsp;KC&nbsp;Grad and Škart there’s no&nbsp;commission&nbsp;— every dinar goes straight to&nbsp;the&nbsp;show.</p>",
 
   // pink ticket bars
   strip_buy: "buy a&nbsp;ticket",
@@ -163,7 +163,7 @@ const SR = {
     "<p><b>A&nbsp;važi i&nbsp;obrnuto.</b> Ako ti&nbsp;je&nbsp;2000&nbsp;RSD previše, a&nbsp;ipak želiš da&nbsp;dođeš na&nbsp;predstavu, samo nam se&nbsp;javi. Naći ćemo rešenje! I&nbsp;ako želiš da&nbsp;podržiš našu ekipu na&nbsp;veći način, rado ćemo čuti tvoje&nbsp;ideje.</p>",
   offline_h: "papirne ulaznice",
   offline_p:
-    "<p>Uskoro ćeš moći da&nbsp;kupiš pravu papirnu ulaznicu kod naših prijatelja u&nbsp;kafićima i&nbsp;barovima po&nbsp;Beogradu. Bez provizije platforme&nbsp;– svaki dinar ide pravo u&nbsp;predstavu. Spisak lokacija uskoro objavljujemo ovde i&nbsp;na <a class=\"u\" href=\"https://www.instagram.com/everything.is.rent/\" target=\"_blank\" rel=\"noopener\">Instagramu</a>.</p>",
+    "<p>Pravu papirnu ulaznicu možeš kupiti kod naših prijatelja u&nbsp;Beogradu:</p><ul class=\"venues\"><li><a class=\"u\" href=\"https://www.instagram.com/kcgrad/\" target=\"_blank\" rel=\"noopener\">KC&nbsp;Grad</a></li><li><a class=\"u\" href=\"https://www.instagram.com/skart.bgd/\" target=\"_blank\" rel=\"noopener\">Škart</a></li><li><a class=\"u\" href=\"https://www.instagram.com/auditoria_belgrade/\" target=\"_blank\" rel=\"noopener\">Auditoria</a></li></ul><p>U&nbsp;KC&nbsp;Gradu i&nbsp;Škartu nema provizije&nbsp;– svaki dinar ide pravo u&nbsp;predstavu.</p>",
   foot_xtix: "Ulaznice se&nbsp;prodaju preko xtix-a",
 
   strip_buy: "KUPI ULAZNICU",

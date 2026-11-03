@@ -556,3 +556,8 @@ html, body { overflow-x: clip; }
   transform-origin: center;
 }
 .sold.is-placed { visibility: visible; }
+/* paper tickets: venue list */
+.venues { list-style: none; padding: 0; margin: .5em 0; }
+.venues li::before { content: "— "; }
+.venues a { text-decoration: underline; text-underline-offset: .15em; }
+.venues a:hover { color: var(--orange); }
