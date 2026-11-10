@@ -418,7 +418,7 @@ section, [id] { scroll-margin-top: var(--header-h); }
    DRAFT v2 — layout from Figma "update"
    ===================================================================== */
 /* hero: photo under the dates, vertical paper texture */
-.hero__photo { display: block; width: min(778px, 54vw); aspect-ratio: 778 / 976; object-fit: cover; margin: 0 auto; }
+.hero__photo { display: block; width: min(778px, 54vw); aspect-ratio: 1000 / 1414; object-fit: cover; margin: 0 auto; }
 .hero::before, .hero::after { background-image: url(images/paper-v.jpg); }
 .hero::after { opacity: .7; }
 
