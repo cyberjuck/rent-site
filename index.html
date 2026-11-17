@@ -253,11 +253,56 @@ src="https://www.facebook.com/tr?id=963561763215882&ev=PageView&noscript=1"
 <script src="main.js?v=202611171217"></script>
 <script src="https://hub.xtix.ai/static/scripts/widget/xtixwidget.js"></script>
 <script src="fx.js?v=202611171217"></script>
-<!-- Meta Pixel: InitiateCheckout on every "buy a ticket" link -->
+<!-- Meta Pixel: "buy a ticket" links only scroll to the widget -->
 <script>
 document.querySelectorAll('a[href$="#tickets"]').forEach(function(el){
-  el.addEventListener('click', function(){ if (window.fbq) fbq('track', 'InitiateCheckout'); });
+  el.addEventListener('click', function(){ if (window.fbq) fbq('trackCustom', 'ScrollToTickets'); });
 });
+</script>
+<!-- Meta Pixel: events from the XTIX widget (iframe, postMessage) -->
+<script>
+(function () {
+  var ORIGIN = /^https:\/\/([a-z0-9-]+\.)*(xtix\.ai|xtix\.org)$/;
+  function once(key) {
+    try { if (sessionStorage.getItem(key)) return false; sessionStorage.setItem(key, "1"); } catch (e) {}
+    return true;
+  }
+  var checkoutSent = false;
+  function initiateCheckout(params) {
+    if (checkoutSent || !window.fbq) return;
+    checkoutSent = true;
+    if (!once("px_ic")) return;
+    fbq("track", "InitiateCheckout", params || {});
+  }
+  window.addEventListener("message", function (e) {
+    if (!ORIGIN.test(e.origin)) return;
+    var d = e.data;
+    if (typeof d === "string") { try { d = JSON.parse(d); } catch (err) { return; } }
+    if (!d || !d.action) return;
+    console.log("XTIX msg", e.origin, d); // TEMP: for checking, remove later
+    if (d.action === "xtixBeginCheckout") {
+      var p = { currency: d.currency || "RSD" };
+      var v = parseFloat(d.ticket_price) * (parseFloat(d.ticket_qty) || 1);
+      if (!isNaN(v)) p.value = v;
+      initiateCheckout(p);
+    }
+    if (d.action === "xtixPurchase" && window.fbq) {
+      var key = "px_buy_" + (d.transaction_id || "");
+      if (d.transaction_id && !once(key)) return;
+      var pp = { currency: d.currency || "RSD" };
+      var val = parseFloat(d.value);
+      if (!isNaN(val)) pp.value = val;
+      fbq("track", "Purchase", pp, d.transaction_id ? { eventID: String(d.transaction_id) } : undefined);
+    }
+  });
+  // fallback: first click inside the widget iframe counts as InitiateCheckout
+  window.addEventListener("blur", function () {
+    setTimeout(function () {
+      var a = document.activeElement;
+      if (a && a.tagName === "IFRAME" && a.closest(".tickets__widget")) initiateCheckout({ currency: "RSD" });
+    }, 0);
+  });
+})();
 </script>
 </body>
 </html>

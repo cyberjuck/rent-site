@@ -159,10 +159,10 @@ src="https://www.facebook.com/tr?id=963561763215882&ev=PageView&noscript=1"
 
 <script src="../i18n.js?v=202611171217"></script>
 <script src="../main.js?v=202611171217"></script>
-<!-- Meta Pixel: InitiateCheckout on every "buy a ticket" link -->
+<!-- Meta Pixel: "buy a ticket" links only scroll to the widget -->
 <script>
 document.querySelectorAll('a[href$="#tickets"]').forEach(function(el){
-  el.addEventListener('click', function(){ if (window.fbq) fbq('track', 'InitiateCheckout'); });
+  el.addEventListener('click', function(){ if (window.fbq) fbq('trackCustom', 'ScrollToTickets'); });
 });
 </script>
 </body>
